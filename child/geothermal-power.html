@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="preload" href="/assets/js/viewport.js" as="script">
+    <script src="/assets/js/viewport.js" defer></script>
+    <meta name="format-detection" content="telephone=no">
+    <title>网络招聘数据分析可视化</title>
+    <meta name="description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="网络招聘数据分析可视化">
+    <meta property="og:image" content="/assets/img/common/og-image.png">
+    <meta property="og:description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:site_name" content="世界を変える！网络招聘数据分析可视化">
+    <meta property="og:locale" content="zh">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/common/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/common/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/common/favicon-192.png">
+    <!-- 字体中文  md cdn 要加速才行-->
+    <link rel="preconnect" href="https://gstatic.loli.net">
+    <link href="https://fonts.loli.net/css2?family=Kiwi+Maru:wght@300&family=New+Tegomin&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+
+    <!-- 嵌入的资源 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/echarts.js"></script>
+    <link rel="stylesheet" href="/assets/css/child/bootstrap.min.css">
+    <!-- 结束嵌入 -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/libs/smooth-scroll.polyfills.min.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "世界を変える！？再生可能エネルギー",
+                "item": "https://energy.jre.co.jp/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "再生可能エネルギー図鑑",
+                "item": "https://energy.jre.co.jp/re-energy-book/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "地熱発電",
+                "item": "https://energy.jre.co.jp/re-energy-book/geothermal-power/"
+            }]
+        }
+    </script>
+</head>
+
+<body data-category="re-energy-book">
+    <div class="l-container">
+        <div class="l-content" data-content="true">
+            <header class="l-header" data-header="true">
+                <div class="l-header__inner">
+                    <div class="l-header-menu">
+                        <button type="button" class="l-header-menu-btn" aria-controls="l-header-nav" aria-expanded="false" data-menu-btn="true" aria-label="メニュー">
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+      </button>
+                        <div class="l-header-menu-btn-pos" data-menu-btn-pos="true"></div>
+                        <div id="l-header-nav" class="l-header-nav">
+                            <div class="l-header-nav__inner" data-header-nav-inner="true">
+                                <nav aria-label="メインメニュー" data-scroll-anim="ready" data-scroll-anim-type="nav" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <div class="l-header-nav-hdg">
+                                        <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                                    </div>
+                                    <div class="l-header-nav-list-container">
+                                        <ul class="l-header-nav-list">
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-top">
+                                                <a href="/" class="l-header-nav-list__target">
+主页
+</a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-think-about-energy">
+                                                <a href="/think-about-data.html" class="l-header-nav-list__target">
+分析数据
+</a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-book">
+                                                <a href="/data-charts-book.html" class="l-header-nav-list__target">
+招聘数据图鉴
+</a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-faq">
+                                                <a href="/faq.html" class="l-header-nav-list__target">
+关于数据 Q&amp;A
+</a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-dict">
+                                                <a href="/data-tech-dict.html" class="l-header-nav-list__target">
+用語辞典
+</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="l-header-sns-list">
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--twitter">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-header">
+  <title id="svg-icon-twitter-header">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--facebook">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-header">
+  <title id="svg-icon-facebook-header">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <div class="l-header-copyright" data-scroll-anim="ready" data-scroll-anim-type="copyright" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <small class="l-header-copyright__text" data-fixed-copyright="true">
+                                        <span class="l-header-copyright__text-rotate">&copy;</span>  China Recruitment visual  Design
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="hdg-logo">
+                <a href="/" class="hdg-logo__target">
+                    <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                </a>
+            </div>
+            <main class="l-main" data-main="true">
+
+
+                <div class="l-detail book-detail book-detail--geothermal-power">
+                    <article class="book-detail__article">
+                        <header class="book-detail-header">
+                            <figure class="book-detail-header__image book-detail-header__image--posy">
+                                <div class="book-detail-header__image-inner">
+                                    <span class="book-detail-header__image-target-container">
+            <!-- <img src="/assets/img/common/img-re-energy-geothermal-power.png" alt="" width="484" height="404" loading="eager" class="book-detail-header__image-target"> -->
+            <img src="/assets/img/link/rosepie.svg " alt=" " width="484" height="404" loading="eager" class="book-detail-header__image-target">
+                                    
+        </span>
+                                    <span class="book-detail-header__image-bg book-detail-header__image-bg--01"></span>
+                                    <span class="book-detail-header__image-bg book-detail-header__image-bg--02"></span>
+                                    <span class="book-detail-header__image-formula"></span>
+                                    <span class="book-detail-header__image-dot book-detail-header__image-dot--01"></span>
+                                    <span class="book-detail-header__image-dot book-detail-header__image-dot--02"></span>
+                                </div>
+                            </figure>
+                            <div class="book-detail-header__text">
+                                <div class="book-detail-header__hdg">
+                                    <div class="book-detail-header__hdg-en">Indicators And Classification</div>
+                                    <h1 class="book-detail-header__hdg-ja">指标与分类</h1>
+                                </div>
+                                <p class="book-detail-header__lead">
+                                    技术指标分析，是依据一定的数理统计方法，运用一些复杂的计算公式，来判断汇率走势的量化的分析方法。主要有动量指标、相对强弱指数、随机指数等等。  </p>
+
+                            </div>
+                        </header>
+                        <section class="book-study book-detail-section">
+                            <div class="book-study-header">
+                                <h2 class="book-study-header__hdg book-detail-hdg-02">作用</h2>
+                                <div class="book-study-header__inner">
+                                    <figure class="book-study-header__image">
+                                        <img src="/assets/img/common/illust-study-01.png" alt="" width="452" height="404" loading="lazy" class="book-study-header__image-target">
+                                    </figure>
+                                    <p class="book-study-header__desc book-detail-desc">
+                                        指标值的具体数值和相互间关系,直接反映职位所处的状态,为我们的操作行为提供指导方向。指标反映的东西大多是从行文字中直接看不到的。
+                                      <br>
+                                      比如说： 职位的薪酬可以通过平均值，来衡量自己是否满意这份工作的薪酬。etc
+                                    </p>
+
+                                </div>
+                            </div>
+                        </section>
+                        <section class="book-detail-section">
+                            <h2 class="book-detail-hdg-02">示例</h2>
+                            <p class="book-detail-desc">
+                              哪些职位需要的工作经验高，哪些行业不限制学历 ？ 
+                           
+                            </p>
+                            <p>在下面选择框中选择你想要查询的职位</p>
+                               <!-- 选择职位 -->
+                               <label for="post_type">职位</label>
+                               <select id="post_type"  style="height:fit-content;" class="col-sm-4 form-control"></select>
+                             <!-- 结束选择职位 -->
+                            <div class="book-method-mod-02">
+                                <section class="book-method-mod-02__item">
+                                    <h3 class="book-method-mod-02__hdg">经验</h3>
+                                    <p class="book-method-mod-02__desc">工作经历是指应聘者的所有工作历史，无论是有偿的还是无偿的，全职的还是兼职的。 工作经历是企业选拔招聘人员的主要参考要素之一。</p>
+                                    <figure class="book-method-mod-02__image" data-width-pc="60">
+                                        <!-- <img src="/assets/img/re-energy-book/geothermal-power/study-img-geothermal-01.png" alt="フラッシュ発電方式のイメージ" width="615" height="461" loading="lazy"> -->
+                                        <!-- edu exp -->
+                                        <div id="expchart" style="min-height: 300px;"></div>
+
+
+                                        <!-- end edu exp  -->
+                                        <figcaption class="book-method-mod-02__image-caption">
+                                            出典：wiki.mbalib「工作经历」
+                                        </figcaption>
+                                    </figure>
+                                </section>
+                                <section class="book-method-mod-02__item">
+                                    <h3 class="book-method-mod-02__hdg">学历</h3>
+                                    <p class="book-method-mod-02__desc">学历指的是一个人学习的经历，通常指在学校内毕业。社会对于正规学历证书的需求逐渐增加，及此类学历证明同时不断贬值（没错，低学历竞争大）的相关过程</p>
+                                    <figure class="book-method-mod-02__image" data-width-pc="60">
+                                        <!-- <img src="/assets/img/re-energy-book/geothermal-power/study-img-geothermal-02.png" alt="バイナリー発電方式のイメージ" width="615" height="445" loading="lazy"> -->
+                                        <div id="educhart" style="min-height: 300px;"></div>
+
+                                        <figcaption class="book-method-mod-02__image-caption">
+                                            出典：Wikipedia「文凭主义及教育通胀」
+                                        </figcaption>
+                                    </figure>
+                                </section>
+                            </div>
+
+                        </section>
+                        <section class="book-detail-section">
+                            <h2 class="book-detail-hdg-02">趋势统计量</h2>
+                            <section class="book-feat-section">
+                                <ul class="book-feat-env-list">
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em>集中趋势</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            在统计学中，集中趋势（central tendency）或中央趋势，在口语上也经常被称为平均，表示一个几率分布的中间值
+                                        </p>
+                                    </li>
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em> 加权平均数</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            考虑不同群资料贡献程度不同时的算数平均数
+                                        </p>
+                                    </li> 
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em> 众数</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            
+                                            出现最多次的观测值
+                                        </p>
+                                    </li>
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em> 算数平均数</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            观测值的总和除以观测值的个数，常简称为平均数，也往往是背后几率分布的期望值之不偏估计。
+                                        </p>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-merit-hdg book-detail-hdg-03">示例指标</h3>
+
+                                <div class="book-feat-merit-section-container">
+                                    <section class="book-feat-merit-section">
+                                        <!-- <h4 class="book-feat-merit-section-hdg">
+                                            <img src="/assets/img/re-energy-book/common/merit-icon-merit.png" alt="メリット" width="150" height="150" loading="lazy">
+                                          </h4> -->
+                                         <div style="width: 68%;" class="book-feat-merit-section-hdg">
+                                            <iframe style="background: #ffffff00;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);"   width="250" height="150" src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=d9e7e42f-59b7-44a8-8d20-c61a4089c5c4&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe>
+
+                                         </div>
+                                      
+                                        <ul class="book-feat-merit-section-list">
+                                            <li class="book-feat-merit-section-list__item">
+                                              选择所有职位
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                             计算平均值
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                以k为单位
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                更多薪酬指标可点击<a href="http://localhost">Here</a>自定义
+                                            </li>
+                                             
+                                        </ul>
+                                    </section>
+                                    <section class="book-feat-merit-section">
+                                        <!-- <h4 class="book-feat-merit-section-hdg">
+                                            <img src="/assets/img/re-energy-book/common/merit-icon-demerit.png" alt="デメリット" width="150" height="150" loading="lazy">
+                                        </h4> -->
+                                        <div style="width: 68%;" class="book-feat-merit-section-hdg">
+                                    
+                                        <iframe style="background: #ffffff00;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="250" height="150"  src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=a6e6b420-d165-4ccb-a590-7bea81a30ec7&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe>
+                                       </div>
+                                        <ul class="book-feat-merit-section-list">
+                                            <li class="book-feat-merit-section-list__item">
+                                               选择单个职位
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                               挑选过滤字段
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                得出结果
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                更多职位数量指标可点击<a href="http://localhost">Here</a>自定义
+                                            </li>
+                                          
+                                        </ul>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-column-hdg book-detail-hdg-03">履历小知識</h3>
+
+                                <div class="book-feat-column-body">
+                                    <section class="book-feat-column-section">
+                                        <h4 class="book-feat-column-hdg book-detail-hdg-04">工作经历的内容与书写</h4>
+                                        <p class="book-feat-column-desc book-detail-desc">任务经历应包含的内容有：
+
+                                            1、就职日期与离任日期，包括年份和月份。 如果工作经历有间断，只列出年份亦可。
+                                            
+                                            2、就职公司的公司全称，如可能，还应提供所在部门名称及母公司名称。
+                                            
+                                            3、工作地点，就职公司所在的城市或区域，以及应聘者工作所在的城市或区域。
+                                            
+                                            4、职务或职位，对于不同的企业，相同的职务可能会有不同的工作内容。
+                                            
+                                            5、具体的工作内容和职责。</p>
+                                        <p class="book-feat-column-desc book-detail-desc">工作经历应注重业绩，用词简单明了。 不要出现人称代词，那样会引起反感。 在保证真实性的前提下，尽量扩充与丰富你的工作经历，但用词必须简练。 从最近的工作纪录开始，逐渐往前写，并保持每份纪录的独立性。 介绍工作史时应提供雇主的姓名、地址，本人在职时间以及担任职务。</p>
+                                    </section>
+                                </div>
+                            </section>
+                        </section>
+
+                    </article>
+                </div>
+
+                <aside class="rel">
+                    <div class="rel__inner">
+                        <section class="rel-re-energy rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg"> 其它可视化图表图鉴</h2>
+                            </div>
+                            <ul class="rel-re-energy-list">
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/solar-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/bar.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            数值关系<span class="u-wbr">分析 </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/onshore-wind-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/zone.svg " alt=" " style="background-image: url(/assets/img/map3.png); background-size: contain; " width="330 " height="294 " loading="lazy ">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            空间地域<span class="u-wbr ">分布</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/offshore-wind-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/timeEchart.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            时间序列<span class="u-wbr">演化</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/biomass.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/comparisonEchart.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            对比参照<span class="u-wbr">分析</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/small-hydropower.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/wordcould.svg" style="background-image: url(/assets/img/Word-Cloud2.png); background-size: contain;" alt=" " width="330 " height="294 " loading="lazy ">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            词云突出<span class="u-wbr">强调</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="rel-other rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg">其它内容</h2>
+                            </div>
+                            <ul class="rel-other-list">
+                                <li class="rel-other-list__item">
+                                    <a href="/think-about-data.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-think-about-energy.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Think about Worth
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    数据&bull;价值&bull;算法
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/faq.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-faq.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Question and Answer
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    关于Q&amp;A
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/data-tech-dict.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-re-energy-dict.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Dictionary
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    用語辞典
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </aside>
+
+            </main>
+        </div>
+        <footer class="l-footer " data-footer="true ">
+            <div class="l-footer__inner ">
+                <div class="l-footer-link ">
+                    <div class="l-footer-logo ">
+
+                        <a href="/ " class="l-footer-logo__target ">
+                            <!-- <img src="/assets/img/common/logo2.png " alt="世界を変える！？再生可能エネルギー " width="708 " height="175 " loading="lazy "> -->
+                            <p style="font-size: 1.5em;  letter-spacing: 0.2em;margin-top: -18px;color: white;"> 网络 </p>
+                            <span style="font-size: 1.5em; letter-spacing: 0.2em; position: absolute; left: 2.3em; top: 0em;color: white; "> 招聘 </span>
+                            <p style=" padding-top: 20px; letter-spacing: 0.5em; color: white; ">数据分析可视化系统</p>
+
+                        </a>
+                    </div>
+                    <ul class="l-footer-sns-list ">
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--twitter ">
+                            <a href="# " rel="noopener " class="l-footer-sns-list__target btn-sns btn-sns--twitter " data-share-btn="twitter ">
+                                <span class="btn-sns__inner ">
+    <svg xmlns="http://www.w3.org/2000/svg " width="50 " height="50 " viewBox="0 0 50 50 " role="img " aria-labelledby="svg-icon-twitter-footer ">
+<title id="svg-icon-twitter-footer ">Twitter</title>
+<path class="svg-fill-01 " d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61 "/>
+</svg>
+  </span>
+                            </a>
+                        </li>
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--facebook ">
+                            <a href="# " rel="noopener " class="l-footer-sns-list__target btn-sns btn-sns--facebook " data-share-btn="facebook ">
+                                <span class="btn-sns__inner ">
+    <svg xmlns="http://www.w3.org/2000/svg " width="50 " height="49.7 " viewBox="0 0 50 49.7 " role="img " aria-labelledby="svg-icon-facebook-footer ">
+<title id="svg-icon-facebook-footer ">Facebook</title>
+<path class="svg-fill-01 " d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z "/>
+</svg>
+  </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="l-footer-utility ">
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/sitepolicy/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+ MongoDB
+</a>
+                        </li>
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/privacy/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+  ElasticSearch
+</a>
+                        </li>
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+ 运营：桂林理式大学ー株式会社
+</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-footer-copyright ">
+                    <small class="l-footer-copyright__text ">
+&copy; China Recruitment visual  Design
+</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/assets/js/select.js"></script>
+    
+    <!-- 工作经验与教育学历  -->
+    <script type="text/javascript">
+
+// 生成select值
+for (item of option_value) {
+        let item_add_value = '<option value=\'' + item + '\'>' + item + '</option>';
+        document.getElementById('post_type').innerHTML +=  item_add_value
+
+}
+      
+        const educhart = echarts.init(document.getElementById("educhart"));
+        const expchart = echarts.init(document.getElementById("expchart"));
+
+        window.onresize = function() {
+            educhart.resize();
+            expchart.resize();
+        }
+
+        eduoption = {
+            title: {
+                text: '学历要求占比',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c}个 (占{d}%)"
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {
+                        show: true
+                    },
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                data: []
+                    //
+                    //        selected: data.selected
+            },
+            series: [{
+                name: '学历要求',
+                type: 'pie',
+                radius: [20, 100],
+                // center: ['50%', '50%'],
+                data: [],
+                roseType: 'radius',
+
+                itemStyle: {
+                    borderRadius: 8,
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+
+        expoption = {
+            title: {
+                text: '工作经验要求占比',
+                x: 'center'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {
+                        show: true
+                    },
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c}个 (占{d}%)"
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                data: []
+                    //
+                    //        selected: data.selected
+            },
+            series: [{
+                name: '工作经验',
+                type: 'pie',
+                radius: [20, 100],
+                // center: ['40%', '50%'],
+                roseType: 'radius',
+                data: [],
+                itemStyle: {
+                    borderRadius: 8,
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+        genData();
+
+        function genData() {
+            educhart.showLoading();
+            expchart.showLoading();
+            $.ajax({
+                async: false, //表示请求是否异步处理
+                type: "get", //请求类型
+                url: "/job/getEducationAndExperienceOfCity", //请求的 URL地址
+                dataType: "json", //返回的数据类型
+                data: {
+                    "post_type": $("#post_type").val()
+                },
+                success: function(datas) {
+                    educhart.hideLoading();
+                    expchart.hideLoading();
+
+                    eduoption.legend.data = datas.legendData;
+                    eduoption.series[0].data = datas.seriesData;
+
+                    expoption.legend.data = datas.legendData2;
+                    expoption.series[0].data = datas.seriesData2;
+
+                    if (eduoption && typeof eduoption === "object") {
+                        educhart.setOption(eduoption, true);
+                    }
+
+                    if (expoption && typeof expoption === "object") {
+                        expchart.setOption(expoption, true);
+                    }
+                },
+                timeout: 3000, // sets timeout to 3 seconds
+                error: function(data) {
+
+                }
+            });
+        }
+        $("#post_type").change(function() {
+            genData();
+        });
+    </script>
+</body>
+
+</html>

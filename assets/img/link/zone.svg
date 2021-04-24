@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="340" height="300" style="user-select: none; position: absolute; left: 0px; top: 0px;">
+<g>
+<rect width="340" height="300" x="0" y="0" id="0" style="fill: transparent;">
+</rect>
+</g>
+<g>
+<path d="M 34 230.5 L 306 230.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 201.5 L 306 201.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 173.5 L 306 173.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 145.5 L 306 145.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 116.5 L 306 116.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 88.5 L 306 88.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 60.5 L 306 60.5" fill="none" stroke="#E0E6F1" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34.5 230 L 34.5 60" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="round" stroke-miterlimit="10">
+</path>
+<path d="M 34 230.5 L 29 230.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 201.5 L 29 201.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 173.5 L 29 173.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 145.5 L 29 145.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 116.5 L 29 116.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 88.5 L 29 88.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 34 60.5 L 29 60.5" fill="none" stroke="#6E7079" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,230)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">-90</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,201.6667)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">-60</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,173.3333)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">-30</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,145)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">0</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,116.6667)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">30</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,88.3333)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">60</text>
+<text xml:space="preserve" fill="#6E7079" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,26,60)" dominant-baseline="central" text-anchor="end" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">90</text>
+</g>
+</svg>

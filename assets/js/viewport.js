@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",(function(){var t=document.querySelector('meta[name="viewport"]');window.matchMedia("(min-width: 768px)").matches&&window.matchMedia("(max-width: 999px)").matches&&t.setAttribute("content","width=1000")}),!1);

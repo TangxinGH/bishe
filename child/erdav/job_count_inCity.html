@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://gallery.echartsjs.com/dep/echarts/map/js/china.js"></script>
+    <script src="/assets/css/style.css"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        var data = [];
+        var geoCoordMap = {};
+        window.onresize = function() {
+            myChart.resize();
+        }
+        $.ajax({
+            async: false, //表示请求是否异步处理
+            type: "get", //请求类型
+            url: "/job/jobCountsEveryCity", //请求的 URL地址
+            dataType: "json", //返回的数据类型
+            success: function(datas) {
+                data = datas.jobCountOfCity;
+                geoCoordMap = datas.lngAndLatOfCity;
+
+            },
+            timeout: 3000, // sets timeout to 3 seconds
+            error: function(data) {
+
+            }
+        });
+
+        // 地图数据
+        var convertData = function(data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        value: geoCoord.concat(data[i].value)
+                    });
+                }
+            }
+            return res;
+        };
+        // 前6数据
+        var convertedData = [
+            convertData(data),
+             data.sort(function(a, b) {
+                return b.value - a.value;
+            }).slice(0, 6) 
+        ];
+        data.sort(function(a, b) {
+            return a.value - b.value;
+        })
+        var selectedItems = [];
+        var categoryData = [];//这是y坐标的数据 bar条
+        var sum = 0;
+        var count = data.length;
+        for (var i = 0; i < convertedData[1].length; i++) {
+            categoryData.push(convertedData[1][i].name);
+            sum += convertedData[1][i].value;
+        }
+        categoryData.reverse();//反转数据
+        option = {
+            backgroundColor: '#fffff9', //背景色透明
+            animation: true,
+            animationDuration: 1000,
+            animationEasing: 'cubicInOut',
+            animationDurationUpdate: 1000,
+            animationEasingUpdate: 'cubicInOut',
+            title: [{
+                text: '招聘数量地区分布图',
+                link: 'http://pages.anjuke.com/expert/newexpert.html',
+                subtext: 'data from 智联',
+                sublink: 'http://pages.anjuke.com/expert/newexpert.html',
+                left: 'center',
+                textStyle: {
+                    color: '#1f1f1e'
+                }
+            }, {
+                id: 'statistic',
+                text: count ? '平均: ' + parseInt((sum / count).toFixed(4)) : '',
+                right: 120,
+                top: 40,
+                width: 100,
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 16
+                }
+            }],
+            toolbox: {
+                iconStyle: {
+                    normal: {
+                        borderColor: '#111'
+                    },
+                    emphasis: {
+                        borderColor: '#b1e4ff'
+                    }
+                },
+                feature: {
+                    dataZoom: {},
+                    brush: {
+                        type: ['rect', 'polygon', 'clear']
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            brush: {
+                outOfBrush: {
+                    color: '#abc'
+                },
+                brushStyle: {
+                    borderWidth: 2,
+                    color: 'rgba(0,0,0,0.2)',
+                    borderColor: 'rgba(0,0,0,0.5)',
+                },
+                seriesIndex: [0, 1],
+                throttleType: 'debounce',
+                throttleDelay: 300,
+                geoIndex: 0
+            },
+            geo: {
+                map: 'china',
+                left: '10',
+                right: '35%',
+                center: [117.98561551896913, 33.205000490896193],
+                zoom: 1,
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                roam: true,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#b7bab5', //省份颜色
+                        borderColor: '#000' //边界线颜色
+                    },
+                    emphasis: {
+                        areaColor: '#69b0ac'
+                    }
+                }
+            },
+            tooltip: {
+                show:true,
+                trigger: 'item',
+            },
+            grid: {
+                right: 40,
+                top: 100,
+                bottom: 40,
+                width: '30%'
+            },
+            xAxis: {
+                // bar图的x坐标。
+                type: 'value',
+                scale: true,
+                position: 'top',
+                boundaryGap: false,
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    margin: 2,
+                    // show:false,//
+                    textStyle: {
+                        color: '#aaa'
+                    },
+                    nameGap: 50,// option, indicates the separation with the axisLabel tags.
+                    nameLocation: 'middle',// option will position the label vertically;
+                    formatter: function (value, index) { //单位换算
+                           return value/1000 + 'k';
+                    }//'{value} °C'
+      
+                },
+            },
+            yAxis: {
+                type: 'category',
+                //  name: 'TOP 20',
+                nameGap: 16,
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#000'
+                    }
+                },
+                axisTick: {
+                    show: false,
+                    lineStyle: {
+                        color: '#000'
+                    }
+                },
+                axisLabel: {
+                    interval: 0,
+                    textStyle: {
+                        color: '#000'
+                    }
+                },
+                data: categoryData
+            },
+            series: [{
+                // name: 'pm2.5',
+                type: 'scatter',
+                coordinateSystem: 'geo',
+                data: convertedData[0],
+                symbolSize: function(val) {
+                    return Math.max(val[2] / 1000, 8);//圆圈大小
+                },
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'inside',
+                        show: true//底层标签。
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                // tooltip:{
+                //       // 显示信息数据，不然大多乱
+                //     show: true,
+                //     trigger: 'item',
+                //     position: 'inside',
+                // },
+                itemStyle: {
+                    normal: {
+                        color: '#4aa95e', // 
+                        position: 'right',
+                        show: true
+                    }
+                }
+            }, {
+                 name: '工作城市',
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                data: convertedData[0],
+                symbolSize: function(val) {
+                    return Math.max(val[2] / 1000, 8);//圆圈大小
+                },
+                showEffectOn: 'render',
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                hoverAnimation: true,
+                    label: {
+                    normal: {
+                        formatter: '{b}',
+                        position: 'inside',
+                        show: false//显示效果名字
+                    }
+                },
+                tooltip:{
+                    // 显示信息数据，不然大多乱
+                    show: true,
+                    trigger: 'item'
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#f4e925', //点的颜色
+                        shadowBlur: 50,
+                        shadowColor: '#EE0000'
+                    }
+                },
+                zlevel: 1
+            }, {
+                id: 'bar',
+                zlevel: 2,
+                type: 'bar',
+                symbol: 'none',
+                itemStyle: {
+                    normal: {
+                        color: '#6a789d' //bar的颜色
+                    }
+                },
+                
+                data:   convertedData[1].reverse()//反转数据,//data.filter(val=>val.value>1000) 这是 bar 的 x 坐标数据
+                
+            }]
+        };
+
+
+   
+
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+
+</body>
+
+</html>

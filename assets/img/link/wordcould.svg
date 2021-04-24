@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="340" height="300" style="user-select: none; position: absolute; left: 0px; top: 0px;">
+<g>
+<rect width="340" height="300" x="0" y="0" id="0" style="fill: transparent;">
+</rect>
+</g>
+<g>
+<path d="M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5" fill="rgba(0,0,0,0)" fill-opacity="1" stroke="#ccc" stroke-width="0" paint-order="fill" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="10" transform="matrix(1,0,0,1,170,295)">
+</path>
+</g>
+</svg>

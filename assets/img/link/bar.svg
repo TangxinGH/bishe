@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="340" height="300" style="user-select: none; position: absolute; left: 0px; top: 0px;">
+<g>
+<rect width="340" height="300" x="0" y="0" id="0" style="fill: transparent;">
+</rect>
+</g>
+<g>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="rgba(255,255,255,1)" stroke-width="2" paint-order="stroke" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="2" transform="matrix(1,0,0,1,311,196.0971)" dominant-baseline="central" text-anchor="start" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">41.88</text>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="rgba(255,255,255,1)" stroke-width="2" paint-order="stroke" stroke-opacity="1" stroke-dasharray="" stroke-linecap="butt" stroke-miterlimit="2" transform="matrix(1,0,0,1,311,191.2157)" dominant-baseline="central" text-anchor="start" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">47.91</text>
+<path d="M 37.8695 228.381 L 43.7717 228.381 A 0.8095 0.8095 0 0 1 44.5812 229.1905 A 0.8095 0.8095 0 0 1 43.7717 230 L 37.8695 230 A 0.8095 0.8095 0 0 1 37.06 229.1905 A 0.8095 0.8095 0 0 1 37.8695 228.381" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 61.71 226.0333 L 65.2645 226.0333 A 1.9833 1.9833 0 0 1 67.2479 228.0167 A 1.9833 1.9833 0 0 1 65.2645 230 L 61.71 230 A 1.9833 1.9833 0 0 1 59.7267 228.0167 A 1.9833 1.9833 0 0 1 61.71 226.0333" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 85.2267 224.3333 L 87.0812 224.3333 A 2.8333 2.8333 0 0 1 89.9145 227.1667 A 2.8333 2.8333 0 0 1 87.0812 230 L 85.2267 230 A 2.8333 2.8333 0 0 1 82.3933 227.1667 A 2.8333 2.8333 0 0 1 85.2267 224.3333" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 108.06 208.7905 L 109.5812 208.7905 A 3 3 0 0 1 112.5812 211.7905 L 112.5812 227 A 3 3 0 0 1 109.5812 230 L 108.06 230 A 3 3 0 0 1 105.06 227 L 105.06 211.7905 A 3 3 0 0 1 108.06 208.7905" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 130.7267 209.2762 L 132.2479 209.2762 A 3 3 0 0 1 135.2479 212.2762 L 135.2479 227 A 3 3 0 0 1 132.2479 230 L 130.7267 230 A 3 3 0 0 1 127.7267 227 L 127.7267 212.2762 A 3 3 0 0 1 130.7267 209.2762" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 153.3933 167.9095 L 154.9145 167.9095 A 3 3 0 0 1 157.9145 170.9095 L 157.9145 227 A 3 3 0 0 1 154.9145 230 L 153.3933 230 A 3 3 0 0 1 150.3933 227 L 150.3933 170.9095 A 3 3 0 0 1 153.3933 167.9095" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 176.06 120.2286 L 177.5812 120.2286 A 3 3 0 0 1 180.5812 123.2286 L 180.5812 227 A 3 3 0 0 1 177.5812 230 L 176.06 230 A 3 3 0 0 1 173.06 227 L 173.06 123.2286 A 3 3 0 0 1 176.06 120.2286" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 198.7267 98.6952 L 200.2479 98.6952 A 3 3 0 0 1 203.2479 101.6952 L 203.2479 227 A 3 3 0 0 1 200.2479 230 L 198.7267 230 A 3 3 0 0 1 195.7267 227 L 195.7267 101.6952 A 3 3 0 0 1 198.7267 98.6952" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 221.3933 203.6095 L 222.9145 203.6095 A 3 3 0 0 1 225.9145 206.6095 L 225.9145 227 A 3 3 0 0 1 222.9145 230 L 221.3933 230 A 3 3 0 0 1 218.3933 227 L 218.3933 206.6095 A 3 3 0 0 1 221.3933 203.6095" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 244.06 213.8095 L 245.5812 213.8095 A 3 3 0 0 1 248.5812 216.8095 L 248.5812 227 A 3 3 0 0 1 245.5812 230 L 244.06 230 A 3 3 0 0 1 241.06 227 L 241.06 216.8095 A 3 3 0 0 1 244.06 213.8095" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 266.3171 224.819 L 268.6574 224.819 A 2.5905 2.5905 0 0 1 271.2479 227.4095 A 2.5905 2.5905 0 0 1 268.6574 230 L 266.3171 230 A 2.5905 2.5905 0 0 1 263.7267 227.4095 A 2.5905 2.5905 0 0 1 266.3171 224.819" fill="#a6c0cd" fill-opacity="1" stroke="none">
+</path>
+<path d="M 287.729 227.3286 L 292.5788 227.3286 A 1.3357 1.3357 0 0 1 293.9145 228.6643 A 1.3357 1.3357 0 0 1 292.5788 230 L 287.729 230 A 1.3357 1.3357 0 0 1 286.3933 228.6643 A 1.3357 1.3357 0 0 1 287.729 227.3286" fill="rgba(166,192,205,1)" fill-opacity="1" stroke="none">
+</path>
+<path d="M 47.1378 227.8952 L 52.5543 227.8952 A 1.0524 1.0524 0 0 1 53.6067 228.9476 A 1.0524 1.0524 0 0 1 52.5543 230 L 47.1378 230 A 1.0524 1.0524 0 0 1 46.0855 228.9476 A 1.0524 1.0524 0 0 1 47.1378 227.8952" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 71.1402 225.2238 L 73.8852 225.2238 A 2.3881 2.3881 0 0 1 76.2733 227.6119 A 2.3881 2.3881 0 0 1 73.8852 230 L 71.1402 230 A 2.3881 2.3881 0 0 1 68.7521 227.6119 A 2.3881 2.3881 0 0 1 71.1402 225.2238" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 94.4188 222.7143 L 95.94 222.7143 A 3 3 0 0 1 98.94 225.7143 L 98.94 227 A 3 3 0 0 1 95.94 230 L 94.4188 230 A 3 3 0 0 1 91.4188 227 L 91.4188 225.7143 A 3 3 0 0 1 94.4188 222.7143" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 117.0855 210.2476 L 118.6067 210.2476 A 3 3 0 0 1 121.6067 213.2476 L 121.6067 227 A 3 3 0 0 1 118.6067 230 L 117.0855 230 A 3 3 0 0 1 114.0855 227 L 114.0855 213.2476 A 3 3 0 0 1 117.0855 210.2476" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 139.7521 206.7667 L 141.2733 206.7667 A 3 3 0 0 1 144.2733 209.7667 L 144.2733 227 A 3 3 0 0 1 141.2733 230 L 139.7521 230 A 3 3 0 0 1 136.7521 227 L 136.7521 209.7667 A 3 3 0 0 1 139.7521 206.7667" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 162.4188 172.7667 L 163.94 172.7667 A 3 3 0 0 1 166.94 175.7667 L 166.94 227 A 3 3 0 0 1 163.94 230 L 162.4188 230 A 3 3 0 0 1 159.4188 227 L 159.4188 175.7667 A 3 3 0 0 1 162.4188 172.7667" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 185.0855 87.8476 L 186.6067 87.8476 A 3 3 0 0 1 189.6067 90.8476 L 189.6067 227 A 3 3 0 0 1 186.6067 230 L 185.0855 230 A 3 3 0 0 1 182.0855 227 L 182.0855 90.8476 A 3 3 0 0 1 185.0855 87.8476" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 207.7521 82.5048 L 209.2733 82.5048 A 3 3 0 0 1 212.2733 85.5048 L 212.2733 227 A 3 3 0 0 1 209.2733 230 L 207.7521 230 A 3 3 0 0 1 204.7521 227 L 204.7521 85.5048 A 3 3 0 0 1 207.7521 82.5048" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 230.4188 190.5762 L 231.94 190.5762 A 3 3 0 0 1 234.94 193.5762 L 234.94 227 A 3 3 0 0 1 231.94 230 L 230.4188 230 A 3 3 0 0 1 227.4188 227 L 227.4188 193.5762 A 3 3 0 0 1 230.4188 190.5762" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 253.0855 214.781 L 254.6067 214.781 A 3 3 0 0 1 257.6067 217.781 L 257.6067 227 A 3 3 0 0 1 254.6067 230 L 253.0855 230 A 3 3 0 0 1 250.0855 227 L 250.0855 217.781 A 3 3 0 0 1 253.0855 214.781" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 275.1807 225.1429 L 277.8448 225.1429 A 2.4286 2.4286 0 0 1 280.2733 227.5714 A 2.4286 2.4286 0 0 1 277.8448 230 L 275.1807 230 A 2.4286 2.4286 0 0 1 272.7521 227.5714 A 2.4286 2.4286 0 0 1 275.1807 225.1429" fill="#e9c37a" fill-opacity="1" stroke="none">
+</path>
+<path d="M 296.3497 228.1381 L 302.009 228.1381 A 0.931 0.931 0 0 1 302.94 229.069 A 0.931 0.931 0 0 1 302.009 230 L 296.3497 230 A 0.931 0.931 0 0 1 295.4188 229.069 A 0.931 0.931 0 0 1 296.3497 228.1381" fill="rgba(233,195,122,1)" fill-opacity="1" stroke="none">
+</path>
+<path d="M 34 196.5 L 306 196.5" fill="none" stroke="#a6c0cd" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 4 0 A 4 4 0 1 1 4 -0.0004" fill="#a6c0cd" fill-opacity="1" stroke="none" transform="matrix(0,-1,1,0,34,196.0971)">
+</path>
+<path d="M 0 0 L 5.3333 16 L 0 12 L -5.3333 16 L 0 0 Z" fill="#a6c0cd" fill-opacity="1" stroke="none" transform="matrix(0,1,-1,0,306,196.0971)">
+</path>
+<path d="M 34 191.5 L 306 191.5" fill="none" stroke="#e9c37a" stroke-width="1" paint-order="fill" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-linecap="butt" stroke-miterlimit="10">
+</path>
+<path d="M 4 0 A 4 4 0 1 1 4 -0.0004" fill="#e9c37a" fill-opacity="1" stroke="none" transform="matrix(0,-1,1,0,34,191.2157)">
+</path>
+<path d="M 0 0 L 5.3333 16 L 0 12 L -5.3333 16 L 0 0 Z" fill="#e9c37a" fill-opacity="1" stroke="none" transform="matrix(0,1,-1,0,306,191.2157)">
+</path>
+<path d="M -0.5421 -0.8857 A 0.6 0.6 0 1 1 0.5421 -0.8857 C 0.3878 -0.5605 0 -0.42 0 0 C 0 -0.42 -0.3878 -0.5605 -0.5421 -0.8857 Z" fill="#a6c0cd" fill-opacity="1" stroke="none" transform="matrix(25,0,0,25,199.4873,98.6952)">
+</path>
+<path d="M -0.5421 -0.8857 A 0.6 0.6 0 1 1 0.5421 -0.8857 C 0.3878 -0.5605 0 -0.42 0 0 C 0 -0.42 -0.3878 -0.5605 -0.5421 -0.8857 Z" fill="#a6c0cd" fill-opacity="1" stroke="none" transform="matrix(25,0,0,25,40.8206,228.381)">
+</path>
+<path d="M -0.5421 -0.8857 A 0.6 0.6 0 1 1 0.5421 -0.8857 C 0.3878 -0.5605 0 -0.42 0 0 C 0 -0.42 -0.3878 -0.5605 -0.5421 -0.8857 Z" fill="#e9c37a" fill-opacity="1" stroke="none" transform="matrix(25,0,0,25,208.5127,81.8571)">
+</path>
+<path d="M -0.5421 -0.8857 A 0.6 0.6 0 1 1 0.5421 -0.8857 C 0.3878 -0.5605 0 -0.42 0 0 C 0 -0.42 -0.3878 -0.5605 -0.5421 -0.8857 Z" fill="#e9c37a" fill-opacity="1" stroke="none" transform="matrix(25,0,0,25,299.1794,227.5714)">
+</path>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,199.4873,72.5524)" dominant-baseline="central" text-anchor="middle" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">162.2</text>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,40.8206,202.2381)" dominant-baseline="central" text-anchor="middle" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">2</text>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,208.5127,55.7143)" dominant-baseline="central" text-anchor="middle" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">182.2</text>
+<text xml:space="preserve" fill="#333" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,299.1794,201.4286)" dominant-baseline="central" text-anchor="middle" x="0" y="0" style="font: 12px &quot;Microsoft YaHei&quot;;">2.3</text>
+</g>
+</svg>

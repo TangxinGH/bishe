@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="preload" href="/assets/js/viewport.js" as="script">
+    <script src="/assets/js/viewport.js" defer></script>
+    <meta name="format-detection" content="telephone=no">
+    <title>网络招聘数据分析可视化</title>
+    <meta name="description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="网络招聘数据分析可视化">
+    <meta property="og:image" content="/assets/img/common/og-image.png">
+    <meta property="og:description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:site_name" content="世界を変える！网络招聘数据分析可视化">
+    <meta property="og:locale" content="zh">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/common/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/common/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/common/favicon-192.png">
+    <link rel="canonical" href="https://energy.jre.co.jp/re-energy-book/">
+
+
+    <!-- 字体中文  md cdn 要加速才行-->
+    <link rel="preconnect" href="https://gstatic.loli.net">
+    <link href="https://fonts.loli.net/css2?family=Kiwi+Maru:wght@300&family=New+Tegomin&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+
+    <!-- 动画 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 图表js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0/dist/Chart.min.js"></script>
+    <script src="/assets/js/Chart.roundedBarCharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+    <script src='assets/js/ecStat.min.js'></script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/libs/smooth-scroll.polyfills.min.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
+    <script type="application/ld+json">
+        {
+           "@context":"https://schema.org",
+           "@type":"BreadcrumbList",
+           "itemListElement": [{
+               "@type":"ListItem",
+               "position": 1,
+               "name":"世界を変える！？再生可能エネルギー",
+               "item":"https://energy.jre.co.jp/"
+            }, {
+               "@type":"ListItem",
+               "position": 2,
+               "name":"エネルギーを考える",
+               "item":"https://energy.jre.co.jp/think-about-energy/"
+            }]
+        }
+    </script>
+</head>
+
+<body data-category="think-about-energy">
+    <div class="l-container">
+        <div class="l-content" data-content="true">
+            <header class="l-header" data-header="true">
+                <div class="l-header__inner">
+                    <div class="l-header-menu">
+                        <button type="button" class="l-header-menu-btn" aria-controls="l-header-nav" aria-expanded="false" data-menu-btn="true" aria-label="メニュー">
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+      </button>
+                        <div class="l-header-menu-btn-pos" data-menu-btn-pos="true"></div>
+                        <div id="l-header-nav" class="l-header-nav">
+                            <div class="l-header-nav__inner" data-header-nav-inner="true">
+                                <nav aria-label="メインメニュー" data-scroll-anim="ready" data-scroll-anim-type="nav" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <div class="l-header-nav-hdg">
+                                        <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                                    </div>
+                                    <div class="l-header-nav-list-container">
+                                        <ul class="l-header-nav-list">
+                                            <ul class="l-header-nav-list">
+                                                <li class="l-header-nav-list__item l-header-nav-list__item-top">
+                                                    <a href="/" class="l-header-nav-list__target">
+                    主页
+                  </a>
+                                                </li>
+                                                <li class="l-header-nav-list__item l-header-nav-list__item-think-about-energy">
+                                                    <a href="/think-about-data.html" class="l-header-nav-list__target">
+                    分析数据
+                  </a>
+                                                </li>
+                                                <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-book">
+                                                    <a href="/data-charts-book.html" class="l-header-nav-list__target">
+                    招聘数据图鉴
+                  </a>
+                                                </li>
+                                                <li class="l-header-nav-list__item l-header-nav-list__item-faq">
+                                                    <a href="/faq.html" class="l-header-nav-list__target">
+                    关于数据 Q&amp;A
+                  </a>
+                                                </li>
+                                                <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-dict">
+                                                    <a href="/data-tech-dict.html" class="l-header-nav-list__target">
+                    用語辞典
+                  </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="l-header-sns-list">
+                                                <li class="l-header-sns-list__item l-header-sns-list__item--twitter">
+                                                    <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                                        <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-header">
+  <title id="svg-icon-twitter-header">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+                    </span>
+                                                    </a>
+                                                </li>
+                                                <li class="l-header-sns-list__item l-header-sns-list__item--facebook">
+                                                    <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                                        <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-header">
+  <title id="svg-icon-facebook-header">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+                    </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                </nav>
+                                <div class="l-header-copyright" data-scroll-anim="ready" data-scroll-anim-type="copyright" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <small class="l-header-copyright__text" data-fixed-copyright="true">
+             <span class="l-header-copyright__text-rotate">&copy;</span> China Recruitment visual  Design
+            </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="hdg-logo">
+                <a href="/" class="hdg-logo__target">
+                    <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                </a>
+            </div>
+            <main class="l-main" data-main="true">
+                <article class="index-list">
+                    <header class="index-list-header index-list-header--think-about-energy">
+                        <figure class="index-list-header__image">
+                            <div class="index-list-header__image-inner">
+                                <img src="/assets/img/common/illust-02.png" alt="" width="1348" height="920" loading="eager" class="index-list-header__image-target">
+                                <span class="index-list-header__image-bg"></span>
+                                <span class="index-list-header__image-formula"></span>
+                                <span class="index-list-header__image-dot"></span>
+                            </div>
+                        </figure>
+                        <div class="index-list-header__text">
+                            <div class="index-list-header__hdg-en">Think about Worth</div>
+                            <h1 class="index-list-header__hdg-ja">数据&bull;价值&bull;算法</h1>
+                            <p class="index-list-header__desc">
+                                在数据分析领域，不少优秀的算法像，聚类k-means、关键词TextRank、关联规则Apriori、以及如何解决非结构化数据、量化数据、去掉无用数据等一系列の問題。这是一个有趣的課題研究。
+                            </p>
+                        </div>
+                    </header>
+
+                    <div class="think-index">
+                        <ul class="think-index-list">
+                            <li class="think-index-list__item">
+                                <a href="/child/analysis.html" class="think-index-list__target">
+                                    <span class="think-index-list__num">01</span>
+                                    <span class="think-index-list__name">如何分析招聘的信息</span>
+                                </a>
+                            </li>
+                            <li class="think-index-list__item">
+                                <a href="/child/search.html" class="think-index-list__target">
+                                    <span class="think-index-list__num">02</span>
+                                    <span class="think-index-list__name">在海量内容中搜索你想要的</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <aside class="rel">
+                    <div class="rel__inner">
+                        <section class="rel-other rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg">其它内容</h2>
+                            </div>
+                            <ul class="rel-other-list">
+                                <li class="rel-other-list__item">
+                                    <a href="/data-charts-book.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-re-energy-book.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Picture Book
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    可视化图表样式図鑑
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/faq.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-faq.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Question and Answer
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    关于Q&amp;A
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/data-tech-dict.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-re-energy-dict.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Dictionary
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    框架用語辞典
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </aside>
+            </main>
+        </div>
+        <footer class="l-footer" data-footer="true">
+            <div class="l-footer__inner">
+                <div class="l-footer-link">
+                    <div class="l-footer-logo">
+
+                        <a href="/" class="l-footer-logo__target">
+                            <!-- <img src="/assets/img/common/logo2.png" alt="世界を変える！？再生可能エネルギー" width="708" height="175" loading="lazy"> -->
+                            <p style="font-size: 1.5em;  letter-spacing: 0.2em;margin-top: -18px;color: white;"> 网络 </p>
+                            <span style="font-size: 1.5em; letter-spacing: 0.2em; position: absolute; left: 2.3em; top: 0em;color: white;"> 招聘 </span>
+                            <p style=" padding-top: 20px; letter-spacing: 0.5em; color: white;">数据分析可视化系统</p>
+
+                        </a>
+                    </div>
+                    <ul class="l-footer-sns-list">
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--twitter">
+                            <a href="#" rel="noopener" class="l-footer-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                <span class="btn-sns__inner">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-footer">
+<title id="svg-icon-twitter-footer">Twitter</title>
+<path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+          </span>
+                            </a>
+                        </li>
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--facebook">
+                            <a href="#" rel="noopener" class="l-footer-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                <span class="btn-sns__inner">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-footer">
+<title id="svg-icon-facebook-footer">Facebook</title>
+<path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+          </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="l-footer-utility">
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/sitepolicy/" target="_blank" rel="noopener" class="l-footer-utility__target">
+         MongoDB
+        </a>
+                        </li>
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/privacy/" target="_blank" rel="noopener" class="l-footer-utility__target">
+          ElasticSearch
+        </a>
+                        </li>
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/" target="_blank" rel="noopener" class="l-footer-utility__target">
+         运营：桂林理式大学ー株式会社
+        </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-footer-copyright">
+                    <small class="l-footer-copyright__text">
+      &copy; China Recruitment visual  Design
+    </small>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

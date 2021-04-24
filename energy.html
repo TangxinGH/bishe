@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="preload" href="/assets/js/viewport.js" as="script">
+    <script src="/assets/js/viewport.js" defer></script>
+    <meta name="format-detection" content="telephone=no">
+    <title>网络招聘数据分析可视化</title>
+    <meta name="description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="网络招聘数据分析可视化">
+    <meta property="og:image" content="/assets/img/common/og-image.png">
+    <meta property="og:description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:site_name" content="世界を変える！网络招聘数据分析可视化">
+    <meta property="og:locale" content="zh">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/common/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/common/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/common/favicon-192.png">
+    <!-- 字体中文  md cdn 要加速才行-->
+    <link rel="preconnect" href="https://gstatic.loli.net">
+    <link href="https://fonts.loli.net/css2?family=Kiwi+Maru:wght@300&family=New+Tegomin&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+
+    <!-- 动画 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 图表js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0/dist/Chart.min.js"></script>
+    <script src="/assets/js/Chart.roundedBarCharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+    <script src='assets/js/ecStat.min.js'></script>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/libs/smooth-scroll.polyfills.min.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
+    
+</head>
+
+<body data-category="top">
+    <div class="l-container">
+        <div class="l-content" data-content="true">
+            <header class="l-header" data-header="true">
+                <div class="l-header__inner">
+                    <div class="l-header-menu">
+                        <button type="button" class="l-header-menu-btn" aria-controls="l-header-nav" aria-expanded="false" data-menu-btn="true" aria-label="メニュー">
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+      </button>
+                        <div class="l-header-menu-btn-pos" data-menu-btn-pos="true"></div>
+                        <div id="l-header-nav" class="l-header-nav">
+                            <div class="l-header-nav__inner" data-header-nav-inner="true">
+                                <nav aria-label="メインメニュー" data-scroll-anim="ready" data-scroll-anim-type="nav" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <div class="l-header-nav-hdg">
+                                        <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                                    </div>
+                                    <div class="l-header-nav-list-container">
+                                        <ul class="l-header-nav-list">
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-top">
+                                                <a href="/" class="l-header-nav-list__target">
+                    主页
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-think-about-energy">
+                                                <a href="/think-about-data.html" class="l-header-nav-list__target">
+                    分析数据
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-book">
+                                                <a href="/data-charts-book.html" class="l-header-nav-list__target">
+                    招聘数据图鉴
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-faq">
+                                                <a href="/faq.html" class="l-header-nav-list__target">
+                    关于数据 Q&amp;A
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-dict">
+                                                <a href="/data-tech-dict.html" class="l-header-nav-list__target">
+                    用語辞典
+                  </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="l-header-sns-list">
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--twitter">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-header">
+  <title id="svg-icon-twitter-header">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--facebook">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-header">
+  <title id="svg-icon-facebook-header">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <div class="l-header-copyright" data-scroll-anim="ready" data-scroll-anim-type="copyright" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <small class="l-header-copyright__text" data-fixed-copyright="true">
+              <span class="l-header-copyright__text-rotate">&copy;</span> China Recruitment visual  Design
+            </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="l-main" data-main="true">
+
+                <div class="top-hero" data-scroll-anim="ready">
+                    <div class="top-hero__image" data-scroll-anim-trigger="sp">
+                        <figure class="top-hero__image__inner">
+                            <!-- <img src="/assets/img/top/hero-illust.png" alt="" width="1011" height="881" loading="eager" class="top-hero__image-target" data-scroll-anim-type="illust"> -->
+                            <!-- <iframe style="background: rgba(255, 255, 255, 0);border: none;border-radius:30px; margin: 1.5em;" loading="eager" class="top-hero__image-target" data-scroll-anim-type="illust" width="665" height="370" src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=36043806-d308-45be-83cc-5444d2057701&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe> -->
+                            <!-- <div class="top-hero__image-target" data-scroll-anim-type="illust"> -->
+                                <!-- 好丑的图 -->
+                                <div style="min-height: 320px;"  class="top-hero__image-target" id="myChart"   ></div>
+                            <!-- </div> -->
+                            <span class="top-hero__image-bg" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-hero__image-formula" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-hero__image-dot" data-scroll-anim-type="fadeIn"></span>
+                        </figure>
+                    </div>
+                    <div class="top-hero__text">
+                        <div class="top-hero__title-en hdg-en" data-scroll-anim-type="fadeIn">Recruitment Data Era Expolre The World</div>
+                        <h1 class="top-hero__title-ja" data-scroll-anim-type="fadeIn" data-scroll-anim-trigger="pc">
+                            <!-- <p data-scroll-anim-type="fadeIn" style="font-size: 1.5em;  letter-spacing: 0.2em;margin-top: -18px;"> 网络 </p>
+                            <span   data-scroll-anim-type="fadeIn" style="font-size: 1.5em; letter-spacing: 0.2em; position: absolute; left: 2.3em; top: 0.5em;"> 招聘 </span>
+                            <p data-scroll-anim-type="fadeIn" style=" padding-top: 10px; letter-spacing: 0.5em;">数据分析可视化</p> -->
+                            <!-- <img src="/assets/img/common/logo-03.svg" alt="网络招聘数据分析可视化" width="500" height="249" loading="eager"> -->
+                            <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 345 147"  >
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#343434;}
+                                .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#44A4AA;}
+                                 
+                                .st3{font-size:.9em; letter-spacing:.2em;}
+                                .st4{font-size:1.5rem;}
+                                .st5{letter-spacing:.7em;}
+                            </style>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M295.8,191"/>
+                                    <path class="st0" d="M293,182.1"/>
+                                    <path class="st0" d="M278.8,188.5c0.1,0,0.3,0,0.4-0.1"/>
+                                    <path class="st0" d="M458.9-4.7c-0.1,0-0.3,0.1-0.4,0.1c-1.1,0.3-2.3,0.4-3.4,0.4c-1,0-2.1-0.1-3.1-0.2c-0.2-0.1-0.5-0.1-0.7-0.1"
+                                        />
+                                    <path class="st0" d="M480-4.4L480-4.4c-1.7,0-2.1,0.4-2.5,1.5"/>
+                                </g>
+                                <path class="st1" d="M69.2,36.2l-0.3,0.3c-5.2,5.9-3.8,14.4-3.8,14.4l0.1,0.3c0.1,0.3,0.3,0.1,0.5-0.2
+                                    C67.4,48.7,73.9,42.8,69.2,36.2L69.2,36.2z"/>
+                                <path class="st1" d="M61.4,48.8c-0.2,0-0.3-0.3-0.4-0.7c0,0-0.3-1.3-2.7-3.8c-5.5-5.8-3-9.2-2.5-11.2c0.3-1,0.5-2.1,0.6-3.2
+                                    c0,0,6.4,5.2,6.2,10.1c-0.1,2.6-0.4,5.2-0.9,7.7C61.6,48.2,61.6,48.8,61.4,48.8z"/>
+                            </g>
+                            <text transform="matrix(1 0 0 1 0 55.8154)" fill='#343434' class="st2 st3">网络</text>
+                            <text transform="matrix(1 0 0 1 60.8837 77.7627)" fill='#343434' class="st2 st3">招聘</text>
+                            <text transform="matrix(1 0 0 1 0 106.8351)" fill='#343434' class="st2 st4 st5">数据分析可视化</text>
+                            </svg>
+                            <!-- <p data-scroll-anim-type="fadeIn" style=" padding-top: 10px; letter-spacing: 0.5em;">数据分析可视化</p> -->
+                            
+                        </h1>
+                        <p class="top-hero__desc text-01" style="margin-top:-40px;" data-scroll-anim-type="fadeIn">
+                            从互联网时代开始，一个可每天都产生大量数据的世界。 我们希望与大家一起建立一个探索这种未来的机制。 关键是如何发现它们。 让我们一起思考改变世界的数据可视化方式。
+                        </p>
+                    </div>
+                </div>
+                <div data-scroll-anim="ready">
+                    <ul class="top-sns-list" data-scroll-anim-type="fadeIn">
+                        <li class="top-sns-list__item top-sns-list__item--twitter">
+                            <a href="#" rel="noopener" class="top-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                <span class="btn-sns__inner">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-top">
+  <title id="svg-icon-twitter-top">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+        </span>
+                            </a>
+                        </li>
+                        <li class="top-sns-list__item top-sns-list__item--facebook">
+                            <a href="#" rel="noopener" class="top-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                <span class="btn-sns__inner">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-top">
+  <title id="svg-icon-facebook-top">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+        </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="top-index-section top-index-section--think-about-energy" data-scroll-anim="ready">
+                    <div class="top-index-section__image" data-scroll-anim-trigger="sp">
+                        <figure class="top-index-section__image-inner">
+                            <!-- <img src="/assets/img/common/illust-02.png" alt="" width="1348" height="920" loading="lazy" class="top-index-section__image-target" data-scroll-anim-type="illust"> -->
+                            <div id='myechart_k' style="min-height: 310px;" class="top-index-section__image-target" data-scroll-anim-type="illust"> </div>
+                            <span class="top-index-section__image-bg" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-formula" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-dot top-index-section__image-dot--01" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-dot top-index-section__image-dot--02" data-scroll-anim-type="fadeIn"></span>
+                        </figure>
+                    </div>
+                    <div class="top-index-section__text" data-scroll-anim-type="fadeIn">
+                        <div class="top-index-section__hdg-en hdg-en">Think about Worth</div>
+                        <h2 class="top-index-section__hdg-ja hdg-ja" data-scroll-anim-trigger="pc">数据&bull;价值&bull;算法</h2>
+                        <p class="top-secton__desc text-01">
+                            你知道如何从海量的信息中提取有用的信息吗？ 与结构化的数据相比，非结构化的数据的处理有何不同，又要需要如何改进精确值？
+                        </p>
+                        <div class="top-index-section__link">
+                            <div class="btn-01">
+                                <a href="/think-about-data.html" class="btn-01__target">
+                                    <div class="btn-01__target-inner">
+                                        View More
+                                        <span class="btn-01__arrow"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="top-index-section top-index-section--re-energy-book" data-scroll-anim="ready">
+                    <div class="top-index-section__image" data-scroll-anim-trigger="sp">
+                        <figure class="top-index-section__image-inner">
+                            <!-- <img src="/assets/img/common/illust-01.png" alt="" width="1348" height="920" loading="lazy" class="top-index-section__image-target" data-scroll-anim-type="illust"> -->
+                            <!-- <iframe style="background: rgba(255, 255, 255, 0);border: none;border-radius:30px; margin: 1.5em;" class="top-index-section__image-target" loading="eager" class="top-hero__image-target" class="top-index-section__image-target" data-scroll-anim-type="illust" -->
+                            <!-- width="665" height="320" src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=36043806-d308-45be-83cc-5444d2057701&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe> -->
+                            <div style="min-height: 310px;" id="myechart" class="top-index-section__image-target" class="top-hero__image-target" class="top-index-section__image-target" data-scroll-anim-type="illust">
+                            </div>
+                            <span class="top-index-section__image-bg" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-formula" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-dot top-index-section__image-dot--01" data-scroll-anim-type="fadeIn"></span>
+                            <span class="top-index-section__image-dot top-index-section__image-dot--02" data-scroll-anim-type="fadeIn"></span>
+                        </figure>
+                    </div>
+                    <div class="top-index-section__text" data-scroll-anim-type="fadeIn">
+                        <div class="top-index-section__hdg-en hdg-en">Picture Book</div>
+                        <h2 class="top-index-section__hdg-ja hdg-ja" data-scroll-anim-trigger="pc" style="  font-family: 'New Tegomin', serif;">可视化方式<br>图表关系図鑑</h2>
+                        <p class="top-secton__desc text-01">
+                            可视化的方式多种多样，包括时间序列、空间地域、数值关系、指标排行、词云、关键词权重。 每种图表都以什么方式表达它们之间关系，它们有什么特点？
+                        </p>
+                        <div class="top-index-section__link">
+                            <div class="btn-01">
+                                <a href="/data-charts-book.html" class="btn-01__target">
+                                    <div class="btn-01__target-inner">
+                                        View More
+                                        <span class="btn-01__arrow"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="top-index-list">
+                    <section class="top-index-list__item top-index-list__item--faq" data-scroll-anim="ready">
+                        <div class="top-index-list__image" data-scroll-anim-trigger="sp">
+                            <figure class="top-index-list__image-inner">
+                                <img src="/assets/img/common/illust-03.png" alt="" width="300" height="300" loading="lazy" class="top-index-list__image-target" data-scroll-anim-type="illust">
+                                <span class="top-index-list__image-bg" data-scroll-anim-type="fadeIn"></span>
+                            </figure>
+                        </div>
+                        <div class="top-index-list__text" data-scroll-anim-type="fadeIn">
+                            <div class="top-index-list__hdg-en hdg-en">Question and Answer</div>
+                            <h2 class="top-index-list__hdg-ja hdg-ja" data-scroll-anim-trigger="pc" style="font-family: 'New Tegomin', serif;">关于Q&amp;A</h2>
+                            <div class=" top-index-list__link">
+                                <div class="btn-01">
+                                    <a href="/faq.html" class="btn-01__target">
+                                        <div class="btn-01__target-inner">
+                                            View More
+                                            <span class="btn-01__arrow"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="top-index-list__item top-index-list__item--re-energy-dict" data-scroll-anim="ready">
+                        <div class="top-index-list__image" data-scroll-anim-trigger="sp">
+                            <figure class="top-index-list__image-inner">
+                                <img src="/assets/img/common/illust-04.png" alt="" width="300" height="300" loading="lazy" class="top-index-list__image-target" data-scroll-anim-type="illust">
+                                <span class="top-index-list__image-bg" data-scroll-anim-type="fadeIn"></span>
+                            </figure>
+                        </div>
+                        <div class="top-index-list__text" data-scroll-anim-type="fadeIn">
+                            <div class="top-index-list__hdg-en hdg-en">Dictionary</div>
+                            <h2 class="top-index-list__hdg-ja hdg-ja" data-scroll-anim-trigger="pc" style="font-family: 'New Tegomin', serif;">技术用語辞典</h2>
+                            <div class="top-index-list__link">
+                                <div class="btn-01">
+                                    <a href="/data-tech-dict.html" class="btn-01__target">
+                                        <div class="btn-01__target-inner">
+                                            View More
+                                            <span class="btn-01__arrow"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+        <footer class="l-footer" data-footer="true">
+            <div class="l-footer__inner">
+                <div class="l-footer-link">
+                    <div class="l-footer-logo">
+
+                        <a href="/" class="l-footer-logo__target">
+                            <!-- <img src="/assets/img/common/logo2.png" alt="世界を変える！？再生可能エネルギー" width="708" height="175" loading="lazy"> -->
+                            <p style="font-size: 1.5em;  letter-spacing: 0.2em;margin-top: -18px;color: white;"> 网络 </p>
+                            <span style="font-size: 1.5em; letter-spacing: 0.2em; position: absolute; left: 2.3em; top: 0em;color: white;"> 招聘 </span>
+                            <p style=" padding-top: 20px; letter-spacing: 0.5em; color: white;">数据分析可视化系统</p>
+
+                        </a>
+                    </div>
+                    <ul class="l-footer-sns-list">
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--twitter">
+                            <a href="#" rel="noopener" class="l-footer-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                <span class="btn-sns__inner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-footer">
+  <title id="svg-icon-twitter-footer">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+            </span>
+                            </a>
+                        </li>
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--facebook">
+                            <a href="#" rel="noopener" class="l-footer-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                <span class="btn-sns__inner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-footer">
+  <title id="svg-icon-facebook-footer">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+            </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="l-footer-utility">
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/sitepolicy/" target="_blank" rel="noopener" class="l-footer-utility__target">
+           MongoDB
+          </a>
+                        </li>
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/privacy/" target="_blank" rel="noopener" class="l-footer-utility__target">
+            ElasticSearch
+          </a>
+                        </li>
+                        <li class="l-footer-utility__item">
+                            <a href="https://www.jre.co.jp/" target="_blank" rel="noopener" class="l-footer-utility__target">
+           运营：桂林理式大学ー株式会社
+          </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-footer-copyright">
+                    <small class="l-footer-copyright__text">
+        &copy; China Recruitment visual  Design
+      </small>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 替换 -->
+<script>
+    let option2 = {
+    title: {
+        text: '某地区蒸发量和降水量',
+        subtext: '纯属虚构',
+        show:false
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['蒸发量', '降水量']
+        ,show:false
+    },
+    toolbox: {
+        show: false,
+        feature: {
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    itemStyle: {
+
+borderRadius: 3,
+
+},
+    calculable: true,
+    xAxis: [
+        {
+            type: 'category',
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '蒸发量',
+            type: 'bar',
+            itemStyle: { color: '#a6c0cd' },
+            data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
+            },
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name: '降水量',
+            type: 'bar',
+            itemStyle: { color: '#e9c37a' },
+            data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+            markPoint: {
+                data: [
+                    {name: '年最高', value: 182.2, xAxis: 7, yAxis: 183},
+                    {name: '年最低', value: 2.3, xAxis: 11, yAxis: 3}
+                ]
+            },
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'}
+                ]
+            }
+        }
+    ]
+};
+
+var myEChart_vt = echarts.init(document.getElementById('myChart'));
+myEChart_vt.setOption(option2)
+</script>
+    <!--  -->
+    <!-- <script>
+        Chart.defaults.global.defaultFontFamily = 'Comic Sans MS'; //字体漫画风格
+        // Chart.defaults.global.animation.easing = 'easeOutCubic' //全局动画效果
+        Chart.defaults.global.animation.duration = 0 //remove animation
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar', //先定义，不行宽度无法
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    // The type of chart we want to create
+                    type: 'bar',
+                    label: '工资分布',
+                    order: 2, //图层
+                    backgroundColor: '#87b7cd'
+                        //  [
+                        //     '#87b7cd',
+                        //     'rgba(255, 99, 132, 1)',
+                        //     'rgba(54, 162, 235, 1)',
+                        //     'rgba(255, 206, 86, 1)',
+                        //     'rgba(75, 192, 192, 1)',
+                        //     'rgba(153, 102, 255, 1)',
+                        //     'rgba(255, 159, 64, 1)',
+                        //     '#79c3ac'
+                        // ]
+                        ,
+                    // borderColor: 'rgb(255, 99, 132)',
+                    data: [3, 10, 5, 2, 20, 30, 45],
+                    borderWidth: 0
+
+                }, {
+                    type: 'line',
+                    //  lineTension: 0, //straight curves
+                    backgroundColor: '#79c3ac',
+                    borderColor: '#d1dddB',
+                    order: 1, //图层
+                    fill: false, //	How to fill the area under the line. See area charts.
+                    data: [45, 38, 27, 6, 15, 14, 3]
+                }]
+            },
+            // Configuration options go here
+            options: {
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        // display: false
+                    }]
+                },
+
+                legend: {
+                    display: false
+                },
+                layout: {
+                    padding: 26
+                }
+
+            }
+        });
+    </script> -->
+    <!-- echartjs -->
+    <script type="text/javascript">
+        var myEChart_v = echarts.init(document.getElementById('myechart'));
+        let eoption = {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                left: 'center',
+                top: 'bottom',
+                data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8'],
+            },
+            series: [{
+                    name: '半径模式',
+                    type: 'pie',
+                    radius: [20, 140],
+                    // center: ['45%', '50%'], //默认中间
+                    roseType: 'radius',
+                    color: ['#87b7cd', '#1c6b96', '#61a0a8', '#d48265', '#91c7ae', '#749f83', '#ca8622', '#bda29a', '#6e7074', '#546570', '#d1dddd', '#c4ccd3', '#283b42', ],
+
+                    itemStyle: {
+                        borderRadius: 5,
+                        // 设置扇形的颜色
+
+                    },
+                    label: {
+                        show: true //展现标签
+                    },
+                    emphasis: {
+                        label: {
+                            show: true
+                        }
+                    },
+                    data: [{
+                        value: 40,
+                        name: 'rose 1'
+                    }, {
+                        value: 33,
+                        name: 'rose 2'
+                    }, {
+                        value: 28,
+                        name: 'rose 3'
+                    }, {
+                        value: 22,
+                        name: 'rose 4'
+                    }, {
+                        value: 20,
+                        name: 'rose 5'
+                    }, {
+                        value: 15,
+                        name: 'rose 6'
+                    }, {
+                        value: 12,
+                        name: 'rose 7'
+                    }, {
+                        value: 10,
+                        name: 'rose 8'
+                    }]
+                },
+
+            ]
+        };
+        myEChart_v.setOption(eoption)
+    </script>
+    <script>
+        var myechart_kmeans = echarts.init(document.getElementById('myechart_k'));
+        echarts.registerTransform(ecStat.transform.clustering);
+
+        var data = [
+            [3.275154, 2.957587],
+            [-3.344465, 2.603513],
+            [0.355083, -3.376585],
+            [1.852435, 3.547351],
+            [-2.078973, 2.552013],
+            [-0.993756, -0.884433],
+            [2.682252, 4.007573],
+            [-3.087776, 2.878713],
+            [-1.565978, -1.256985],
+            [2.441611, 0.444826],
+            [-0.659487, 3.111284],
+            [-0.459601, -2.618005],
+            [2.17768, 2.387793],
+            [-2.920969, 2.917485],
+            [-0.028814, -4.168078],
+            [3.625746, 2.119041],
+            [-3.912363, 1.325108],
+            [-0.551694, -2.814223],
+            [2.855808, 3.483301],
+            [-3.594448, 2.856651],
+            [0.421993, -2.372646],
+            [1.650821, 3.407572],
+            [-2.082902, 3.384412],
+            [-0.718809, -2.492514],
+            [4.513623, 3.841029],
+            [-4.822011, 4.607049],
+            [-0.656297, -1.449872],
+            [1.919901, 4.439368],
+            [-3.287749, 3.918836],
+            [-1.576936, -2.977622],
+            [3.598143, 1.97597],
+            [-3.977329, 4.900932],
+            [-1.79108, -2.184517],
+            [3.914654, 3.559303],
+            [-1.910108, 4.166946],
+            [-1.226597, -3.317889],
+            [1.148946, 3.345138],
+            [-2.113864, 3.548172],
+            [0.845762, -3.589788],
+            [2.629062, 3.535831],
+            [-1.640717, 2.990517],
+            [-1.881012, -2.485405],
+            [4.606999, 3.510312],
+            [-4.366462, 4.023316],
+            [0.765015, -3.00127],
+            [3.121904, 2.173988],
+            [-4.025139, 4.65231],
+            [-0.559558, -3.840539],
+            [4.376754, 4.863579],
+            [-1.874308, 4.032237],
+            [-0.089337, -3.026809],
+            [3.997787, 2.518662],
+            [-3.082978, 2.884822],
+            [0.845235, -3.454465],
+            [1.327224, 3.358778],
+            [-2.889949, 3.596178],
+            [-0.966018, -2.839827],
+            [2.960769, 3.079555],
+            [-3.275518, 1.577068],
+            [0.639276, -3.41284]
+        ];
+
+        var CLUSTER_COUNT = 6;
+        var DIENSIION_CLUSTER_INDEX = 2;
+        var COLOR_ALL = [
+            '#d1dddd', '#87b7cd', '#1c6b96', '#283b42', '#9a8d96  ', '#e9c37a', '#6a789d'
+        ];
+        var pieces = [];
+        for (var i = 0; i < CLUSTER_COUNT; i++) {
+            pieces.push({
+                value: i,
+                label: 'cluster ' + i,
+                color: COLOR_ALL[i]
+            });
+        }
+
+        let k_option = {
+            dataset: [{
+                source: data
+            }, {
+                transform: {
+                    type: 'ecStat:clustering',
+                    // print: true,
+                    config: {
+                        clusterCount: CLUSTER_COUNT,
+                        outputType: 'single',
+                        outputClusterIndexDimension: DIENSIION_CLUSTER_INDEX
+                    }
+                }
+            }],
+            tooltip: {
+                position: 'top'
+            },
+            visualMap: {
+                type: 'piecewise',
+                top: 'middle',
+                min: 0,
+                max: CLUSTER_COUNT,
+                left: 10,
+                splitNumber: CLUSTER_COUNT,
+                dimension: DIENSIION_CLUSTER_INDEX,
+                pieces: pieces
+            },
+            grid: {
+                left: 120
+            },
+            xAxis: {},
+            yAxis: {},
+            series: {
+                type: 'scatter',
+                encode: {
+                    tooltip: [0, 1]
+                },
+                symbolSize: 15,
+                itemStyle: {
+                    borderColor: '#555'
+                },
+                datasetIndex: 1
+            }
+        };
+
+        myechart_kmeans.setOption(k_option)
+    </script>
+</body>
+
+</html>

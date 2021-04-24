@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="preload" href="/assets/js/viewport.js" as="script">
+    <script src="/assets/js/viewport.js" defer></script>
+    <meta name="format-detection" content="telephone=no">
+    <title>网络招聘数据分析可视化</title>
+    <meta name="description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="网络招聘数据分析可视化">
+    <meta property="og:image" content="/assets/img/common/og-image.png">
+    <meta property="og:description" content="「世界を変える！？招聘数据ー」网络招聘数据分析可视化">
+    <meta property="og:site_name" content="世界を変える！网络招聘数据分析可视化">
+    <meta property="og:locale" content="zh">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/common/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/common/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/common/favicon-192.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="canonical" href="https://energy.jre.co.jp/re-energy-book/solar-power/">
+    <!-- 字体中文  md cdn 要加速才行-->
+    <link rel="preconnect" href="https://gstatic.loli.net">
+    <link href="https://fonts.loli.net/css2?family=Kiwi+Maru:wght@300&family=New+Tegomin&family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+    <script src="/assets/js/libs/smooth-scroll.polyfills.min.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "世界を変える！？再生可能エネルギー",
+                "item": "https://energy.jre.co.jp/"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "再生可能エネルギー図鑑",
+                "item": "https://energy.jre.co.jp/re-energy-book/"
+            }, {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "陸上風力発電",
+                "item": "https://energy.jre.co.jp/re-energy-book/onshore-wind-power/"
+            }]
+        }
+    </script>
+</head>
+
+<body data-category="re-energy-book">
+    <div class="l-container">
+        <div class="l-content" data-content="true">
+            <header class="l-header" data-header="true">
+                <div class="l-header__inner">
+                    <div class="l-header-menu">
+                        <button type="button" class="l-header-menu-btn" aria-controls="l-header-nav" aria-expanded="false" data-menu-btn="true" aria-label="メニュー">
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+        <span class="l-header-menu-btn__bar"></span>
+      </button>
+                        <div class="l-header-menu-btn-pos" data-menu-btn-pos="true"></div>
+                        <div id="l-header-nav" class="l-header-nav">
+                            <div class="l-header-nav__inner" data-header-nav-inner="true">
+                                <nav aria-label="メインメニュー" data-scroll-anim="ready" data-scroll-anim-type="nav" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <div class="l-header-nav-hdg">
+                                        <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                                    </div>
+                                    <div class="l-header-nav-list-container">
+                                        <ul class="l-header-nav-list">
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-top">
+                                                <a href="/" class="l-header-nav-list__target">
+                    主页
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-think-about-energy">
+                                                <a href="/think-about-data.html" class="l-header-nav-list__target">
+                    分析数据
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-book">
+                                                <a href="/data-charts-book.html" class="l-header-nav-list__target">
+                    招聘数据图鉴
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-faq">
+                                                <a href="/faq.html" class="l-header-nav-list__target">
+                    关于数据 Q&amp;A
+                  </a>
+                                            </li>
+                                            <li class="l-header-nav-list__item l-header-nav-list__item-re-energy-dict">
+                                                <a href="/data-tech-dict.html" class="l-header-nav-list__target">
+                    用語辞典
+                  </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="l-header-sns-list">
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--twitter">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--twitter" data-share-btn="twitter">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img" aria-labelledby="svg-icon-twitter-header">
+  <title id="svg-icon-twitter-header">Twitter</title>
+  <path class="svg-fill-01" d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="l-header-sns-list__item l-header-sns-list__item--facebook">
+                                                <a href="#" rel="noopener" class="l-header-sns-list__target btn-sns btn-sns--facebook" data-share-btn="facebook">
+                                                    <span class="btn-sns__inner">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="49.7" viewBox="0 0 50 49.7" role="img" aria-labelledby="svg-icon-facebook-header">
+  <title id="svg-icon-facebook-header">Facebook</title>
+  <path class="svg-fill-01" d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z"/>
+</svg>
+                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <div class="l-header-copyright" data-scroll-anim="ready" data-scroll-anim-type="copyright" data-scroll-anim-delay="1000" data-scroll-anim-fixed="true">
+                                    <small class="l-header-copyright__text" data-fixed-copyright="true">
+              <span class="l-header-copyright__text-rotate">&copy;</span>  China Recruitment visual  Design
+            </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="hdg-logo">
+                <a href="/" class="hdg-logo__target">
+                    <img src="/assets/img/common/logo-04.svg" alt="网络招聘数据分析可视化" width="707" height="195" loading="lazy">
+                </a>
+            </div>
+            <main class="l-main" data-main="true">
+
+
+                <div class="l-detail book-detail book-detail--onshore-wind-power">
+                    <article class="book-detail__article">
+                        <header class="book-detail-header">
+                            <figure class="book-detail-header__image">
+                                <div class="book-detail-header__image-inner">
+                                    <span class="book-detail-header__image-target-container">
+                                        <img src="/assets/img/link/zone.svg " alt=" " style="background-image: url(/assets/img/map3.png); background-size: contain; " width="484" height="404" loading="eager" class="book-detail-header__image-target">
+                                        
+            
+          </span>
+                                    <span class="book-detail-header__image-bg book-detail-header__image-bg--01"></span>
+                                    <span class="book-detail-header__image-bg book-detail-header__image-bg--02"></span>
+                                    <span class="book-detail-header__image-formula"></span>
+                                    <span class="book-detail-header__image-dot book-detail-header__image-dot--01"></span>
+                                    <span class="book-detail-header__image-dot book-detail-header__image-dot--02"></span>
+                                </div>
+                            </figure>
+                            <div class="book-detail-header__text">
+                                <div class="book-detail-header__hdg">
+                                    <div class="book-detail-header__hdg-en">Spatial Distribution</div>
+                                    <h1 class="book-detail-header__hdg-ja">空间地域分布</h1>
+                                </div>
+                                <p class="book-detail-header__lead">
+                                    &nbsp;&nbsp; &nbsp;&nbsp; 空间分布是地球表面现象的排列，而这种排列的图形显示是地理和环境统计的重要工具。空间分布的图形显示可以直接汇总原始数据，也可以反映更复杂的数据分析的结果。现象的许多不同方面可以通过使用不同的颜色的适当选择来表示差异，在单个图形显示屏中显示。
+                                    包括的信息可能是某物的单位在哪里，每个区域有多少个单位，以及它们彼此之间是多么稀疏或密集的包装。
+                                </p>
+                                <!-- 插入iframe -->
+                                <!-- <iframe class="book-index-list__image-target" seamless='seamless' src="/child/erdav/educationAndExperienceOfCity.html" style="width: 100%; height: 15em; border: none;border-radius:30px; margin: 1em;"> </iframe> -->
+
+
+                            </div>
+                        </header>
+                        <section class="book-study book-detail-section">
+                            <div class="book-study-header">
+                                <h2 class="book-study-header__hdg book-detail-hdg-02">工作发布量分布图</h2>
+                                <div class="book-study-header__inner">
+                                    <figure class="book-study-header__image">
+                                        <img src="/assets/img/common/illust-study-01.png" alt="" width="452" height="404" loading="lazy" class="book-study-header__image-target">
+                                    </figure>
+                                    <p class="book-study-header__desc book-detail-desc">
+                                      尽管统计和数据分析程序通常以数字或表格的形式产生输出，但图形技术允许以某种图形形式显示这些结果。 
+                                      
+                                      <br>右边是工作的分类。移动鼠标进行交互 。 
+                                    <br>  一线城市及周边仍是重要聚集区,西部发展迅速
+                                    我国企业的布局渐进完善,新建数据中心,尤其是大型、超大型数据中心逐渐向中西部以及北京市、上海市、广州市、
+                                    深圳市周边的城市转栘。 北京市、上海市、广东窅的3个数据聚集区在全国占比降低到
+                                    31%。 很明显，北上广深工作是最密集的地方。
+                                     
+                                    </p>
+                                </div>
+                            </div>
+                            <figure class="book-study-image" data-width-pc="92">
+                                <!-- <img src="/assets/img/re-energy-book/onshore-wind-power/study-img-01.png" alt="風車の構造のイメージ" width="615" height="384" loading="lazy"> -->
+                                <iframe seamless='seamless' style="background: #ffffff05;border: none;border-radius: 16px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=f42bd705-f9d5-4176-933a-7e67acb7534e&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe>
+
+
+                            </figure>
+                            <section class="book-study-section">
+                                <h3 class="book-study-hdg book-detail-hdg-03">排行Top3的工作数量城市</h3>
+                                <p class="book-study-desc book-detail-desc">从下图中可以看到工作数量的情况。从一线城市的非常密集，而二三线的城市则少很多。</p>
+                                <p class="book-study-desc book-detail-desc">在图的右侧可以看到排行Top3的城市。点击左侧的地图版本可以进行交互提示操作</p>
+                                <p class="book-study-desc book-detail-desc">注意：由于原网站数据起码有一千亿条（看ID就知道）,但，在数学中，可以采用采样的方式。所以与真实情况有一定差距。在获取数据的时候，我们已经尽量保持一定的全面性，均衡性。</p>
+                                <figure class="book-study-image" data-width-pc="100">
+                                    <!-- <img src="/assets/img/re-energy-book/onshore-wind-power/study-img-02.png" alt="風車の大きさのイメージ" width="615" height="364" loading="lazy"> -->
+                                    <iframe seamless='seamless' src="/child/erdav/job_count_inCity.html" style="width: 100%; height: 25em; border: none;border-radius:20px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2); "> </iframe>
+
+                                </figure>
+                            </section>
+                            <section class="book-study-section">
+                                <h3 class="book-study-hdg book-detail-hdg-03"> 公司的分布情况「上市的公司都分布在中国的哪里」</h3>
+                                <p class="book-study-desc book-detail-desc">当然，数据中包括了公司的部分信息，比如是否上市、是否是中国/世界500强，是否急招。</p>
+                                <p class="book-study-desc book-detail-desc">不同行业的公司又分布在哪里</p>
+                                <!-- 插入iframe mongodb -->
+                                <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="http://localhost/mongodb-charts-kcwmd/embed/charts?id=d32337b6-4a10-4f91-9aa6-de2358e7536c&tenant=f533ec56-223e-40aa-8ff4-8652cf1e728f&theme=light"></iframe>
+                               
+                                <p class="book-study-desc book-detail-desc">可以看到，大都在一线。分布中国上市公司的地区统计，得出的结论是，上市公司最多的地区是广东（含深圳）、长三角、北京。中国的发展地区差异很明显，上市公司也大多分布在一、二线城市，
+                                <a href="http://www.sse.com.cn/assortment/stock/areatrade/area/">更详细的数据请访问上海交易证所-></a>  
+                                </p>
+                            </section>
+                        </section>
+                        <section class="book-detail-section">
+                            <h2 class="book-detail-hdg-02">挖掘数据的想法方式（以地域分布为例）</h2>
+                            <p class="book-detail-desc">
+                                根据IDC最新发布的统计数据，中国的数据产生量约占全球数据产生量的23%，美国的数据产生量占比约为21%，EMEA(欧洲、中东、非洲)的数据产生量占比约为30%，APJxC(日本和亚太)数据产生量占比约为18%，全球其他地区数据产生量占比约为8%。
+                            </p>
+                            <section class="book-method-mod-01">
+                                <div class="book-method-mod-01-header">
+                                    <h3 class="book-method-mod-01-header__hdg book-detail-hdg-03">水平式</h3>
+                                    <p class="book-method-mod-01-header__desc">数学概念讲解</p>
+                                </div>
+                                <ul class="book-method-mod-01-list">
+                                    <li class="book-method-mod-01-list__item">
+                                        <figure class="book-method-mod-01-list__image">
+                                            <img src="/assets/img/content/SFA_Point.svg" alt="プロペラ型風車" width="201" height="169" data-width-sp="40" loading="lazy">
+                                        </figure>
+                                        <dl class="book-method-mod-01-list__text">
+                                            <dt class="book-method-mod-01-list__term">抽样调查①</dt>
+                                            <dd class="book-method-mod-01-list__desc book-detail-desc">
+                                                抽样调查是一种非全面调查，它是从全部调查研究对象中，抽选一部分单位进行调查，并据以对全部调查研究对象做出估计和推断的一种调查方法。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="book-method-mod-01-list__item">
+                                        <figure class="book-method-mod-01-list__image">
+                                            <img src="/assets/img/content/SFA_LineString.svg" alt="オランダ型風車" width="201" height="169" data-width-sp="40" loading="lazy">
+                                        </figure>
+                                        <dl class="book-method-mod-01-list__text">
+                                            <dt class="book-method-mod-01-list__term">抽样调查②</dt>
+                                            <dd class="book-method-mod-01-list__desc book-detail-desc">
+                                                显然，抽样调查虽然是非全面调查，但它的目的却在于取得反映总体情况的信息资料，因而，也可起到全面调查的作用。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="book-method-mod-01-list__item">
+                                        <figure class="book-method-mod-01-list__image">
+                                            <img src="/assets/img/content/SFA_Polygon.svg" alt="多翼型風車" width="201" height="169" data-width-sp="40" loading="lazy">
+                                        </figure>
+                                        <dl class="book-method-mod-01-list__text">
+                                            <dt class="book-method-mod-01-list__term">抽样调查③</dt>
+                                            <dd class="book-method-mod-01-list__desc book-detail-desc">
+                                                抽样调查可以分为概率抽样和非概率抽样两类。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="book-method-mod-01">
+                                <div class="book-method-mod-01-header">
+                                    <h3 class="book-method-mod-01-header__hdg book-detail-hdg-03">垂直式</h3>
+                                    <p class="book-method-mod-01-header__desc">数据格式讲解</p>
+                                </div>
+                                <ul class="book-method-mod-01-list">
+                                    <li class="book-method-mod-01-list__item">
+                                        <figure class="book-method-mod-01-list__image">
+                                            <img src="/assets/img/content/SFA_MultiPoint.svg" alt="サボニウス型風車" width="201" height="169" data-width-sp="40" loading="lazy">
+                                        </figure>
+                                        <dl class="book-method-mod-01-list__text">
+                                            <dt class="book-method-mod-01-list__term">数据的地理坐标格式</dt>
+                                            <dd class="book-method-mod-01-list__desc book-detail-desc">
+                                                Geo是一种在HTML和XHTML中标记WGS84地理坐标（经度，纬度）的微格式。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="book-method-mod-01-list__item">
+                                        <figure class="book-method-mod-01-list__image">
+                                            <img src="/assets/img/content/SFA_Polygon_with_hole.svg" alt="ダリウス型風車" width="201" height="169" data-width-sp="40" loading="lazy">
+                                        </figure>
+                                        <dl class="book-method-mod-01-list__text">
+                                            <dt class="book-method-mod-01-list__term">GeoJson</dt>
+                                            <dd class="book-method-mod-01-list__desc book-detail-desc">
+                                                GeoJSON是一种基于JSON的地理空间数据交换格式，它定义了几种类型JSON对象以及它们组合在一起的方法，以表示有关地理要素、属性和它们的空间范围的数据。
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </section>
+
+                        </section>
+                        <section class="book-detail-section">
+                            <h2 class="book-detail-hdg-02">关于海证券交易所和深圳证券交易所</h2>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-env-hdg book-detail-hdg-03">上海上市交易所・場所</h3>
+                                <ul class="book-feat-env-list">
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em>  制造业</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            制造业，股票数为2299个，占比为62.9%，总市值为20.06万亿元，占比为43.54%；
+                                            制造业公司数占比为55.57%，一半以上的公司属于制造业；
+                                            
+                                        </p>
+                                    </li>
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em> 金融业</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            金融业，股票数为91个，占比为2.5%，总市值为10.23万亿元，占比为22.21%。
+                                            金融业公司数占比为4.3%，不到制造业的十分之一；
+                                        </p>
+                                    </li>
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em> 上市公司的股票数为3655个</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                         
+                                            但从市值上看，金融业公司总市值却比制造业公司总市值大，所以，相比金融业的大而少，制造业算是小而多。
+                                        </p>
+                                    </li>
+                                    <li class="book-feat-env-list__item">
+                                        <p class="book-feat-env-list__term"><em>总市值为46.07万亿元</em></p>
+                                        <p class="book-feat-env-list__desc book-detail-desc">
+                                            深圳证券交易所，行业股票数和市值的分布如下图所示：
+                                        </p>
+                                        <img src="/assets/img/content/shanghaisse.jpg" alt="" style="max-width: 50%;" width="384" height="204" loading="lazy">
+
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-section-hdg book-detail-hdg-03">坐标与变量关系？</h3>
+                                <p class="book-feat-section-lead book-detail-desc">
+                                   更多的关系操作自定义，详见点击链接。
+                                </p>
+                                <p class="book-feat-section-annotation">
+                                  MongoDBCharts &amp; ElasticSearch &amp;Kibana
+                                </p>
+                                <a href="http://localhost">
+                                <ul class="book-feat-generation">
+                                    <li class="book-feat-generation__item">
+                                        <figure class="book-feat-generation__image">
+                                            <img src="/assets/img/content/mongodb.png" alt="" width="484" height="404" loading="lazy">
+                                        </figure>
+                                        <dl class="book-feat-generation__text">
+                                            <dt class="book-feat-generation__name">
+                                                MongoDB
+              </dt>
+                                            <dd class="book-feat-generation__num">
+                                                <!-- 4,200 -->
+                                                <span class="book-feat-generation__num-suffix">MongoDBCharts</span>
+                                            </dd>
+                                        </dl>
+                                        <div class="book-feat-generation__icon book-feat-generation__icon--energy">
+                                            <img src="/assets/img/content/generation-icon-energy.svg" alt="" width="48" height="48" loading="lazy">
+                                        </div>
+                                    </li>
+                                    <li class="book-feat-generation__item">
+                                        <figure class="book-feat-generation__image">
+                                            <img src="/assets/img/content/elastic-logo.svg" alt="" width="316" height="264" loading="lazy">
+                                        </figure>
+                                        <dl class="book-feat-generation__text">
+                                            <dt class="book-feat-generation__name">
+                                                ElasticSearch
+              </dt>
+                                            <dd class="book-feat-generation__num">
+                                                <span class="book-feat-generation__num-prefix"> </span>  
+                                                <span class="book-feat-generation__num-suffix"> </span>
+                                            </dd>
+                                        </dl>
+                                        <div class="book-feat-generation__icon book-feat-generation__icon--equal">
+                                            <img src="/assets/img/content/generation-icon-equal.svg" alt="" width="48" height="48" loading="lazy">
+                                        </div>
+                                    </li>
+                                    <li class="book-feat-generation__item">
+                                        <figure class="book-feat-generation__image">
+                                            <img src="/assets/img/content/kibana.png" alt="" width="316" height="264" loading="lazy">
+                                        </figure>
+                                        <dl class="book-feat-generation__text">
+                                            <dt class="book-feat-generation__name">
+                                                Kibana<span class="u-wbr"> </span>
+              </dt>
+                                            <dd class="book-feat-generation__num">
+                                                <span class="book-feat-generation__num-prefix"> </span>  
+                                                <span class="book-feat-generation__num-suffix">ElasticSearch</span>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                </a>
+                            </section>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-merit-hdg book-detail-hdg-03">深圳证券交易所・短所</h3>
+
+                                <div class="book-feat-merit-section-container">
+                                    <section class="book-feat-merit-section">
+                                        <h4 class="book-feat-merit-section-hdg">
+                                            <img src="/assets/img/content/merit-icon-merit.png" alt="メリット" width="150" height="150" loading="lazy">
+                                        </h4>
+                                        <ul class="book-feat-merit-section-list">
+                                            <li class="book-feat-merit-section-list__item">
+                                                选择“市场数据”->“股票”->“股票列表”，
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                有所有在深圳证券交易所上市的所有公司
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                （包含A股和B股）的情况
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    <section class="book-feat-merit-section">
+                                        <h4 class="book-feat-merit-section-hdg">
+                                            <img src="/assets/img/content/merit-icon-demerit.png" alt="デメリット" width="150" height="150" loading="lazy">
+                                        </h4>
+                                        <ul class="book-feat-merit-section-list">
+                                            <li class="book-feat-merit-section-list__item">
+                                                点击“下载”按钮，
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                可下载到上市公司的信息，
+                                            </li>
+                                            <li class="book-feat-merit-section-list__item">
+                                                包含代码、注册地和股本等信息。
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </section>
+                            <section class="book-feat-section">
+                                <h3 class="book-feat-column-hdg book-detail-hdg-03">知識</h3>
+
+                                <div class="book-feat-column-body">
+                                    <section class="book-feat-column-section">
+                                        <h4 class="book-feat-column-hdg book-detail-hdg-04">GeoJSON</h4>
+                                        <p class="book-feat-column-desc book-detail-desc">2015年，互联网工程任务组（IETF）与原始规范作者组建了一个GeoJSON工作组，一起规范GeoJSON标准。 
+
+                                            GeoJSON使用唯一地理坐标参考系统WGS1984和十进制度单位，一个GeoJSON对象可以是Geometry, Feature或者FeatureCollection.
+                                            
+                                            其几何对象包括有点（表示地理位置）、线（表示街道、公路、边界）、多边形（表示国家、省、领土），以及由以上类型组合成的复合几何图形。
+                                            
+                                            TopoJSON基于GeoJSON作了扩展，使得文件更小。</p>
+                                    </section>
+                                    <section class="book-feat-column-section">
+                                        <h4 class="book-feat-column-hdg book-detail-hdg-04">JSON</h4>
+                                        <p class="book-feat-column-desc book-detail-desc">JSON（JavaScript Object Notation，JavaScript对象表示法，读作/ˈdʒeɪsən/）是一种由道格拉斯·克罗克福特构想和设计、轻量级的资料交换语言，该语言以易于让人阅读的文字为基础，用来传输由属性值或者序列性的值组成的数据对象。尽管JSON是JavaScript的一个子集，但JSON是独立于语言的文本格式，并且采用了类似于C语言家族的一些习惯。
+                                           </p>
+                                        <ul class="book-feat-column-list">
+                                            <li class="book-feat-column-list__item">
+                                                数值：十进制数
+                                            </li>
+                                            <li class="book-feat-column-list__item">
+                                                字符串：以双引号
+                                            </li>
+                                            <li class="book-feat-column-list__item">
+                                                布尔值：true|false。
+                                            </li>
+                                            <li class="book-feat-column-list__item">
+                                                null类型：值写为null
+                                            </li>
+                                            <li class="book-feat-column-list__item">
+                                                数组：array
+                                            </li>
+                                            <li class="book-feat-column-list__item">
+                                                对象：object
+                                            </li>
+                                           
+                                        </ul>
+                                    </section>
+                                </div>
+                            </section>
+                        </section>
+
+                    </article>
+                </div>
+
+                <aside class="rel">
+                    <div class="rel__inner">
+                        <section class="rel-link rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg">其它链接</h2>
+                            </div>
+                            <ul class="rel-link-list">
+                                <li class="rel-link-list__item">
+                                    <a href="http://www.szse.cn/" target="_blank" rel="noopener" class="rel-link-list__target">
+       深圳证券交易所
+      </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="rel-re-energy rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg">其它可视化图表图鉴</h2>
+                            </div>
+                            <ul class="rel-re-energy-list">
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/solar-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/bar.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            数值关系<span class="u-wbr">分析 </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/offshore-wind-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/timeEchart.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            时间序列<span class="u-wbr">演化</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/biomass.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/comparisonEchart.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            对比参照<span class="u-wbr">分析</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/small-hydropower.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/wordcould.svg" style="background-image: url(/assets/img/Word-Cloud2.png); background-size: contain;" alt=" " width="330 " height="294 " loading="lazy ">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            词云突出<span class="u-wbr">强调</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-re-energy-list__item">
+                                    <a href="/child/geothermal-power.html" class="rel-re-energy-list__target">
+                                        <figure class="rel-re-energy-list__image">
+                                            <img src="/assets/img/link/rosepie.svg" alt="" width="330" height="294" loading="lazy">
+                                        </figure>
+                                        <div class="rel-re-energy-list__name">
+                                            指标与<span class="u-wbr">分类</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="rel-other rel-section">
+                            <div class="rel-header">
+                                <h2 class="rel-header__hdg">其它内容</h2>
+                            </div>
+                            <ul class="rel-other-list">
+                                <li class="rel-other-list__item">
+                                    <a href="/think-about-data.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-think-about-energy.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Think about Worth
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    数据&bull;价值&bull;算法
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/faq.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-faq.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Question and Answer
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    关于Q&amp;A
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="rel-other-list__item">
+                                    <a href="/data-tech-dict.html" class="rel-other-list__target">
+                                        <div class="rel-other-list__target-inner">
+                                            <figure class="rel-other-list__image">
+                                                <img src="/assets/img/common/icon-rel-re-energy-dict.png" alt="" width="140" height="140" loading="lazy">
+                                            </figure>
+                                            <div class="rel-other-list__text">
+                                                <div class="rel-other-list__hdg-en">
+                                                    Dictionary
+                                                </div>
+                                                <div class="rel-other-list__hdg-ja">
+                                                    用語辞典
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </aside>
+
+            </main>
+        </div>
+        <footer class="l-footer " data-footer="true ">
+            <div class="l-footer__inner ">
+                <div class="l-footer-link ">
+                    <div class="l-footer-logo ">
+
+                        <a href="/ " class="l-footer-logo__target ">
+                            <!-- <img src="/assets/img/common/logo2.png " alt="世界を変える！？再生可能エネルギー " width="708 " height="175 " loading="lazy "> -->
+                            <p style="font-size: 1.5em;  letter-spacing: 0.2em;margin-top: -18px;color: white;"> 网络 </p>
+                            <span style="font-size: 1.5em; letter-spacing: 0.2em; position: absolute; left: 2.3em; top: 0em;color: white; "> 招聘 </span>
+                            <p style=" padding-top: 20px; letter-spacing: 0.5em; color: white; ">数据分析可视化系统</p>
+
+                        </a>
+                    </div>
+                    <ul class="l-footer-sns-list ">
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--twitter ">
+                            <a href="# " rel="noopener " class="l-footer-sns-list__target btn-sns btn-sns--twitter " data-share-btn="twitter ">
+                                <span class="btn-sns__inner ">
+            <svg xmlns="http://www.w3.org/2000/svg " width="50 " height="50 " viewBox="0 0 50 50 " role="img " aria-labelledby="svg-icon-twitter-footer ">
+<title id="svg-icon-twitter-footer ">Twitter</title>
+<path class="svg-fill-01 " d="M15.72,45.32c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.52,20.52,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.62,10.29,10.29,0,0,0,4.51-5.68,20.45,20.45,0,0,1-6.51,2.49,10.27,10.27,0,0,0-17.75,7,10.62,10.62,0,0,0,.26,2.34A29.12,29.12,0,0,1,3.48,6.56a10.27,10.27,0,0,0,3.18,13.7A10.26,10.26,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.49,10.49,0,0,1-2.71.36,10.27,10.27,0,0,1-1.93-.18,10.28,10.28,0,0,0,9.59,7.12A20.6,20.6,0,0,1,2.45,40.85,21.94,21.94,0,0,1,0,40.71a29,29,0,0,0,15.72,4.61 "/>
+</svg>
+          </span>
+                            </a>
+                        </li>
+                        <li class="l-footer-sns-list__item l-footer-sns-list__item--facebook ">
+                            <a href="# " rel="noopener " class="l-footer-sns-list__target btn-sns btn-sns--facebook " data-share-btn="facebook ">
+                                <span class="btn-sns__inner ">
+            <svg xmlns="http://www.w3.org/2000/svg " width="50 " height="49.7 " viewBox="0 0 50 49.7 " role="img " aria-labelledby="svg-icon-facebook-footer ">
+<title id="svg-icon-facebook-footer ">Facebook</title>
+<path class="svg-fill-01 " d="M50,25A25,25,0,1,0,21.09,49.7V32.23H14.75V25h6.34V19.49c0-6.26,3.74-9.72,9.45-9.72a39,39,0,0,1,5.59.48v6.16H33c-3.11,0-4.07,1.92-4.07,3.9V25h6.93l-1.11,7.23H28.91V49.7A25,25,0,0,0,50,25Z "/>
+</svg>
+          </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="l-footer-utility ">
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/sitepolicy/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+         MongoDB
+        </a>
+                        </li>
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/privacy/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+          ElasticSearch
+        </a>
+                        </li>
+                        <li class="l-footer-utility__item ">
+                            <a href="https://www.jre.co.jp/ " target="_blank " rel="noopener " class="l-footer-utility__target ">
+         运营：桂林理式大学ー株式会社
+        </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-footer-copyright ">
+                    <small class="l-footer-copyright__text ">
+      &copy; China Recruitment visual  Design
+    </small>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
