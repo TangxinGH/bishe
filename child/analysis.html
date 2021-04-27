@@ -383,6 +383,55 @@
                                     <span class="think-detail-note__mark">※</span>Apriori 核心思想是：连接步和剪枝步。图中给出了所有可能的项集,其中非频繁项集用灰色表示。由于集合{2,3}是非频繁的 因此0.2,3}、(1,2,3和(0,2,3}也是非频繁的,它们的支持度根本不需要计算
                                 </p>
                             </section>
+                            <!-- machine learn  -->
+
+                            <section class="think-detail-section">
+                                <h2 class="think-detail-hdg">Random Forest</h2>
+                                <div class="think-detail-intro">
+                                    <figure class="think-detail-intro__image">
+                                        <img src="/assets/img/content/accuracy.png" alt="" width="452" height="404" loading="lazy" class="think-detail-intro__image-target">
+                                         
+                                    </figure>
+                                    <div class="think-detail-intro__text">
+                                        <p class="think-detail-intro__desc">随机森林或随机决策森林是一种用于分类、回归和其他任务的集成学习方法，它通过在训练时构造大量的决策树并输出类，即单个树的类(分类)或平均/平均预测(回归)的模式。 随机决策森林纠正了决策树与其训练集过度匹配的习惯。随机森林通常优于决策树，但是它们的准确性低于梯度增强树。</p>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <!-- 插入machin learn  -->
+                                    <p>示例数据： [1, '本科', '哈尔滨', '兼职', 0, '物业经理', ] 为小于6000</p>
+                                    <label class="col-sm-2 control-label" for="kw_forest">职位类型</label>
+                                    <select style="height: fit-content" type="text" class="form-control" id='kw_forest'></select>
+                                    <label class="control-label" for='exp_forest'>经验</label>
+                                    <input type='number' class="form-control" min=0 max=99 value=0 id='exp_forest'>
+                        
+                                    <label class="control-label" for='com_size_forest'>公司规模：</label>
+                                    <input type='number'  class="form-control" min=0 max=99999  id='com_size_forest' value=199> 人 
+                                
+                                    <label class="control-label" for='edu_forest'>学历：</label>
+                                    <input type='text' class="form-control"   id='edu_forest'   value='本科'> 
+
+                                    <label class="control-label" for='work_city_forest'>工作城市：</label>
+                                    <input type='text'  class="form-control"   id='work_city_forest' value='北京'> 
+                                
+                                    <label class="control-label" for='work_type_forest'>用工制：</label>
+                                    <input type='text' class="form-control"   id='work_type_forest' value='全职'>
+ 
+                                    <button type="button"  class="form-control" id="start_random_forest_predict">预测</button>
+                                    <p id='predict_value'></p>
+                                    <!-- machin learn -->
+                                </div>
+                                <figure class="think-detail-image-a" data-width-pc="100">
+                                    <img src="/assets/img/content/model_and_weights.png" alt="计算图" style='max-width: 100%; max-height:280px;' width="415" height="321" loading="lazy">
+                                    <figcaption class="think-detail-image-a__caption">
+                                        出典：資源 计算图结构「tflearn TensorBoard 2021年度版」
+                                    </figcaption>
+                                </figure>
+                                <p class="think-detail-note">
+                                    <span class="think-detail-note__mark">※</span>  Tensorboard的可视化功能很丰富。SCALARS栏目展示各标量在训练过程中的变化趋势。
+                                </p>
+                            </section>
+                            <!-- end machine learn  -->
                         </div>
                     </article>
                 </div>
@@ -546,6 +595,7 @@
         document.getElementById('kw_k').innerHTML += item_add_value;
         document.getElementById('kw_t').innerHTML += item_add_value;
         document.getElementById('kw_a').innerHTML += item_add_value;
+        document.getElementById('kw_forest').innerHTML += item_add_value;
 
     }
     document.getElementById('preloaderbody_k').style.display = 'none'
@@ -694,6 +744,40 @@
                 }
             })
         })
+    
+        $('#start_random_forest_predict').click(function(event){
+            $.ajax({
+                async: true, //表示请求是否异步处理
+                type: 'get', //请求类型
+                url: '/job/random_forest_predict', //请求的 URL地址
+                dataType:"json", //返回的数据类型
+                data: {
+                    'kw': $('#kw_forest').val(),
+                    'exp_forest':  $('#exp_forest').val(),
+                    'com_size_forest': $('#com_size_forest').val(),
+                    'edu_forest': $('#edu_forest').val(),
+                    'work_city_forest': $('#work_city_forest').val(),
+                    'work_type_forest': $('#work_type_forest').val()
+                },
+                success: function(data) {
+
+                            console.log(data);
+                            let prob=data.predict;
+                            if (data.result){
+                                console.log( (6000 + 6000 * prob[1]));
+                                document.getElementById('predict_value').innerHTML='预测薪酬为：' + ( 6000 + 6000 * prob[1]).toFixed(2);
+                            }
+                 
+                        else{
+                            console.log((6000 - 6000 * prob[0]));
+                            document.getElementById('predict_value').innerHTML='预测薪酬为：' + (6000 - 6000 * prob[0]).toFixed(2);
+
+                        }
+                    
+                }
+            })
+            
+        });
     </script>
 </body>
 
