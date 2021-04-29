@@ -611,7 +611,7 @@
             $.ajax({
                 async: true, //表示请求是否异步处理
                 type: 'get', //请求类型
-                url:"/job/online_k_means", //请求的 URL地址
+                url:"http://121.37.129.14:8000/job/online_k_means", //请求的 URL地址
                 dataType:"json", //返回的数据类型
                 data: {
                     'kw': $('#kw_k').val(),
@@ -648,7 +648,7 @@
             $.ajax({
                 async: true, //表示请求是否异步处理
                 type: 'get', //请求类型
-                url:"/job/textRank", //请求的 URL地址
+                url:"http://121.37.129.14:8000/job/textRank", //请求的 URL地址
                 dataType:"json", //返回的数据类型
                 data: {
                    "kw": $('#kw_t').val(),
@@ -698,7 +698,7 @@
             $.ajax({
                 async: true, //表示请求是否异步处理
                 type: 'get', //请求类型
-                url: '/job/startApriori', //请求的 URL地址
+                url: 'http://121.37.129.14:8000/job/startApriori', //请求的 URL地址
                 dataType:"json", //返回的数据类型
                 data: {
                     'kw': $('#kw_k').val(),
@@ -749,7 +749,7 @@
             $.ajax({
                 async: true, //表示请求是否异步处理
                 type: 'get', //请求类型
-                url: '/job/random_forest_predict', //请求的 URL地址
+                url: 'http://121.37.129.14:8000/job/random_forest_predict', //请求的 URL地址
                 dataType:"json", //返回的数据类型
                 data: {
                     'kw': $('#kw_forest').val(),

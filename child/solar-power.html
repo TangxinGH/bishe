@@ -599,7 +599,7 @@
             avgwageofcity.resize();
         }
 
-        $.get('/job/avgWage', function(avgWage) {
+        $.get('http://121.37.129.14:8000/job/avgWage', function(avgWage) {
             avgwageofcity.hideLoading();
             jobTypeData = avgWage;
 
@@ -734,7 +734,7 @@
                 $.ajax({
                     async: false, //表示请求是否异步处理
                     type: "get", //请求类型
-                    url: "/job/avgWage", //请求的 URL地址
+                    url: "http://121.37.129.14:8000/job/avgWage", //请求的 URL地址
                     dataType: "json", //返回的数据类型
                     data: {
                         "category": category

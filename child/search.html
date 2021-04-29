@@ -488,7 +488,7 @@
             $(function() {
                 $('#exampleTableEvents').bootstrapTable({
                     /* url:"queryDev.json", */
-                    url:"/job/getJobsInfo",
+                    url:"http://121.37.129.14:8000/job/getJobsInfo",
                     method:"get",
                     search: false,
                     cache: false,
@@ -611,7 +611,7 @@
             $.ajax({
                 async: true, //表示请求是否异步处理
                 type:"get", //请求类型
-                url:"/job/companyInfo", //请求的 URL地址
+                url:"http://121.37.129.14:8000/job/companyInfo", //请求的 URL地址
                 dataType:"json", //返回的数据类型
                 data: {
                    "numberId": numberId
