@@ -1,10 +1,11 @@
 import pathlib
+import sys
 
 from qiniu import Auth, BucketManager, build_batch_delete, put_file, etag
 from typing import List, Dict
 import os
 
-from Test.qiniuconfig import access_key, secret_key
+# from Test.qiniuconfig import access_key, secret_key
 
 
 class Sync:
@@ -92,11 +93,14 @@ class Sync:
 
 if __name__ == "__main__":
     # 不要开代理
+    access_key = sys.argv[1]
+    secret_key = sys.argv[2]
+
     Sync(
         access_key=access_key,  # access_key
         secret_key=secret_key,  # secret_key
         bucket_name="bi-she",  # bucket_name
-        sync_dir="D:/share/web/",  # 静态文件目录(后面必须有斜杠/)
+        sync_dir="./",  # 静态文件目录(后面必须有斜杠/)
         exclude=[".DS_Store"],
         cover=True,
         remove_redundant=True,
