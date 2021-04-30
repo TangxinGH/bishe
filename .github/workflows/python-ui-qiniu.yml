@@ -32,5 +32,5 @@ jobs:
        
     - name: push ui qiniu
       run: |
-        python qiniu_upload.py ${{ secrets.qiniuak }}  ${{ secrets.qiniusk }}
+        python qiniu_upload.py ${{ secrets.QINIU_AK }}  ${{ secrets.QINIU_SK }}
         
