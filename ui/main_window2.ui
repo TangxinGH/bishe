@@ -1,0 +1,2682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1538</width>
+    <height>1009</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Noto Serif SC</family>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>网络招聘数据分析可视化系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <widget class="QSplitter" name="splitter_5">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTabWidget" name="tabwidgetcenter_main">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="stacked_center_mainPage1">
+        <attribute name="icon">
+         <iconset>
+          <normaloff>主界面.svg</normaloff>主界面.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>主界面</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QSplitter" name="splitter_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <widget class="QSplitter" name="splitter_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <widget class="QTabWidget" name="tabWidget_4">
+             <property name="tabPosition">
+              <enum>QTabWidget::West</enum>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_11">
+              <attribute name="title">
+               <string>概要页</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_11">
+               <item row="3" column="1">
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="title">
+                  <string>Check</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_3">
+                  <item row="4" column="0">
+                   <widget class="QCheckBox" name="checkBox_4">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QCheckBox" name="checkBox">
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                    <property name="tristate">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QCheckBox" name="checkBox_3">
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                    <property name="tristate">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0">
+                   <widget class="QCheckBox" name="checkBox_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="tl_item_url_count">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QWidget" name="verticalWidget" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="command_line_input">
+                    <property name="text">
+                     <string>cmd执行的命令:</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Preferred</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox">
+                 <property name="title">
+                  <string>抓取概要页</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="pb_start_spider">
+                    <property name="toolTip">
+                     <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                    </property>
+                    <property name="text">
+                     <string>开始</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>start.svg</normaloff>start.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="pushButton_6">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>Disabled</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="pushButton_">
+                    <property name="text">
+                     <string>Checked</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="pushButton_kill_end">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>终止</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>终止.svg</normaloff>终止.svg</iconset>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="pushButton_11">
+                    <property name="text">
+                     <string>Flat</string>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="pushButton_5">
+                    <property name="text">
+                     <string>Flat checkeable</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QGroupBox" name="groupBox_2">
+                 <property name="title">
+                  <string>暂无</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="1" column="0">
+                   <spacer name="verticalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QTextBrowser" name="current_climb_progress"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_13">
+              <attribute name="title">
+               <string>详情页</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <widget class="QGroupBox" name="groupbox_spider_job_info">
+                 <property name="title">
+                  <string>抓取详情页</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_27" rowstretch="0,0">
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="pb_start_spider_job_info">
+                    <property name="text">
+                     <string>开始</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>start.svg</normaloff>start.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="pushButton_16">
+                    <property name="text">
+                     <string>Flat checkeable</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="pushButton_13">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>Disabled</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>false</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="pushButton_12">
+                    <property name="text">
+                     <string>Checked</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="pushButton_end_spider_job_info">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>终止</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>终止.svg</normaloff>终止.svg</iconset>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                    <property name="flat">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="pushButton_15">
+                    <property name="text">
+                     <string>Flat</string>
+                    </property>
+                    <property name="flat">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="text">
+                      <string>已经处理：</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="tl_item_url_count_job_info">
+                     <property name="text">
+                      <string>tl_item</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>当前抓取：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="pt_command_line_job_info">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>当前抓取的详细页：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="current_climb_progress_job_info"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_tutorial">
+              <attribute name="icon">
+               <iconset>
+                <normaloff>使用说明.svg</normaloff>使用说明.svg</iconset>
+              </attribute>
+              <attribute name="title">
+               <string>使用说明</string>
+              </attribute>
+              <widget class="QWidget" name="verticalLayoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>9</x>
+                 <y>9</y>
+                 <width>281</width>
+                 <height>131</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>1.配置好目录下的config.py和yaml后缀的文件</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>2.安装mitmdump证书</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>3.第一次先登录网站</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </widget>
+            <widget class="QTabWidget" name="tabWidget_2">
+             <property name="tabPosition">
+              <enum>QTabWidget::East</enum>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="tabsClosable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="tab">
+              <attribute name="title">
+               <string>数据处理</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_22">
+               <item row="0" column="0" rowspan="2" colspan="2">
+                <widget class="QToolBox" name="toolBox">
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_4">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>677</width>
+                    <height>498</height>
+                   </rect>
+                  </property>
+                  <attribute name="icon">
+                   <iconset>
+                    <normaloff>数据处理.svg</normaloff>数据处理.svg</iconset>
+                  </attribute>
+                  <attribute name="label">
+                   <string>数据处理</string>
+                  </attribute>
+                  <layout class="QGridLayout" name="gridLayout_21">
+                   <item row="3" column="0" colspan="4">
+                    <layout class="QGridLayout" name="gridLayout_4">
+                     <item row="3" column="2">
+                      <widget class="QComboBox" name="comboBox_4">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="5" column="2">
+                      <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QSpinBox" name="spinBox"/>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QComboBox" name="stage_select">
+                       <property name="editable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="currentText">
+                        <string>第一阶段</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>第一阶段</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>1.svg</normaloff>1.svg</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>第二阶段</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>2.svg</normaloff>2.svg</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>第三阶段</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>3.svg</normaloff>3.svg</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QLineEdit" name="lineEdit">
+                       <property name="text">
+                        <string>Lorem ipsum dolor sit amet</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="2">
+                      <widget class="QLineEdit" name="lineEdit_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="text">
+                        <string>Lorem ipsum dolor sit amet</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QComboBox" name="comboBox_2">
+                       <item>
+                        <property name="text">
+                         <string>测试</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>学历</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>工作城市</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>用工制</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>经验</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>kw</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>薪酬</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QComboBox" name="comboBox_5">
+                       <property name="frame">
+                        <bool>false</bool>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>第三阶段</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>3.svg</normaloff>3.svg</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item2</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item3</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item5</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item6</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item7</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="4" column="2">
+                      <widget class="QSpinBox" name="spinBox_2">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QComboBox" name="comboBox_7">
+                       <property name="editable">
+                        <bool>true</bool>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>第二阶段</string>
+                        </property>
+                        <property name="icon">
+                         <iconset>
+                          <normaloff>2.svg</normaloff>2.svg</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QComboBox" name="comboBox_6">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="frame">
+                        <bool>false</bool>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Item1</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item2</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item3</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item5</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item6</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item7</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="7" column="0">
+                      <widget class="QLineEdit" name="lineEdit_3">
+                       <property name="placeholderText">
+                        <string>Placeholder text</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QLabel" name="stage_dp_info_other">
+                       <property name="text">
+                        <string>详细页中断可分段开始</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="7" column="2">
+                      <widget class="QLineEdit" name="lineEdit_4">
+                       <property name="enabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Placeholder text</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QPushButton" name="stage_dp_info">
+                       <property name="text">
+                        <string>选择此分段开始</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>start.svg</normaloff>start.svg</iconset>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>success</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="text">
+                      <string>数据量化</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <spacer name="horizontalSpacer_4">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>427</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_3">
+                     <property name="font">
+                      <font>
+                       <family>Noto Serif SC</family>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>数据去重</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_2">
+                     <property name="text">
+                      <string>数据清洗</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0" rowspan="2" colspan="4">
+                    <layout class="QGridLayout" name="gridLayout_7">
+                     <item row="2" column="2">
+                      <widget class="QPushButton" name="pushButton_21">
+                       <property name="text">
+                        <string>Warning</string>
+                       </property>
+                       <property name="flat">
+                        <bool>true</bool>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>warning</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QPushButton" name="pb_dp_jobs_wash">
+                       <property name="text">
+                        <string>概要页数据清洗</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>数据清洗.svg</normaloff>数据清洗.svg</iconset>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>success</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QPushButton" name="pushButton_22">
+                       <property name="text">
+                        <string>Success</string>
+                       </property>
+                       <property name="flat">
+                        <bool>true</bool>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>success</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QPushButton" name="pushButton_23">
+                       <property name="text">
+                        <string>Danger</string>
+                       </property>
+                       <property name="flat">
+                        <bool>true</bool>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>danger</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QPushButton" name="pb_dp_job_info_wash">
+                       <property name="text">
+                        <string>详细页数据清洗</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>数据清洗.svg</normaloff>数据清洗.svg</iconset>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>success</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QPushButton" name="pb_dp_storge_db">
+                       <property name="text">
+                        <string>存入数据库</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>数据存储.svg</normaloff>数据存储.svg</iconset>
+                       </property>
+                       <property name="class" stdset="0">
+                        <string>warning</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0" colspan="3">
+                      <widget class="QLabel" name="tl_command_line_job_public_dp">
+                       <property name="text">
+                        <string>执行的命令</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>677</width>
+                    <height>498</height>
+                   </rect>
+                  </property>
+                  <attribute name="icon">
+                   <iconset>
+                    <normaloff>预测.svg</normaloff>预测.svg</iconset>
+                  </attribute>
+                  <attribute name="label">
+                   <string>预测</string>
+                  </attribute>
+                  <widget class="QWidget" name="layoutWidget_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>651</width>
+                     <height>351</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <item>
+                     <widget class="QLCDNumber" name="lcdNumber">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="smallDecimalPoint">
+                       <bool>true</bool>
+                      </property>
+                      <property name="digitCount">
+                       <number>10</number>
+                      </property>
+                      <property name="segmentStyle">
+                       <enum>QLCDNumber::Flat</enum>
+                      </property>
+                      <property name="value" stdset="0">
+                       <double>3.141592000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QFormLayout" name="formLayout">
+                      <property name="sizeConstraint">
+                       <enum>QLayout::SetMaximumSize</enum>
+                      </property>
+                      <property name="fieldGrowthPolicy">
+                       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                      </property>
+                      <property name="rowWrapPolicy">
+                       <enum>QFormLayout::DontWrapRows</enum>
+                      </property>
+                      <property name="labelAlignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="formAlignment">
+                       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                      </property>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="Label">
+                        <property name="text">
+                         <string>公司规模</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QSpinBox" name="company_size_predict">
+                        <property name="suffix">
+                         <string>人</string>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="value">
+                         <number>199</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="Label_2">
+                        <property name="text">
+                         <string>学历</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QComboBox" name="education_predict">
+                        <property name="editable">
+                         <bool>true</bool>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>本科</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>New Item</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>New Item</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>New Item</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>New Item</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QLabel" name="Label_3">
+                        <property name="text">
+                         <string>工作城市</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <widget class="QLineEdit" name="work_city_predict">
+                        <property name="inputMask">
+                         <string/>
+                        </property>
+                        <property name="text">
+                         <string>北京</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="0">
+                       <widget class="QLabel" name="Label_4">
+                        <property name="text">
+                         <string>用工制</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="1">
+                       <widget class="QComboBox" name="work_type_predict">
+                        <item>
+                         <property name="text">
+                          <string>全职</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>兼职</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item row="5" column="0">
+                       <widget class="QLabel" name="Label_5">
+                        <property name="text">
+                         <string>经验</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="1">
+                       <widget class="QSpinBox" name="exp_predict">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="suffix">
+                         <string>年</string>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="0">
+                       <widget class="QLabel" name="kwLabel">
+                        <property name="text">
+                         <string>kw</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="1">
+                       <widget class="QLineEdit" name="kw_predict">
+                        <property name="text">
+                         <string>物业经理</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="0" colspan="2">
+                       <widget class="QPushButton" name="predict">
+                        <property name="text">
+                         <string>预测</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_6">
+                        <property name="text">
+                         <string>示例</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLabel" name="label_11">
+                        <property name="text">
+                         <string> [1, '本科', '哈尔滨', '兼职', 0, '物业经理', ] 则为低于6000</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>98</width>
+                    <height>28</height>
+                   </rect>
+                  </property>
+                  <attribute name="icon">
+                   <iconset>
+                    <normaloff>在浏览器打开.svg</normaloff>在浏览器打开.svg</iconset>
+                  </attribute>
+                  <attribute name="label">
+                   <string>可视化</string>
+                  </attribute>
+                  <layout class="QGridLayout" name="gridLayout_14">
+                   <item row="0" column="0">
+                    <widget class="QWebEngineView" name="webEngineView" native="true">
+                     <property name="url" stdset="0">
+                      <url>
+                       <string>http://127.0.0.1:5500/energy.html</string>
+                      </url>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_2">
+              <attribute name="title">
+               <string>数据分析</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_23">
+               <item row="0" column="0">
+                <widget class="QWebEngineView" name="mongodbcharts" native="true">
+                 <property name="url" stdset="0">
+                  <url>
+                   <string>https://localhost/</string>
+                  </url>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+           <widget class="QTabWidget" name="tabWidget_3">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>324</height>
+             </size>
+            </property>
+            <property name="tabPosition">
+             <enum>QTabWidget::South</enum>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <property name="documentMode">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="tab_7">
+             <attribute name="title">
+              <string>Page</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QTabWidget" name="tabWidget_last_bottom">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <property name="tabsClosable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="tab_3">
+                 <attribute name="title">
+                  <string>common</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_6">
+                  <item row="0" column="0">
+                   <widget class="QSplitter" name="splitter">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <widget class="QFrame" name="frame">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_5">
+                      <item row="0" column="0">
+                       <widget class="QSplitter" name="splitter_3">
+                        <property name="orientation">
+                         <enum>Qt::Vertical</enum>
+                        </property>
+                        <widget class="QFrame" name="frame_3">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_12">
+                          <item row="0" column="0">
+                           <widget class="QScrollBar" name="horizontalScrollBar_2">
+                            <property name="value">
+                             <number>50</number>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QFrame" name="frame_4">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_15">
+                          <item row="0" column="0">
+                           <widget class="QSlider" name="horizontalSlider_2">
+                            <property name="value">
+                             <number>50</number>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QFrame" name="frame_5">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_19">
+                          <item row="0" column="0">
+                           <widget class="QProgressBar" name="progressBar_2">
+                            <property name="value">
+                             <number>24</number>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QFrame" name="frame_2">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <item row="0" column="0">
+                       <widget class="QStackedWidget" name="stackedWidget">
+                        <property name="currentIndex">
+                         <number>1</number>
+                        </property>
+                        <widget class="QWidget" name="page_5">
+                         <layout class="QGridLayout" name="gridLayout_18">
+                          <item row="0" column="0">
+                           <spacer name="horizontalSpacer">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>40</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QScrollBar" name="verticalScrollBar_2">
+                            <property name="value">
+                             <number>50</number>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="2">
+                           <spacer name="horizontalSpacer_3">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>8</width>
+                              <height>108</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item row="0" column="3">
+                           <widget class="QSlider" name="verticalSlider_2">
+                            <property name="value">
+                             <number>50</number>
+                            </property>
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="4">
+                           <spacer name="horizontalSpacer_2">
+                            <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>32</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="page_6"/>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QListWidget" name="listWidget_2">
+                    <property name="iconSize">
+                     <size>
+                      <width>64</width>
+                      <height>64</height>
+                     </size>
+                    </property>
+                    <property name="resizeMode">
+                     <enum>QListView::Adjust</enum>
+                    </property>
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="viewMode">
+                     <enum>QListView::IconMode</enum>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="sortingEnabled">
+                     <bool>true</bool>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QTreeWidget" name="treeWidget">
+                    <column>
+                     <property name="text">
+                      <string>Material Tree</string>
+                     </property>
+                    </column>
+                    <item>
+                     <property name="text">
+                      <string>Tree #1</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Subitem #1</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Subitem #2</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>New Item</string>
+                       </property>
+                      </item>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Tree #2</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Subitem #4</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Subitem #41</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Subitem #42</string>
+                      </property>
+                     </item>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Subitem #5</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Tree #3</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Tree #4</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <widget class="QTableWidget" name="tableWidget">
+                    <property name="alternatingRowColors">
+                     <bool>true</bool>
+                    </property>
+                    <attribute name="horizontalHeaderStretchLastSection">
+                     <bool>true</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderVisible">
+                     <bool>false</bool>
+                    </attribute>
+                    <row>
+                     <property name="text">
+                      <string>Row-1</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="media-playback-start">
+                       <normaloff>C:/Users/26284/.designer/backup</normaloff>C:/Users/26284/.designer/backup</iconset>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>Row-3</string>
+                     </property>
+                    </row>
+                    <column>
+                     <property name="text">
+                      <string>Duration</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Datetime</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Name</string>
+                     </property>
+                    </column>
+                    <item row="0" column="0">
+                     <property name="text">
+                      <string>00:05:02</string>
+                     </property>
+                     <property name="checkState">
+                      <enum>Checked</enum>
+                     </property>
+                    </item>
+                    <item row="0" column="1">
+                     <property name="text">
+                      <string>2020-04-27 17:31:34</string>
+                     </property>
+                    </item>
+                    <item row="0" column="2">
+                     <property name="text">
+                      <string>Unamed-1</string>
+                     </property>
+                    </item>
+                    <item row="1" column="0">
+                     <property name="text">
+                      <string>00:01:02</string>
+                     </property>
+                     <property name="checkState">
+                      <enum>Checked</enum>
+                     </property>
+                    </item>
+                    <item row="1" column="1">
+                     <property name="text">
+                      <string>2020-04-27 17:31:34</string>
+                     </property>
+                    </item>
+                    <item row="1" column="2">
+                     <property name="text">
+                      <string>Unamed-2</string>
+                     </property>
+                    </item>
+                    <item row="2" column="0">
+                     <property name="text">
+                      <string>00:07:02</string>
+                     </property>
+                     <property name="checkState">
+                      <enum>Checked</enum>
+                     </property>
+                    </item>
+                    <item row="2" column="1">
+                     <property name="text">
+                      <string>2020-04-27 17:31:34</string>
+                     </property>
+                    </item>
+                    <item row="2" column="2">
+                     <property name="text">
+                      <string>Unamed-3</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_15">
+                 <attribute name="icon">
+                  <iconset>
+                   <normaloff>命令行.svg</normaloff>命令行.svg</iconset>
+                 </attribute>
+                 <attribute name="title">
+                  <string>控制台</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_29">
+                  <item row="0" column="0">
+                   <widget class="QWidget" name="widget" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                     <item>
+                      <widget class="QTextBrowser" name="textBrowser_stdout_console">
+                       <property name="maximumSize">
+                        <size>
+                         <width>950</width>
+                         <height>350</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QToolButton" name="toolButton_trash">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>32</width>
+                         <height>32</height>
+                        </size>
+                       </property>
+                       <property name="baseSize">
+                        <size>
+                         <width>16</width>
+                         <height>16</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>trash</string>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>trash.svg</normaloff>trash.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_16">
+                 <attribute name="title">
+                  <string>DP</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_30">
+                  <item row="0" column="0">
+                   <widget class="QFrame" name="frame_6">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="tab_18">
+                 <attribute name="title">
+                  <string>AN</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_19">
+                 <attribute name="title">
+                  <string>wash</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_14">
+                 <attribute name="title">
+                  <string>store</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_4">
+                 <attribute name="title">
+                  <string>spider</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_5">
+                 <attribute name="title">
+                  <string>monogo</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_8"/>
+                </widget>
+                <widget class="QWidget" name="tab_6">
+                 <attribute name="title">
+                  <string>elastic</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_10">
+                  <item row="0" column="0">
+                   <widget class="QTabWidget" name="tabWidget_5">
+                    <property name="tabPosition">
+                     <enum>QTabWidget::East</enum>
+                    </property>
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="tab_20">
+                     <attribute name="title">
+                      <string>Tab 1</string>
+                     </attribute>
+                     <layout class="QGridLayout" name="gridLayout_25">
+                      <item row="0" column="0">
+                       <widget class="QTabWidget" name="tabWidget_6">
+                        <property name="tabPosition">
+                         <enum>QTabWidget::South</enum>
+                        </property>
+                        <property name="currentIndex">
+                         <number>0</number>
+                        </property>
+                        <widget class="QWidget" name="tab_22">
+                         <attribute name="title">
+                          <string>Tab 1</string>
+                         </attribute>
+                         <layout class="QGridLayout" name="gridLayout_28">
+                          <item row="0" column="0">
+                           <widget class="QTabWidget" name="tabWidget_7">
+                            <property name="tabPosition">
+                             <enum>QTabWidget::West</enum>
+                            </property>
+                            <widget class="QWidget" name="tab_24">
+                             <attribute name="title">
+                              <string>Tab 1</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="tab_38">
+                             <attribute name="title">
+                              <string>Page</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="tab_39">
+                             <attribute name="title">
+                              <string>Page</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="tab_25">
+                             <attribute name="title">
+                              <string>Tab 2</string>
+                             </attribute>
+                            </widget>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                        <widget class="QWidget" name="tab_23">
+                         <attribute name="title">
+                          <string>Tab 2</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_28">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_29">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_30">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_31">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_32">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_33">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_34">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_35">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_36">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                        <widget class="QWidget" name="tab_37">
+                         <attribute name="title">
+                          <string>Page</string>
+                         </attribute>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="tab_26">
+                     <attribute name="title">
+                      <string>Page</string>
+                     </attribute>
+                    </widget>
+                    <widget class="QWidget" name="tab_21">
+                     <attribute name="title">
+                      <string>Tab 2</string>
+                     </attribute>
+                    </widget>
+                    <widget class="QWidget" name="tab_27">
+                     <attribute name="title">
+                      <string>Page</string>
+                     </attribute>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_17">
+             <attribute name="title">
+              <string>Page</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_31">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QFrame" name="frame_7">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_33" columnstretch="1,1">
+                 <item row="0" column="0">
+                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                   <item>
+                    <widget class="Line" name="line_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="0" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <widget class="Line" name="line_4">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_5">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_6">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWebEngineView" name="webmainpage">
+        <property name="url" stdset="0">
+         <url>
+          <string>http://localhost:5500/</string>
+         </url>
+        </property>
+        <attribute name="icon">
+         <iconset>
+          <normaloff>可视化.svg</normaloff>可视化.svg</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>可视化</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QDockWidget" name="dockWidget_7">
+          <property name="windowTitle">
+           <string>Top Dock</string>
+          </property>
+          <widget class="QWidget" name="dockWidgetContents_6">
+           <layout class="QGridLayout" name="gridLayout_24">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="listWidget_3">
+              <item>
+               <property name="text">
+                <string>New Item (editable)</string>
+               </property>
+               <property name="checkState">
+                <enum>Checked</enum>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>window运行</string>
+               </property>
+               <property name="checkState">
+                <enum>Unchecked</enum>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>路径配置</string>
+               </property>
+               <property name="checkState">
+                <enum>PartiallyChecked</enum>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>打开数据库</string>
+               </property>
+               <property name="checkState">
+                <enum>Checked</enum>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>抽样性</string>
+               </property>
+               <property name="checkState">
+                <enum>Unchecked</enum>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>其它</string>
+               </property>
+               <property name="checkState">
+                <enum>PartiallyChecked</enum>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>想做的</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>更好</string>
+               </property>
+               <property name="flags">
+                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDockWidget" name="dockWidget_2">
+          <property name="windowTitle">
+           <string>Right Doc</string>
+          </property>
+          <widget class="QWidget" name="dockWidgetContents_2">
+           <layout class="QGridLayout" name="gridLayout_34">
+            <item row="0" column="0">
+             <widget class="QTextEdit" name="textEdit_2">
+              <property name="markdown">
+               <string># pip install selenium,mitmproxy ...  # zhaopin.com  -
+
+[selenium与mitmproxy实现自动化数据爬取](https://www.codenong.com/cs106962946/)** - 
+[api的都 失效了，selenium有检测机制](https://zhuanlan.zhihu.com/p/149760553) - 2021.3.15 
+[https://fe-api.zhaopin.com/c/i/sou](https://fe-api.zhaopin.com/c/i/sou)?**
+
+**url变更为position   1. 先选获取所有type 职位大全type.txt 2. 根据type 一个一个的获取 3. 获取城市code  # 命令 
+`commandline mitmweb -s addons.py  mitmdump 无ui  -s 无脚本插件 upstream:   
+upstream-auth 认证   `  运行命令：mitmweb -s addons.py 默认打开默认浏览器 8080端口  # tools**
+
+[您覺得文字排序工具實用嗎？](http://gadget.chienwen.net/x/text/sort)**  # 环境  chromedriver**
+
+**89.0.4389.90 python3.9  # 快捷键生成local variables   ctrl + alt + v  以前好前alt enter
+也是可以提示修复的，不这里是python  # mitmproxy   一定要安装证书到根系统，否则https不显示或者，是pinning的问题 debug**
+
+[只能反代理？](https://gist.github.com/tomsaleeba/c463550b43eb9c58d8b415523c49f70b)**
+或者使用cmdline命令来在pycharm中调试  3. 
+[https://zhuanlan.zhihu.com/p/161350888](https://zhuanlan.zhihu.com/p/161350888)
+python debug server 这个可以 4. mitmweb ui 资源占用，ui好，所以 mitproxy比较好， 5.
+可以不用类，直接函数，在pycharm中运行配置怎么配置？命令行？。  # import机制
+sys.path.append(&quot;../&quot;)#spiders与插件不在同一模块下，所以要加上路径。查一下import的机制就知道了。尽量反斜杠  #
+pYcharm热更新**
+
+
+[https://blog.csdn.net/lly1122334/article/details/103957530](https://blog.csdn.net/lly1122334/article/details/103957530)
+
+1.  **Evaluate  可以更改，但下一次执行呢？  2. Show Python Prompt    - `from importlib import
+    reload→importlib.reload(module)`  不会用**
+2.  
+    [pycharm hot reload](https://stackoverflow.com/questions/23333815/is-there-edit-and-continue-in-pycharm-reload-code-into-running-program-like-i)
+    热重载，最好是无状态的moudle ，否则，不行。与其他模块有关联的状态的话，是不行了  ---  1. Work in Pycharm on a
+    python project :-) 2. Execute your code in Debug mode (did not tried
+    Release so far) 3. Edit some code in one your modules imported during the
+    life of your program  4. Make your program pause. To achieve this, you can
+    click the &quot;Pause&quot; button of in PyCharms Debug view and then any place in
+    your applications main window where it would need to do something (for
+    example on a tab header). If you have a long a running task and no UI, you
+    may place a breakpoint in a place your program often comes by. 5. In the
+    Debug view, switch to the Console tab. There is a button on the left Show
+    command line. Click this. 6. In the console, type in
+    reload(MyModifiedModule) if this call fails, write import MyModifiedModule
+    and try again. 7. Click resume in PyCharm. 8. Try the code you fixed.  #
+    输入框无法清除  0. 选中click(),focus 1. 双击，三击click() 2. keys.backspace n次**
+3.  **3.crtl a +backspace 3. 然后检查 value是否清除了  #浏览器插件爬虫调试 XSwitch  webscrapy 
+    XHook 
+    [devtools](https://docs.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/open/?tabs=cmd-Windows)
+    可能这种方法更快，不用写多少代码，那么多东西研究学习  # Terminal  终端修改 setting-&gt;搜索 terminal specify
+    the powershell.exe or other   # modify the todo style   search todo in
+    setting  add pattern  such as important things mark  `shell \bTips\b.* `  #
+    保存数据 elasticcsearch curl kiban 展示 数据分析保存数据库，再展示算静态了
+    再在kiban上加点操作加点动态的东西，自定义查询，分析由客户自己分析，nice,我只做处理  #正则表达式 \r 回车 \n 换行  #docker
+    vnc chrome   # myspider 路径问题  1. 要改是是zhaopin.py 、 scheduler.py、中的
+    projectDataDir,和 seleniumChrome.py的chromdriver路径，userdir 目录也改一下 2.
+    如果环境包目录问题，则 像 addons.py**
+4.  **放到项目根目录，并修改第1点中的目录 3. AutomationProfile 是userdir=xxx 登录信息会在里面  #
+    更多的chrome命令参照**
+5.  
+    [Chromium ](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+
+
+[chromium-command-line-switches](https://peter.sh/experiments/chromium-command-line-switches/)
+
+# 数据日志文件非常大，几个g，全部放到一个数组是不行的？  ，除非内存够大，不在乎性能，  -
+
+**首先想到生产-消费模式，但是，好像自己实现有点。。，要多线程。 -  用文件一边读，一边写，有加锁。。。 -
+想到linux的管道grep，python有管道这个东西 -  缺点是日志中有重复的数据，浪费时间，1中的数组虽然可以去重。可以去重了，保存到文件，再管道吧，
+\-  或者重复是有规则的？？ 麻烦，直接文件覆盖得了，然后记录进行到的位置 ttributeError: module 'os' has no
+attribute 'fork 只能linux    用yield  # 详细页因为是html
+所以不用mitproxy了，一堆网络问题，直接用selenium 来，缺点是文档结构不是reponse中的样貌，因为js会改变的，那直接禁止js加载，不行 
+![抓取的过程](images/cimb.png) ![job_info_html](images/job_info_html.png) 
+![positionURL.png](images/positionURL.png) 
+![recommendData.png](images/recommendData.png)  # nosql 原因
+第一，解析的json数据，mongo存储就是用json格式，读取和写入非常方便；第二，mongo不用提前设计表Schema，对我们这种临时性和不确定性的分析带来
+便；第三，mongo可以存储海量的数据；第四，mongo会缓存热点数据，我们在后续分析时候读取会非常快。  主要是爬虫数据结构变化，与sql 解耦不太  #
+数据库的设计  一个el index job 连到其它表越多，可搜索的就越多 表：  1. 大类表：9个，附上id  2. 职业表: kws 集合，附上id
+3. job 表： 一个job一行。城市id 与jobid 共同为主键     &gt; job 增加两个类型：城市id与kw关键字id  4.
+城市表：城市代码与城市  5. job详情表，url 作id  6. 公司表  # 数据清洗去重量化  pandas 二维数据 dataframes
+drop_duplicates()函数 ![drop_duplicates.png](images/drop_duplicates.png)
+去掉44%，网络问题  1. 去掉重复的，重复是城市id与job url id 共为主键下，不同。联合主键因为，同工作，可以不同城市，但却job url
+指定的是一样的招聘信息  2. 清洗，去掉无用的数据，http code状态码之类的。其实也就是取list的内容而已     &gt; 1. 取list     &gt;
+2. 增加 城市id ,工作kw关键字，值为空的由pandas改为NAN    &gt; 3. 存储，按行存入文件    &gt; 4. 再存入数据库
+mongoimport -d 数据库名 -c 集合名 --file 文件名 --jsonArray    &gt; 5. 清洗之后，newtag
+&quot;welfareLabel&quot;:[], citydi&quot;&quot;的正则表达 删除，因为nosql不像sql 关系，结构   3. 量化     &gt;
+工资不量化的话，统计的时候太难统计，尤其是有范围的数据    &gt;    &gt; &gt;目前要量化的有工资、万字转换为数字，好像有现成的了。。。 公司人数，人    &gt;**
+
+**job详情的，肯定要量化  ## pandas   要做的  0.
+使用三维的还是二维的？生成json后，还要处理,二维的可以，转json还保持原样，关键是这个文件太大，一行一行存储（line=true）？？，或者直接写入数据库**
+
+1.  **删除所有含缺失值的行，这个在处理完所有的文件后做 2. 
+    [同一文件增加列](https://www.geeksforgeeks.org/adding-new-column-to-existing-dataframe-in-pandas/)**
+
+
+[add-new-col-df-default-value默认值](https://www.interviewqs.com/ddi-code-snippets/add-new-col-df-default-value)
+3. 增加列后合并两个文件 4. 
+[去掉无用的行](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html)**
+
+## 中文  UTF-8与unicode     UTF-8
+
+**是变长的，1-6个字节，少数是汉字每个占用3个字节，多数占用4个字节，正则式为[\x80-\xff]{3}，这个都知道了吧。     
+unicode下，汉字的格式如\uXXXX，只要找到对应的字符集的范围，就能匹配相应的字串，方便从多语言文本中挑出所需要的某种语言的文本。不过，对于像日文这样的
+着语，既有中文字符，又有平假名片假名，或许结果会有所偏差。 ———————————————— 版权声明：本文为CSDN博主「CHENG
+Jian」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/gatieme/article/details/43235791  # 快捷键  command +
+Alt + T 代码块包围(Try Except 等)  # 修改  ## 量化   return tmp.replace(r'^\s*$|[]',
+np.NaN, regex=True)  # 去掉空的值,用正则 TODO notepad++ 正则就行了是，sb   - job detail**
+
+**这个先wo，四个目录一遍先，然后，再与数据库对比，看，缺了哪些。再输出到文件（按这个文件再爬一次），不然，错误中断继续太麻烦。，  # 开多线程/多进程 6.
+不合并了，queue/list保存，最后read就行读出来  - 发送任务的队列:   task_queue = queue.Queue() -
+接收结果的队列:   result_queue = queue.Queue()   线程池，结果采集   数据队列   数据队列    13:52:16**
+
+**奇数，偶数   两两比较/相加  执行次数为 n-1次，最后都会剩下一个元素，所以判断多少次就行了  # 平行计算**
+
+
+[Pandas and Multiprocessing: How to create dataframes in a parallel way](https://python.plainenglish.io/pandas-and-multiprocessing-how-to-create-dataframes-in-a-parallel-way-72f9b18ea72f)
+
+# quantification 量化数据    tmp.companySize = tmp.companySize.apply(lambda s:
+
+**pd.Series(s.removesuffix(&quot;人&quot;))) 还有1000人以上这种 字段,太多了吧   return
+tmp.replace(r'^\s*$|[]', np.NaN, regex=True)  # 去掉空的值,用正则 TODO notepad++
+正则就行了是，sb  1. &quot;&quot; -&gt; 保持 2. [] -&gt; 保持？ 3. &quot;state&quot;:0, -&gt; '' 用正则删除**
+
+
+[正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+x(?!y)  仅仅当'x'后面不跟着'y'时匹配'x'，这被称为正向否定查找。**
+
+
+[\w+(?=ing)，返回“str”，意思为：匹配以ing结束的单词](https://www.w3cschool.cn/regexp/cwp91pqg.html)
+4. (\d+-\d+)人|(\d+)人以上     。先将薪资水平字段值取平均值，再根据平均值所属的区间值进行划分。,     为0则是面议**
+
+**经验水平，也是这样  5. 利用 
+[andas DataFrame数据的增、删、改、查](https://blog.csdn.net/zhangchuang601/article/details/79583551)
+这里要注意的一点是，我们有时会听到说python中的list对象不是线程安全的，这个说法是不严谨的，因为线程是否安全，针对的不是对象，而是操作。如果我们指这样的
+作L[0] = L[0] + 1，它当然不是一个原子操作，不加以保护就会导致线程不安全，而L.append(i)这样的操作则是线程安全的。  作者：dwzb
+链接：https://juejin.cn/post/6844903615824396295 来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  # elasticsearch  ## Starting a single node
+cluster with Docker  docker run -p 9200:9200 -p 9300:9300 -e
+&quot;discovery.type=single-node&quot;
+docker.elastic.co/elasticsearch/elasticsearch:7.12.0 python -m pip install
+elasticsearch 
+[Python进阶必学库：elasticsearch-py使用详解(上篇)](https://hackpython.com/blog/2019/06/28/Python%E8%BF%9B%E9%98%B6%E5%BF%85%E5%AD%A6%E5%BA%93%EF%BC%9Aelasticsearch-py%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3-%E4%B8%8A%E7%AF%87/)
+docker --memory=4g 限制内存 更新参数 docker container update --restart=always 容器名字  #
+mongodb chart  #   cityid  换成 city名  mongodb集合中插入文档时，如果您没有在字段名称中添加带有_id的字段名称，
+数字没有意义,而且中文一样可以关系型sql  # 让用户自己判断价值,我提供计算.def .用户需求太多...抽象,..思维**
+
+
+[在使用excel表格工作时，我们很经常接触输入相同的前缀或者后缀的情况](https://kknews.cc/zh-tw/career/yzpo4ej.html)
+。 加入 https+number+.htm   &gt;
+&quot;cityId&quot;:\d+?,|&quot;companyId&quot;:\d+?,|&quot;companyNumber&quot;:.+?,|&quot;companyRootId&quot;:.+?,|&quot;webs
+te&quot;:\d+?,|&quot;jobId&quot;:\d+?, &gt; education 正则改为学历,或者pandas在初期的时候  &gt;
+companySize(.+?)name(.+?)property(.+?)publishTime(.+?)salaryReal(.+?)skillLabel(
+\+?)welfareLabel(.+?)workCity &gt; 公司规模$1职位$2公司性质$3发布时间$4薪酬$5技能$6福利待遇$7工作城市
+，不是按顺序的就会不替换  _id 急招 &quot;typeShowLabel&quot;:&quot; type:11急招**
+
+
+[Pandas remove null values when to_json](https://stackoverflow.com/questions/30912746/pandas-remove-null-values-when-to-json)
+拼音搜索**
+
+
+[ 将Excel中的两列或多列数据汇总到一列](https://stackoverflow.com/questions/32291654/excel-append-one-range-to-the-end-of-another-in-one-column)
+md,直接记事本,复制粘贴,不卡 然后去重 ![excelurldropducate.png](images/excelurldropducate.png) 
+![result.png](images/excelresult.png) excel对比两列不同, 用记事本打开，不会卡 json.dumps(&quot;ברי
+צקלה&quot;, ensure_ascii=False).encode('utf8') 导入数据模块，web麻烦不实用**
+
+**哈工大停用词表,如的、在、于是、因此、一般、无论等等之类的词语， 称之为停用词，多次试验发现的在句子中没有实际意义且还频繁出现的词语，例如具有、深入、熟悉、
+良好、较好、使用、一定 不需要英文,四字的停用词 Thank'sstop words lis 即：停止词列表
+就是已经被搜索引擎认为是没有必要收录的词，可能这词没意思，或者这个词非常高的密度了。为了节约服务器资源，搜索爬虫就拒绝在收录这样的词了。 Simply
+change start = time.clock() to start = time.perf_counter() in the file:
+thulac/character/CBTaggingDecoder.py, the program will run well 或者改为jiaba
+module 'time' has no attribute 'clock'   职位最多的分类 ，这还用k-means啊。直接分大类就行。 docker
+run    --link elasticsearch7:elasticsearch -p 5601:5601 -d --name kibana7
+docker.elastic.co/kibana/kibana:7.12.0  -
+./kibana.yml:/usr/share/kibana/config/kibana.yml  # es mapping 要在放入数据之前做。。。fuck
+mongodb://host.docker.internal mongorestore -d db_name -c collection_name
+/path/file.bson 
+[https://github.com/mongodb/charts-demo](https://github.com/mongodb/charts-demo)**
+
+# 完成功能  - 地图     &gt; 1. 筛选java的分布图。类推  - 词云    &gt; 谁的词云？技能（要分词）？福利？工作描述？    -
+
+**TextRank    &gt; 谁的排行？ 与谁有关的排行？  - 关系     &gt;   - 统计    &gt;表格  - 嵌入我的app，变成我的，伪动态，fuck
+pyecharts   分词增加列   scikit-learn¶ 聚类 KMeans 来把资料中近似的部分简化成同一类   # 插件开发**
+
+
+[https://trumandu.gitbook.io/kibana-plugin-development-tutorial/wei-zhang/geng-duo-cha-jian-lie-biao](https://trumandu.gitbook.io/kibana-plugin-development-tutorial/wei-zhang/geng-duo-cha-jian-lie-biao)
+用测试数据，md，太慢了   改为TF-IDF 模式。大家都有的不要，与众不同的才叫特点  ---  一袋子模型计数方法的时候。在计算的转换基础上。加入代码**
+
+`python tfidfconverter = TfidfTransformer() X =
+tfidfconverter.fit_transform(X).toarray() `**  全部用TFID 转换的话。这样写 Note: You can also
+directly convert text documents into TFIDF feature values (without first
+converting documents to bag of words features) using the following script: 
+`python from sklearn.feature_extraction.text import TfidfVectorizer
+tfidfconverter = TfidfVectorizer(max_features=1500, min_df=5, max_df=0.7,
+stop_words=stopwords.words('english')) X =
+tfidfconverter.fit_transform(documents).toarray()**
+
+# 侧影法 判断k值。  # sql  等值连接：条件相等，表1 一行对扫表2 的每一行。 条件合的与，这两行拼接形成结果表的一行。
+
+**自然连接：在等值连接中把目标列中重复的属性列去掉 外连接   &gt;
+左外连接：取出左侧关系中与右侧关系任一元组都不匹配的的元组，用空值填充所有来自右侧关系的属性。 产生的元组 加到自然连接的结果上。 &gt;
+右外连接：xxx产生的元组 加到自然连接的结果上。 &gt; 全外连接：完成左和右外连接 产生的元组 加到自然连接的结果上。  关系代数运算 公式RxS  - 选择
+是水平切割 - 投影 是垂直分割 - 连接 是RxS 的笛卡儿积中选取属性值满足一定条件的元组 - 除 是同时从关系的水平和垂直方向进行运算  术语：
+关系：二维表 属性：列 值域：属性取值范围 元组：行 分量：元组的的第一个属性值称为元组的一个分量  ---  boken 需要联网 SSE 
+![bokeh_SSE](images/bokeh_plot.png) ![TEXTRANK](images/pieTextRank.png)  #
+增加在线分析功能 。嗯。nice 然后存入数据库。mongochart再出来。  正则表达式，it 不香？ 
+![apriori](images/aprioir.png) for-in
+缺点更加明显，它不仅遍历数组中的元素，还会遍历自定义的属性，甚至原型链上的属性都被访问到。而且，遍历数组元素的顺序可能是随机的。  嵌入到html
+中，点击显示，再点击隐藏。看来还要抓几个网页才行。 1D6A96 85B8CB d1dddb 283b42    # 嵌入大量图片，看它怎么查重：））））
+需求量大的职位，根据时间。 nosql 扩展性，后期用途。 系统扩展性嘛，取数据自己分析吧。html扩展链接？步骤之间采用分离模式，加适配器就行。
+提供两种方式，一种自己探索，第二种，我写好，展示给你。 Haystack  # 性能改进   读取时间，应该是被缓存了。有缓存，比不了
+dtype=false内存会少10%  ---  | 操作            | 读取时间   | 合并时间  | 设置索引  | resetindex
+|        | 总共时间 | | --------------- | ---------- | --------- | --------- |
+\---------- | ------ | -------- | | merge           | 0.0880     | 0.2117852 |**
+
+**|            |        |          | | copy false      | 0.055463   | 0.03736   |
+0.108461  |            |        |          | | join set index  | 0.009214   |
+0.009699  |           |            |        |          | | 99万+184info    |
+41.2381255 | 1.3706759 | 0.4182125 | 0.0235628  |        | 43.0509  | |
+dtype=false内存 | 39.779510  | 1.332     | 0.343939  | 0.02419    | 140.55 |
+41.481   | | no drop nan     |            |           |           |**
+
+**| 16.714 |          | | 比率            |            |           |**
+
+**|            |        |          |  # 生成目录树  linux下运行： tree -I 'venv|Test|*AutomationProfile
+*/*|Data|*.log|*pycache*' -N  -N Print non-printable characters as is instead of
+as escaped octal numbers.  还是用nigx  `tree . ├── analysis │   ├── algorithm.py │
+  ├── icu.py │   ├── init.py │   ├── mystopWord │   │   └── 自定义停用词.txt │   ├──
+stopWord │   │   ├── 中文停用词库.txt │   │   ├── 哈工大停用词表.txt │   │   ├──
+四川大学机器智能实验室停用词库.txt │   │   └── 百度停用词列表.txt │   ├── test_algorithm.py │   └──
+保留字.txt ├── dataView │   ├── admin.py │   ├── apps.py │   ├── init.py │   ├──
+utils.py │   └── views.py ├── DP │   ├── config.py │   ├── dp_job_info.py │  
+├── dp.py │   ├── drop_duplication.py │   ├── dup_store.py │   ├── Hub.py │  
+├── init.py │   └── wash_quantify.py ├── ERDAV │   ├── asgi.py │   ├── init.py
+│   ├── settings.py │   ├── urls.py │   └── wsgi.py ├── images ├── manage.py
+├── myspider │   ├── addons.py │   ├── chromedriver.exe │   ├── climb_types.js
+│   ├── script.sh │   ├── seleniumChrome.py │   └── spiders │       ├──
+config.py │       ├── jobInfo.py │       └── zhaopin.py ├── persistence │   ├──
+config.py │   ├── docker-compose.yml │   ├── elastic.py │   ├── init.py │   └──
+mongodb-charts │       └── charts-docker-swarm-19.12.2.yml ├── README.md ├──
+requirements.txt ├── static ├── templates ├── tree.txt └── utils     └──
+walk_file.py  14 directories, 63 files**
+
+# CMD命令
+
+
+[cmd.exe 的命令行启动参数（可用于执行命令、传参或进行环境配置） - walterlv](https://blog.walterlv.com/post/cmd-startup-arguments.html)
+Active code page: 65001 chcp 乱码  2、通过 chcp命令改变代码页，UTF-8的代码页为65001 chcp 65001**
+
+</string>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Serif SC'; font-size:9pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;pip install selenium,mitmproxy ...  # zhaopin.com  -&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.codenong.com/cs106962946/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;selenium与mitmproxy实现自动化数据爬取&lt;/span&gt;&lt;/a&gt; - &lt;a href=&quot;https://zhuanlan.zhihu.com/p/149760553&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;api的都 失效了，selenium有检测机制&lt;/span&gt;&lt;/a&gt; - 2021.3.15 &lt;a href=&quot;https://fe-api.zhaopin.com/c/i/sou&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://fe-api.zhaopin.com/c/i/sou&lt;/span&gt;&lt;/a&gt;?&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;url变更为position   1. 先选获取所有type 职位大全type.txt 2. 根据type 一个一个的获取 3. 获取城市code  # 命令 &lt;span style=&quot; font-family:'Courier New'; font-weight:400;&quot;&gt;commandline mitmweb -s addons.py  mitmdump 无ui  -s 无脚本插件 upstream:    upstream-auth 认证   &lt;/span&gt;  运行命令：mitmweb -s addons.py 默认打开默认浏览器 8080端口  # tools&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://gadget.chienwen.net/x/text/sort&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;您覺得文字排序工具實用嗎？&lt;/span&gt;&lt;/a&gt;  # 环境  chromedriver&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;89.0.4389.90 python3.9  # 快捷键生成local variables   ctrl + alt + v  以前好前alt enter 也是可以提示修复的，不这里是python  # mitmproxy   一定要安装证书到根系统，否则https不显示或者，是pinning的问题 debug&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://gist.github.com/tomsaleeba/c463550b43eb9c58d8b415523c49f70b&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;只能反代理？&lt;/span&gt;&lt;/a&gt; 或者使用cmdline命令来在pycharm中调试  3. &lt;a href=&quot;https://zhuanlan.zhihu.com/p/161350888&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://zhuanlan.zhihu.com/p/161350888&lt;/span&gt;&lt;/a&gt; python debug server 这个可以 4. mitmweb ui 资源占用，ui好，所以 mitproxy比较好， 5. 可以不用类，直接函数，在pycharm中运行配置怎么配置？命令行？。  # import机制 sys.path.append(&amp;quot;../&amp;quot;)#spiders与插件不在同一模块下，所以要加上路径。查一下import的机制就知道了。尽量反斜杠  # pYcharm热更新&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://blog.csdn.net/lly1122334/article/details/103957530&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://blog.csdn.net/lly1122334/article/details/103957530&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Evaluate  可以更改，但下一次执行呢？  2. Show Python Prompt    - &lt;span style=&quot; font-family:'Courier New'; font-weight:400;&quot;&gt;from importlib import reload→importlib.reload(module)&lt;/span&gt;  不会用&lt;/li&gt;
+&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/questions/23333815/is-there-edit-and-continue-in-pycharm-reload-code-into-running-program-like-i&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;pycharm hot reload&lt;/span&gt;&lt;/a&gt; 热重载，最好是无状态的moudle ，否则，不行。与其他模块有关联的状态的话，是不行了  ---  1. Work in Pycharm on a python project :-) 2. Execute your code in Debug mode (did not tried Release so far) 3. Edit some code in one your modules imported during the life of your program  4. Make your program pause. To achieve this, you can click the &amp;quot;Pause&amp;quot; button of in PyCharms Debug view and then any place in your applications main window where it would need to do something (for example on a tab header). If you have a long a running task and no UI, you may place a breakpoint in a place your program often comes by. 5. In the Debug view, switch to the Console tab. There is a button on the left Show command line. Click this. 6. In the console, type in reload(MyModifiedModule) if this call fails, write import MyModifiedModule and try again. 7. Click resume in PyCharm. 8. Try the code you fixed.  # 输入框无法清除  0. 选中click(),focus 1. 双击，三击click() 2. keys.backspace n次&lt;/li&gt;
+&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;3.crtl a +backspace 3. 然后检查 value是否清除了  #浏览器插件爬虫调试 XSwitch  webscrapy  XHook &lt;a href=&quot;https://docs.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/open/?tabs=cmd-Windows&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;devtools&lt;/span&gt;&lt;/a&gt; 可能这种方法更快，不用写多少代码，那么多东西研究学习  # Terminal  终端修改 setting-&amp;gt;搜索 terminal specify the powershell.exe or other   # modify the todo style   search todo in setting  add pattern  such as important things mark  &lt;span style=&quot; font-family:'Courier New'; font-weight:400;&quot;&gt;shell \bTips\b.* &lt;/span&gt;  # 保存数据 elasticcsearch curl kiban 展示 数据分析保存数据库，再展示算静态了 再在kiban上加点操作加点动态的东西，自定义查询，分析由客户自己分析，nice,我只做处理  #正则表达式 \r 回车 \n 换行  #docker vnc chrome   # myspider 路径问题  1. 要改是是zhaopin.py 、 scheduler.py、中的 projectDataDir,和 seleniumChrome.py的chromdriver路径，userdir 目录也改一下 2. 如果环境包目录问题，则 像 addons.py&lt;/li&gt;
+&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;放到项目根目录，并修改第1点中的目录 3. AutomationProfile 是userdir=xxx 登录信息会在里面  # 更多的chrome命令参照&lt;/li&gt;
+&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.chromium.org/developers/how-tos/run-chromium-with-flags&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Chromium &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://peter.sh/experiments/chromium-command-line-switches/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;chromium-command-line-switches&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;数据日志文件非常大，几个g，全部放到一个数组是不行的？  ，除非内存够大，不在乎性能，  -&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;首先想到生产-消费模式，但是，好像自己实现有点。。，要多线程。 -  用文件一边读，一边写，有加锁。。。 - 想到linux的管道grep，python有管道这个东西 -  缺点是日志中有重复的数据，浪费时间，1中的数组虽然可以去重。可以去重了，保存到文件，再管道吧， -  或者重复是有规则的？？ 麻烦，直接文件覆盖得了，然后记录进行到的位置 ttributeError: module 'os' has no attribute 'fork 只能linux    用yield  # 详细页因为是html 所以不用mitproxy了，一堆网络问题，直接用selenium 来，缺点是文档结构不是reponse中的样貌，因为js会改变的，那直接禁止js加载，不行 &lt;img src=&quot;images/cimb.png&quot; alt=&quot;抓取的过程&quot; /&gt; &lt;img src=&quot;images/job_info_html.png&quot; alt=&quot;job_info_html&quot; /&gt; &lt;img src=&quot;images/positionURL.png&quot; alt=&quot;positionURL.png&quot; /&gt; &lt;img src=&quot;images/recommendData.png&quot; alt=&quot;recommendData.png&quot; /&gt;  # nosql 原因 第一，解析的json数据，mongo存储就是用json格式，读取和写入非常方便；第二，mongo不用提前设计表Schema，对我们这种临时性和不确定性的分析带来 便；第三，mongo可以存储海量的数据；第四，mongo会缓存热点数据，我们在后续分析时候读取会非常快。  主要是爬虫数据结构变化，与sql 解耦不太  # 数据库的设计  一个el index job 连到其它表越多，可搜索的就越多 表：  1. 大类表：9个，附上id  2. 职业表: kws 集合，附上id 3. job 表： 一个job一行。城市id 与jobid 共同为主键     &amp;gt; job 增加两个类型：城市id与kw关键字id  4. 城市表：城市代码与城市  5. job详情表，url 作id  6. 公司表  # 数据清洗去重量化  pandas 二维数据 dataframes drop_duplicates()函数 &lt;img src=&quot;images/drop_duplicates.png&quot; alt=&quot;drop_duplicates.png&quot; /&gt; 去掉44%，网络问题  1. 去掉重复的，重复是城市id与job url id 共为主键下，不同。联合主键因为，同工作，可以不同城市，但却job url 指定的是一样的招聘信息  2. 清洗，去掉无用的数据，http code状态码之类的。其实也就是取list的内容而已     &amp;gt; 1. 取list     &amp;gt; 2. 增加 城市id ,工作kw关键字，值为空的由pandas改为NAN    &amp;gt; 3. 存储，按行存入文件    &amp;gt; 4. 再存入数据库 mongoimport -d 数据库名 -c 集合名 --file 文件名 --jsonArray    &amp;gt; 5. 清洗之后，newtag &amp;quot;welfareLabel&amp;quot;:[], citydi&amp;quot;&amp;quot;的正则表达 删除，因为nosql不像sql 关系，结构   3. 量化     &amp;gt; 工资不量化的话，统计的时候太难统计，尤其是有范围的数据    &amp;gt;    &amp;gt; &amp;gt;目前要量化的有工资、万字转换为数字，好像有现成的了。。。 公司人数，人    &amp;gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:40px; margin-right:40px; -qt-block-indent:0; text-indent:0px;&quot;&gt;job详情的，肯定要量化  ## pandas   要做的  0. 使用三维的还是二维的？生成json后，还要处理,二维的可以，转json还保持原样，关键是这个文件太大，一行一行存储（line=true）？？，或者直接写入数据库&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;删除所有含缺失值的行，这个在处理完所有的文件后做 2. &lt;a href=&quot;https://www.geeksforgeeks.org/adding-new-column-to-existing-dataframe-in-pandas/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;同一文件增加列&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.interviewqs.com/ddi-code-snippets/add-new-col-df-default-value&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;add-new-col-df-default-value默认值&lt;/span&gt;&lt;/a&gt; 3. 增加列后合并两个文件 4. &lt;a href=&quot;https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;去掉无用的行&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large;&quot;&gt;中文  UTF-8与unicode     UTF-8&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;是变长的，1-6个字节，少数是汉字每个占用3个字节，多数占用4个字节，正则式为[\x80-\xff]{3}，这个都知道了吧。      unicode下，汉字的格式如\uXXXX，只要找到对应的字符集的范围，就能匹配相应的字串，方便从多语言文本中挑出所需要的某种语言的文本。不过，对于像日文这样的 着语，既有中文字符，又有平假名片假名，或许结果会有所偏差。 ———————————————— 版权声明：本文为CSDN博主「CHENG Jian」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/gatieme/article/details/43235791  # 快捷键  command + Alt + T 代码块包围(Try Except 等)  # 修改  ## 量化   return tmp.replace(r'^\s*$|[]', np.NaN, regex=True)  # 去掉空的值,用正则 TODO notepad++ 正则就行了是，sb   - job detail&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;这个先wo，四个目录一遍先，然后，再与数据库对比，看，缺了哪些。再输出到文件（按这个文件再爬一次），不然，错误中断继续太麻烦。，  # 开多线程/多进程 6. 不合并了，queue/list保存，最后read就行读出来  - 发送任务的队列:   task_queue = queue.Queue() - 接收结果的队列:   result_queue = queue.Queue()   线程池，结果采集   数据队列   数据队列    13:52:16&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;奇数，偶数   两两比较/相加  执行次数为 n-1次，最后都会剩下一个元素，所以判断多少次就行了  # 平行计算&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://python.plainenglish.io/pandas-and-multiprocessing-how-to-create-dataframes-in-a-parallel-way-72f9b18ea72f&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Pandas and Multiprocessing: How to create dataframes in a parallel way&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;quantification 量化数据    tmp.companySize = tmp.companySize.apply(lambda s:&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;pd.Series(s.removesuffix(&amp;quot;人&amp;quot;))) 还有1000人以上这种 字段,太多了吧   return tmp.replace(r'^\s*$|[]', np.NaN, regex=True)  # 去掉空的值,用正则 TODO notepad++ 正则就行了是，sb  1. &amp;quot;&amp;quot; -&amp;gt; 保持 2. [] -&amp;gt; 保持？ 3. &amp;quot;state&amp;quot;:0, -&amp;gt; '' 用正则删除&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;正则表达式&lt;/span&gt;&lt;/a&gt; x(?!y)  仅仅当'x'后面不跟着'y'时匹配'x'，这被称为正向否定查找。&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://www.w3cschool.cn/regexp/cwp91pqg.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;\w+(?=ing)，返回“str”，意思为：匹配以ing结束的单词&lt;/span&gt;&lt;/a&gt; 4. (\d+-\d+)人|(\d+)人以上     。先将薪资水平字段值取平均值，再根据平均值所属的区间值进行划分。,     为0则是面议&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;经验水平，也是这样  5. 利用 &lt;a href=&quot;https://blog.csdn.net/zhangchuang601/article/details/79583551&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;andas DataFrame数据的增、删、改、查&lt;/span&gt;&lt;/a&gt; 这里要注意的一点是，我们有时会听到说python中的list对象不是线程安全的，这个说法是不严谨的，因为线程是否安全，针对的不是对象，而是操作。如果我们指这样的 作L[0] = L[0] + 1，它当然不是一个原子操作，不加以保护就会导致线程不安全，而L.append(i)这样的操作则是线程安全的。  作者：dwzb 链接：https://juejin.cn/post/6844903615824396295 来源：掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  # elasticsearch  ## Starting a single node cluster with Docker  docker run -p 9200:9200 -p 9300:9300 -e &amp;quot;discovery.type=single-node&amp;quot; docker.elastic.co/elasticsearch/elasticsearch:7.12.0 python -m pip install elasticsearch &lt;a href=&quot;https://hackpython.com/blog/2019/06/28/Python%E8%BF%9B%E9%98%B6%E5%BF%85%E5%AD%A6%E5%BA%93%EF%BC%9Aelasticsearch-py%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3-%E4%B8%8A%E7%AF%87/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Python进阶必学库：elasticsearch-py使用详解(上篇)&lt;/span&gt;&lt;/a&gt; docker --memory=4g 限制内存 更新参数 docker container update --restart=always 容器名字  # mongodb chart  #   cityid  换成 city名  mongodb集合中插入文档时，如果您没有在字段名称中添加带有_id的字段名称， 数字没有意义,而且中文一样可以关系型sql  # 让用户自己判断价值,我提供计算.def .用户需求太多...抽象,..思维&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://kknews.cc/zh-tw/career/yzpo4ej.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;在使用excel表格工作时，我们很经常接触输入相同的前缀或者后缀的情况&lt;/span&gt;&lt;/a&gt; 。 加入 https+number+.htm   &amp;gt; &amp;quot;cityId&amp;quot;:\d+?,|&amp;quot;companyId&amp;quot;:\d+?,|&amp;quot;companyNumber&amp;quot;:.+?,|&amp;quot;companyRootId&amp;quot;:.+?,|&amp;quot;webs te&amp;quot;:\d+?,|&amp;quot;jobId&amp;quot;:\d+?, &amp;gt; education 正则改为学历,或者pandas在初期的时候  &amp;gt; companySize(.+?)name(.+?)property(.+?)publishTime(.+?)salaryReal(.+?)skillLabel( +?)welfareLabel(.+?)workCity &amp;gt; 公司规模$1职位$2公司性质$3发布时间$4薪酬$5技能$6福利待遇$7工作城市 ，不是按顺序的就会不替换  _id 急招 &amp;quot;typeShowLabel&amp;quot;:&amp;quot; type:11急招&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/questions/30912746/pandas-remove-null-values-when-to-json&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Pandas remove null values when to_json&lt;/span&gt;&lt;/a&gt; 拼音搜索&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/questions/32291654/excel-append-one-range-to-the-end-of-another-in-one-column&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; 将Excel中的两列或多列数据汇总到一列&lt;/span&gt;&lt;/a&gt; md,直接记事本,复制粘贴,不卡 然后去重 &lt;img src=&quot;images/excelurldropducate.png&quot; alt=&quot;excelurldropducate.png&quot; /&gt; &lt;img src=&quot;images/excelresult.png&quot; alt=&quot;result.png&quot; /&gt; excel对比两列不同, 用记事本打开，不会卡 json.dumps(&amp;quot;ברי צקלה&amp;quot;, ensure_ascii=False).encode('utf8') 导入数据模块，web麻烦不实用&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;哈工大停用词表,如的、在、于是、因此、一般、无论等等之类的词语， 称之为停用词，多次试验发现的在句子中没有实际意义且还频繁出现的词语，例如具有、深入、熟悉、 良好、较好、使用、一定 不需要英文,四字的停用词 Thank'sstop words lis 即：停止词列表 就是已经被搜索引擎认为是没有必要收录的词，可能这词没意思，或者这个词非常高的密度了。为了节约服务器资源，搜索爬虫就拒绝在收录这样的词了。 Simply change start = time.clock() to start = time.perf_counter() in the file: thulac/character/CBTaggingDecoder.py, the program will run well 或者改为jiaba module 'time' has no attribute 'clock'   职位最多的分类 ，这还用k-means啊。直接分大类就行。 docker run    --link elasticsearch7:elasticsearch -p 5601:5601 -d --name kibana7 docker.elastic.co/kibana/kibana:7.12.0  - ./kibana.yml:/usr/share/kibana/config/kibana.yml  # es mapping 要在放入数据之前做。。。fuck mongodb://host.docker.internal mongorestore -d db_name -c collection_name /path/file.bson &lt;a href=&quot;https://github.com/mongodb/charts-demo&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/mongodb/charts-demo&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;完成功能  - 地图     &amp;gt; 1. 筛选java的分布图。类推  - 词云    &amp;gt; 谁的词云？技能（要分词）？福利？工作描述？    -&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;TextRank    &amp;gt; 谁的排行？ 与谁有关的排行？  - 关系     &amp;gt;   - 统计    &amp;gt;表格  - 嵌入我的app，变成我的，伪动态，fuck pyecharts   分词增加列   scikit-learn¶ 聚类 KMeans 来把资料中近似的部分简化成同一类   # 插件开发&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://trumandu.gitbook.io/kibana-plugin-development-tutorial/wei-zhang/geng-duo-cha-jian-lie-biao&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://trumandu.gitbook.io/kibana-plugin-development-tutorial/wei-zhang/geng-duo-cha-jian-lie-biao&lt;/span&gt;&lt;/a&gt; 用测试数据，md，太慢了   改为TF-IDF 模式。大家都有的不要，与众不同的才叫特点  ---  一袋子模型计数方法的时候。在计算的转换基础上。加入代码&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Courier New'; font-weight:400;&quot;&gt;python tfidfconverter = TfidfTransformer() X = tfidfconverter.fit_transform(X).toarray() &lt;/span&gt;  全部用TFID 转换的话。这样写 Note: You can also directly convert text documents into TFIDF feature values (without first converting documents to bag of words features) using the following script:  `python from sklearn.feature_extraction.text import TfidfVectorizer tfidfconverter = TfidfVectorizer(max_features=1500, min_df=5, max_df=0.7, stop_words=stopwords.words('english')) X = tfidfconverter.fit_transform(documents).toarray()&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;侧影法 判断k值。  # sql  等值连接：条件相等，表1 一行对扫表2 的每一行。 条件合的与，这两行拼接形成结果表的一行。&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;自然连接：在等值连接中把目标列中重复的属性列去掉 外连接   &amp;gt; 左外连接：取出左侧关系中与右侧关系任一元组都不匹配的的元组，用空值填充所有来自右侧关系的属性。 产生的元组 加到自然连接的结果上。 &amp;gt; 右外连接：xxx产生的元组 加到自然连接的结果上。 &amp;gt; 全外连接：完成左和右外连接 产生的元组 加到自然连接的结果上。  关系代数运算 公式RxS  - 选择 是水平切割 - 投影 是垂直分割 - 连接 是RxS 的笛卡儿积中选取属性值满足一定条件的元组 - 除 是同时从关系的水平和垂直方向进行运算  术语： 关系：二维表 属性：列 值域：属性取值范围 元组：行 分量：元组的的第一个属性值称为元组的一个分量  ---  boken 需要联网 SSE &lt;img src=&quot;images/bokeh_plot.png&quot; alt=&quot;bokeh_SSE&quot; /&gt; &lt;img src=&quot;images/pieTextRank.png&quot; alt=&quot;TEXTRANK&quot; /&gt;  # 增加在线分析功能 。嗯。nice 然后存入数据库。mongochart再出来。  正则表达式，it 不香？ &lt;img src=&quot;images/aprioir.png&quot; alt=&quot;apriori&quot; /&gt; for-in 缺点更加明显，它不仅遍历数组中的元素，还会遍历自定义的属性，甚至原型链上的属性都被访问到。而且，遍历数组元素的顺序可能是随机的。  嵌入到html 中，点击显示，再点击隐藏。看来还要抓几个网页才行。 1D6A96 85B8CB d1dddb 283b42    # 嵌入大量图片，看它怎么查重：）））） 需求量大的职位，根据时间。 nosql 扩展性，后期用途。 系统扩展性嘛，取数据自己分析吧。html扩展链接？步骤之间采用分离模式，加适配器就行。 提供两种方式，一种自己探索，第二种，我写好，展示给你。 Haystack  # 性能改进   读取时间，应该是被缓存了。有缓存，比不了 dtype=false内存会少10%  ---  | 操作            | 读取时间   | 合并时间  | 设置索引  | resetindex |        | 总共时间 | | --------------- | ---------- | --------- | --------- | ---------- | ------ | -------- | | merge           | 0.0880     | 0.2117852 |&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;|            |        |          | | copy false      | 0.055463   | 0.03736   | 0.108461  |            |        |          | | join set index  | 0.009214   | 0.009699  |           |            |        |          | | 99万+184info    | 41.2381255 | 1.3706759 | 0.4182125 | 0.0235628  |        | 43.0509  | | dtype=false内存 | 39.779510  | 1.332     | 0.343939  | 0.02419    | 140.55 | 41.481   | | no drop nan     |            |           |           |&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;| 16.714 |          | | 比率            |            |           |&lt;/p&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;|            |        |          |  # 生成目录树  linux下运行： tree -I 'venv|Test|&lt;span style=&quot; font-style:italic;&quot;&gt;AutomationProfile&lt;/span&gt;/&lt;span style=&quot; font-style:italic;&quot;&gt;|Data|&lt;/span&gt;.log|&lt;span style=&quot; font-style:italic;&quot;&gt;pycache&lt;/span&gt;' -N  -N Print non-printable characters as is instead of as escaped octal numbers.  还是用nigx  `tree . ├── analysis │   ├── algorithm.py │   ├── icu.py │   ├── init.py │   ├── mystopWord │   │   └── 自定义停用词.txt │   ├── stopWord │   │   ├── 中文停用词库.txt │   │   ├── 哈工大停用词表.txt │   │   ├── 四川大学机器智能实验室停用词库.txt │   │   └── 百度停用词列表.txt │   ├── test_algorithm.py │   └── 保留字.txt ├── dataView │   ├── admin.py │   ├── apps.py │   ├── init.py │   ├── utils.py │   └── views.py ├── DP │   ├── config.py │   ├── dp_job_info.py │   ├── dp.py │   ├── drop_duplication.py │   ├── dup_store.py │   ├── Hub.py │   ├── init.py │   └── wash_quantify.py ├── ERDAV │   ├── asgi.py │   ├── init.py │   ├── settings.py │   ├── urls.py │   └── wsgi.py ├── images ├── manage.py ├── myspider │   ├── addons.py │   ├── chromedriver.exe │   ├── climb_types.js │   ├── script.sh │   ├── seleniumChrome.py │   └── spiders │       ├── config.py │       ├── jobInfo.py │       └── zhaopin.py ├── persistence │   ├── config.py │   ├── docker-compose.yml │   ├── elastic.py │   ├── init.py │   └── mongodb-charts │       └── charts-docker-swarm-19.12.2.yml ├── README.md ├── requirements.txt ├── static ├── templates ├── tree.txt └── utils     └── walk_file.py  14 directories, 63 files&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large;&quot;&gt;CMD命令&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:6px; margin-bottom:6px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;https://blog.walterlv.com/post/cmd-startup-arguments.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;cmd.exe 的命令行启动参数（可用于执行命令、传参或进行环境配置） - walterlv&lt;/span&gt;&lt;/a&gt; Active code page: 65001 chcp 乱码  2、通过 chcp命令改变代码页，UTF-8的代码页为65001 chcp 65001&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPlainTextEdit" name="plainTextEdit_2">
+              <property name="plainText">
+               <string>1. mihalcea emnlp 是textrank的详解
+2. [Frequent Itemset Generation Using Apriori Algorithm | An Explorer of Things (chih-ling-hsu.github.io)](https://chih-ling-hsu.github.io/2017/03/25/apriori)
+3. [Introduction to Data Mining (umn.edu)](https://www-users.cs.umn.edu/~kumar001/dmbook/index.php)这是书吧，介绍页而已。
+4. [Web Mining – Concepts, Applications and Research Directions | SpringerLink](https://link.springer.com/chapter/10.1007/11362197_10)
+5. [Data Mining: Concepts and Implementation Issues | SpringerLink](https://link.springer.com/chapter/10.1007/978-3-642-56687-5_38)
+6. [Future trends in data mining | SpringerLink](https://link.springer.com/article/10.1007/s10618-007-0067-9)  可以下载 这个
+7. [Scaling up data mining algorithms: review and taxonomy | SpringerLink](https://link.springer.com/article/10.1007/s13748-011-0004-4)扩展挖掘算法
+8. IEEE*Xplore* will undergo scheduled maintenance from 1:00-5:00 PM ET. During this time, there may be intermittent impact on performance. We apologize for any inconvenience.  时间下午1:00-5:00进行定期保养。在此期间，性能可能会受到间歇性的影响。不便之处，敬请原谅
+9. 
+
+
+
+&gt;
+&gt;
+&gt;工程型则要做出工程产品的一部分或相对完整的工程原型系统，工程型为技术报告型，报告应 包括本课题所依据的原理、规范和实现模型所需的环境支持，总体实现方案，各部分的设计与实现， 与外部的接口等；报告应有论证性，如本课题实现方案的选择（有几种、为何选此种）、优缺点， 软/硬件互易带来的好处和问题等，报告要重点突出，对核心部分、独创部分应详细论述，其他部分 则是为了文章的系统性可以一带而过。工程型题目强调的是系统性，即报告应包括系统分析、设计、 实现、测试结果分析，每个部分的重点技术应论述清楚，尤其是测试结果的分析和使用情况（如果 有的话）是工程型课题最为特色的部分。
+
+&gt;  论文中，说的要拿得出证据。
+
+&gt; 范围抽样性，层次抽样性。</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1538</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menumenu">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="actionspider"/>
+   </widget>
+   <widget class="QMenu" name="menumenu2">
+    <property name="title">
+     <string>Menu2</string>
+    </property>
+    <addaction name="actionSubmenu_5"/>
+   </widget>
+   <widget class="QMenu" name="menumenu_disabled">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Menu disabled</string>
+    </property>
+   </widget>
+   <addaction name="menumenu"/>
+   <addaction name="menumenu2"/>
+   <addaction name="menumenu_disabled"/>
+  </widget>
+  <action name="web_visual_stacked_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>可视化</string>
+   </property>
+  </action>
+  <action name="actionSubmenu_3">
+   <property name="text">
+    <string>Submenu</string>
+   </property>
+  </action>
+  <action name="main_center_ui">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SUBSUB</string>
+   </property>
+  </action>
+  <action name="web_visual_stacked">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SUBSUB</string>
+   </property>
+  </action>
+  <action name="actionSUBSUB_3">
+   <property name="text">
+    <string>SUBSUB</string>
+   </property>
+  </action>
+  <action name="actiondissabled">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>dissabled</string>
+   </property>
+  </action>
+  <action name="actionSubmenu">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Submenu</string>
+   </property>
+  </action>
+  <action name="actionSubmenu_4">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Submenu</string>
+   </property>
+  </action>
+  <action name="actionSubmenu_5">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Submenu</string>
+   </property>
+  </action>
+  <action name="actionToolbar_main_center">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>主界面</string>
+   </property>
+   <property name="toolTip">
+    <string>Qt Material Theme</string>
+   </property>
+  </action>
+  <action name="actionSelected">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Spider.svg</normaloff>Spider.svg</iconset>
+   </property>
+   <property name="text">
+    <string> 爬虫</string>
+   </property>
+  </action>
+  <action name="actionaction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>Spider.svg</normaloff>Spider.svg</iconset>
+   </property>
+   <property name="text">
+    <string>爬虫2</string>
+   </property>
+  </action>
+  <action name="actionaction2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>使用说明.svg</normaloff>使用说明.svg</iconset>
+   </property>
+   <property name="text">
+    <string>README</string>
+   </property>
+  </action>
+  <action name="fdfdfsdfs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>在浏览器打开.svg</normaloff>在浏览器打开.svg</iconset>
+   </property>
+   <property name="text">
+    <string> 浏览器</string>
+   </property>
+  </action>
+  <action name="menu_action33">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Style</string>
+   </property>
+  </action>
+  <action name="emnu_actin22">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>style2</string>
+   </property>
+  </action>
+  <action name="actionspider">
+   <property name="icon">
+    <iconset>
+     <normaloff>Spider.svg</normaloff>Spider.svg</iconset>
+   </property>
+   <property name="text">
+    <string>spider</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

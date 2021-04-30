@@ -1,0 +1,59 @@
+#选择默认数据库
+global_data_source: mongo
+global_database:
+  db:
+    mongo:
+      db_name: ERADV
+      col: jobs
+      mongo_url: mongodb://localhost:27017/
+    elastic:
+      db_name: ERADV
+      col: jobs
+      id_column_name: number # 要做主键的列名
+global_spider:
+  zhaopin_projectDataDir: 'G:\\数据集\\zhaopincom\\zhaopinData'  # 职位数据抓取保存的位置  #  保存的数据目录
+  seleniumChrome_category_dir: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\Data\\category.txt' #  职位分类文件：
+  job_details_handle_data_dir: "G:\\数据集\\zhaopincom\\zhaopinData"  # 从这里目录取出详细页的url
+  job_info_projectDataDir: 'G:\数据集\zhaopincom\jobDetails'  # job详细信息 html文件解析后 存储在这个目录下
+  chrome_user_dir: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\myspider\\AutomationProfile' #登录保存信息用户目录
+  chromedriver_dir: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\myspider\\chromedriver.exe' # 驱动文件
+global_data_process:
+  jobs_dp:
+    original_data_dir: "G:\\数据集\\zhaopincom\\zhaopinData\\"  # 要处理的数据目录
+    # ---------------- 阶段储存 -----------------------
+    # 方便中断继续，中断，用main,改参数输入
+    storage_dir_jobs: 'G:\\数据集\\zhaopincom\\DP\\storage_jobs'  # 存放的目录 ,
+    data_washed_file: 'data_washed.json'  # 清洗后
+    data_quantized_file: 'data_quantized.json'  # 量化后
+    finally_storage__one_line_file: 'finally_storage_one_line.json'  # 处理完的数据
+    finally_storage_multi_line_file: 'finally_storage_multi_line.json'  # 一行一json
+    finally_storage_drop_nan_file: 'finally_storage_drop_nan_file.json'  # 去掉nan
+    job_detail_urls: 'urls_info.csv'
+  jobs_info_dp:
+    storage_dir_job_info: 'G:\\数据集\\zhaopincom\\DP\\storage_job_info'  # 存放的目录 ,
+    original_job_detail_data_dir: "G:\\数据集\\zhaopincom\\jobDetails\\jobDetailslinux\\"
+    # original_job_detail_data_dir: "G:\\数据集\\zhaopincom\\jobDetails\\test\\"  # 测试用
+    stage_job_info_file_one: '保存第一阶段.json'
+    stage_job_info_file_two: '第二阶段文件.json'
+    finally_job_detail_storage_drop_nan_file: 'finally_job_detail_storage_drop_nan.json'
+    finally_recommend_storage_drop_nan_file: 'finally_recommend_storage_drop_nan.json'
+  genres: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\Data\\category.json' # 行业大类
+  urls_col: 'number'  # jobs文件工作职位 url所在的列
+  finally_two_table_merge_storage:
+    # 详细页与概要页 数据 两表合并，要存储的目录与文件名
+    storage_dir_merge: 'G:\\数据集\\zhaopincom\\DP\\storage_merge\\' #目录
+    finally_elastic_merge_nan_file: 'finally_elastic_merge_nan_file.json'
+    finally_mongo_merge_nan_file: 'finally_mongo_merge_nan_file.json' #nan为去掉空值
+    finally_mongo_merge_line_file: 'finally_mongo_merge_line_file.json' # 换行，用于命令行导入
+
+machine_learn:
+  model_pkl_dir: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\Test\\test_sklearn\\model.pkl' # 模型训练文件，data 的model.pkl.bz2 文件解压后放入modeL_ppkl_dir
+  deep_learn:
+    dnn_model_tfl: 'Data/model.tfl.index'  # 模型目录 model.tfl.data-00000-of-00001 index mete 三个文件
+    dnn_catagorical: 'Data/_CATEGORICAL_TYPES_.pkl' # 分类文件
+analysis:
+   reserve_word_file: ' analysis\\保留字.txt'  # 用户字典
+   stop_words_dir: 'analysis\\stopWord\\'  #停用词目录
+   custom_stop_word_file: 'analysis\\mystopWord\\自定义停用词.txt'
+django:
+  cache_age: 10 # 缓存时间 单位分钟

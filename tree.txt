@@ -1,0 +1,119 @@
+.
+├── analysis
+│   ├── algorithm.py
+│   ├── icu.py
+│   ├── __init__.py
+│   ├── machine_learn
+│   │   ├── __init__.py
+│   │   ├── product_predict.py
+│   │   ├── random_forest.py
+│   │   └── tflearn_ten.py
+│   ├── mystopWord
+│   │   └── 自定义停用词.txt
+│   ├── stopWord
+│   │   ├── 中文停用词库.txt
+│   │   ├── 哈工大停用词表.txt
+│   │   ├── 四川大学机器智能实验室停用词库.txt
+│   │   └── 百度停用词列表.txt
+│   └── 保留字.txt
+├── Data
+│   ├── category.json
+│   ├── category.txt
+│   └── model.pkl.bz2
+├── dataView
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── utils.py
+│   └── views.py
+├── DP
+│   ├── config.py
+│   ├── dp_job_info.py
+│   ├── dp.py
+│   ├── drop_duplication.py
+│   ├── dup_store.py
+│   ├── Hub.py
+│   ├── __init__.py
+│   └── wash_quantify.py
+├── ERDAV
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── global_config.yaml
+├── images
+│   ├── accuracy.png
+│   ├── aprioir.png
+│   ├── bokeh_plot.png
+│   ├── cimb.png
+│   ├── copyfalse.png
+│   ├── copytrue.png
+│   ├── drop_duplicates.png
+│   ├── excelresult.png
+│   ├── excelurldropducate.png
+│   ├── home_ui.gif
+│   ├── job_info_html.png
+│   ├── model_and_weights.png
+│   ├── multiproeccess.png
+│   ├── multi_thread.png
+│   ├── pieTextRank.png
+│   ├── positionURL.png
+│   └── recommendData.png
+├── main_window.py
+├── manage.py
+├── myspider
+│   ├── addons.py
+│   ├── chromedriver.exe
+│   ├── climb_types.js
+│   ├── current_climb_progress.txt
+│   ├── current_jobinfo_json_file.txt
+│   ├── item_url_count.txt
+│   ├── script.sh
+│   ├── seleniumChrome.py
+│   └── spiders
+│       ├── config.py
+│       ├── jobInfo.py
+│       └── zhaopin.py
+├── persistence
+│   ├── config.py
+│   ├── docker-compose.yml
+│   ├── elastic.py
+│   ├── __init__.py
+│   └── mongodb-charts
+│       └── charts-docker-swarm-19.12.2.yml
+├── README.md
+├── requirements.txt
+├── static
+├── templates
+├── tree.txt
+├── ui
+│   ├── 1.svg
+│   ├── 2.svg
+│   ├── 3.svg
+│   ├── favicon.ico
+│   ├── main_window2.ui
+│   ├── main_window.ui
+│   ├── NotoSerifSC-Light.otf
+│   ├── off.svg
+│   ├── resource.qrc
+│   ├── Spider.svg
+│   ├── start.svg
+│   ├── trash.svg
+│   ├── 主界面.svg
+│   ├── 使用说明.svg
+│   ├── 可视化.svg
+│   ├── 命令行.svg
+│   ├── 在浏览器打开.svg
+│   ├── 数据处理.svg
+│   ├── 数据存储.svg
+│   ├── 数据清洗.svg
+│   ├── 终止.svg
+│   └── 预测.svg
+└── utils
+    ├── parse_yaml.py
+    ├── pythontail.py
+    ├── tail.py
+    └── walk_file.py
+
+17 directories, 99 files

@@ -1,0 +1,6 @@
+version: '2'
+#--memory=4g 限制内存
+#docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+#docker pull docker.elastic.co/kibana/kibana:7.12.0
+#When you run in Docker, the Elasticsearch configuration files are loaded from /usr/share/elasticsearch/config/.
+#docker run  -d -v /e/WorkDockerMappingDir/elasticsearch7/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml  -v /e/WorkDockerMappingDir/elasticsearch7/home:/home  --name elasticsearch7  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.12.0

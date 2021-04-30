@@ -1,0 +1,17 @@
+version: "3"
+services: 
+  bishe: 
+    build: "."
+    container_name: bishe
+    working_dir: /usr/src/app
+    command: >
+          bash -c  "cd /usr/src/app && pwd  && ls && python manage.py runserver 0.0.0.0:8000" # https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands
+    depends_on: 
+      - db
+    ports: 
+      - "8000:8000"
+  db: 
+    image: mongo
+    container_name: bishe_mongo
+    volumes:
+     - ./data:/data/db

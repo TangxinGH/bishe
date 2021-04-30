@@ -1,0 +1,12 @@
+/venv
+/.idea
+/myspider/AutomationProfile
+/AutomationProfile
+#vital 提高速度,二是数据是不能共享的，注意这个问题,
+#/Data
+*.log
+.env
+/Test
+*__pycache__*
+model.pkl.bz2.001
+model.pkl.bz2.002
