@@ -80,7 +80,7 @@ class Sync:
             for filename in os.listdir(path):
                 if filename in self.exclude:
                     continue
-                if filename.startswith('.git') 
+                if filename.startswith('.git'): 
                     continue
                 fullpath = os.path.join(path, filename)
                 if os.path.isfile(fullpath):
