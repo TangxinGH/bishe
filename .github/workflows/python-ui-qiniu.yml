@@ -28,7 +28,7 @@ jobs:
     - name: cddir
       run: |
         # stop the build if there are Python syntax errors or undefined names
-        cd utils
+        ls
        
     - name: push ui qiniu
       run: |
