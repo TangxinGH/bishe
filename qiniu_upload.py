@@ -80,6 +80,8 @@ class Sync:
             for filename in os.listdir(path):
                 if filename in self.exclude:
                     continue
+                if filename.startswith('.git') 
+                    continue
                 fullpath = os.path.join(path, filename)
                 if os.path.isfile(fullpath):
                     key = fullpath.split(self.sync_dir)[1]
@@ -101,7 +103,7 @@ if __name__ == "__main__":
         secret_key=secret_key,  # secret_key
         bucket_name="bi-she",  # bucket_name
         sync_dir="./",  # 静态文件目录(后面必须有斜杠/)
-        exclude=[".DS_Store"],
+        exclude=["qiniu_upload.py",'.git','.gitignore'],
         cover=True,
         remove_redundant=True,
     )
