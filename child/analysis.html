@@ -761,19 +761,23 @@
                 },
                 success: function(data) {
 
+                        if (data.msg=='dnn'){
                             console.log(data);
+                            document.getElementById('predict_value').innerHTML='预测薪酬为：' + data.result.toFixed(2);
+                        }
+                        else
+                         {   console.log(data);
                             let prob=data.predict;
                             if (data.result){
                                 console.log( (6000 + 6000 * prob[1]));
                                 document.getElementById('predict_value').innerHTML='预测薪酬为：' + ( 6000 + 6000 * prob[1]).toFixed(2);
                             }
                  
-                        else{
-                            console.log((6000 - 6000 * prob[0]));
-                            document.getElementById('predict_value').innerHTML='预测薪酬为：' + (6000 - 6000 * prob[0]).toFixed(2);
-
+                            else{
+                                console.log((6000 - 6000 * prob[0]));
+                                document.getElementById('predict_value').innerHTML='预测薪酬为：' + (6000 - 6000 * prob[0]).toFixed(2);
+                            }
                         }
-                    
                 }
             })
             

@@ -1,7 +1,7 @@
 import pathlib
 import sys
 
-from qiniu import Auth, BucketManager, build_batch_delete, put_file, etag
+from qiniu import Auth, BucketManager, build_batch_delete, put_file, etag, CdnManager
 from typing import List, Dict
 import os
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     access_key = sys.argv[1]
     secret_key = sys.argv[2]
 
-    Sync(
+    sync = Sync(
         access_key=access_key,  # access_key
         secret_key=secret_key,  # secret_key
         bucket_name="bi-she",  # bucket_name
@@ -107,3 +107,18 @@ if __name__ == "__main__":
         cover=True,
         remove_redundant=True,
     )
+    # 刷新缓存
+    cdn_manager = CdnManager(sync.q)
+
+    # 需要刷新的文件链接
+    # urls = [
+    #     'http://aaa.example.com/a.gif',
+    #     'http://bbb.example.com/b.jpg'
+    # ]
+
+    # URL刷新链接
+    # refresh_url_result = cdn_manager.refresh_urls(urls)
+
+    # 目录刷新链接
+    refresh_dir_result = cdn_manager.refresh_dirs(['http://bishe.yayi.site/'])
+    print(f'刷新结果：{refresh_dir_result}')
