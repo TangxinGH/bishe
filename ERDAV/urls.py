@@ -22,6 +22,7 @@ from ERDAV import settings
 from dataView import views
 from utils.parse_yaml import global_config
 
+
 cache_age = 60 * 2  # 缓存时间
 
 if global_config.get('django'):

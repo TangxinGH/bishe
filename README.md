@@ -1,4 +1,11 @@
+[toc]
+
+# 使用说明在最后
+
+
+
 # init 
+
 1. Djano pycharm 创建项目
 2. scrapy startproject JobSpider
 3. scrapy genspider zhaopin zhaopin.com 示例
@@ -279,6 +286,19 @@ mongodb://host.docker.internal
 
 ```
 mongodump -h dbhost -d dbname -o dbdirectory
+mongodump 只打一个则 全部
+恢复也是mongorestore 一个
+
+部署的话，要先备份再完成
+mkdir c:\temp\charts-keys-backup
+docker run -it `
+  --volume mongodb-charts_keys:/volume `
+  --volume /c/temp/charts-keys-backup:/backup `
+  alpine sh -c 'cp /volume/* /backup'
+  
+  之后还要修改data sources 的mongodb//url,
+  error connecting to MongoDB service cluster: failed to ping: server selection error: server selection timeout current topology: Type: Unknown Servers: Addr: host.docker.internal:27017, Type: Unknown, State: Connected, Average RTT: 0, Last error: dial tcp: lookup host.docker.internal: no such host
+  
 ```
 
 mongorestore -d db_name -c collection_name /path/file.bson
@@ -393,17 +413,23 @@ dtype=false内存会少10%
 
 linux下运行： tree -I 'venv|Test|\*AutomationProfile\*/*|Data|\*.log|\*__pycache__\*' -N
 
+```bash
+ tree -I 'venv|Test|*AutomationProfile*|Data|*.log|*__pycache__*' -N
+```
+
+
+
 -N Print non-printable characters as is instead of as escaped octal numbers.
 
 还是用nigx
 
-```tree
+```yaml
 .
-├── analysis
+├── analysis # 数据分析
 │   ├── algorithm.py
 │   ├── icu.py
 │   ├── __init__.py
-│   ├── machine_learn
+│   ├── machine_learn   # 机器学习 sklearn 
 │   │   ├── __init__.py
 │   │   ├── product_predict.py
 │   │   ├── random_forest.py
@@ -416,52 +442,52 @@ linux下运行： tree -I 'venv|Test|\*AutomationProfile\*/*|Data|\*.log|\*__pyc
 │   │   ├── 四川大学机器智能实验室停用词库.txt
 │   │   └── 百度停用词列表.txt
 │   └── 保留字.txt
-├── Data
+├── Data # 数据引用文件
 │   ├── category.json
 │   ├── category.txt
 │   └── model.pkl.bz2
-├── dataView
+├── dataView  # djago 文件视图
 │   ├── admin.py
 │   ├── apps.py
 │   ├── __init__.py
-│   ├── utils.py
+│   ├── utils.py   # url 
 │   └── views.py
-├── DP
+├── DP    #数据处理
 │   ├── config.py
-│   ├── dp_job_info.py
+│   ├── dp_job_info.py    # main文件
 │   ├── dp.py
 │   ├── drop_duplication.py
 │   ├── dup_store.py
-│   ├── Hub.py
+│   ├── Hub.py   # main文件
 │   ├── __init__.py
 │   └── wash_quantify.py
-├── ERDAV
+├── ERDAV  # django 配置 
 │   ├── asgi.py
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── global_config.yaml
+├── global_config.yaml   # 全局配置文件
 ├── images
-├── main_window.py
-├── manage.py
-├── myspider
-│   ├── addons.py
-│   ├── chromedriver.exe
+├── main_window.py     # main文件  qt 界面
+├── manage.py    # main文件 要配置runserver 8080 django
+├── myspider  # 爬虫
+│   ├── addons.py    # main文件
+│   ├── chromedriver.exe  
 │   ├── climb_types.js
 │   ├── current_climb_progress.txt
 │   ├── current_jobinfo_json_file.txt
 │   ├── item_url_count.txt
-│   ├── script.sh
-│   ├── seleniumChrome.py
+│   ├── script.sh   # linux 脚本
+│   ├── seleniumChrome.py  # main文件
 │   └── spiders
 │       ├── config.py
 │       ├── jobInfo.py
 │       └── zhaopin.py
-├── persistence
+├── persistence  # 存储到数据库
 │   ├── config.py
 │   ├── docker-compose.yml
-│   ├── elastic.py
+│   ├── elastic.py   # main文件
 │   ├── __init__.py
 │   └── mongodb-charts
 │       └── charts-docker-swarm-19.12.2.yml
@@ -471,11 +497,11 @@ linux下运行： tree -I 'venv|Test|\*AutomationProfile\*/*|Data|\*.log|\*__pyc
 ├── templates
 ├── tree.txt
 ├── ui
-└── utils
-    ├── parse_yaml.py
+└── utils  # 工具
+    ├── parse_yaml.py  # 读取配置文件
     ├── pythontail.py
     ├── tail.py
-    └── walk_file.py
+    └── walk_file.py  # 遍历目录
 
 17 directories, 99 files
 
@@ -504,3 +530,30 @@ qt_gui
 
 adachi-shimamura@123456 mongo charts
 ![mongo_charts](images/mongo_charts.gif)
+
+
+
+
+
+# 使用说明
+
+### 配置
+
+1. 配置所有目录下的config.py文件 或者只配置global.config.yaml文件即可.默认覆盖
+
+2. 运行文件：
+
+   见上面生成目录树。有 # main文件的地方运行相关模块
+
+   也可以运行 main_window.py 是qt 界面。  manag.py是djano web项目
+
+### 可视化
+
+1. 数据处理生成的数据文件。命令行。导入mongodb  见mongoimort用法。或者备份还原的方法
+
+2. 安装mongodb charts 。见官方文档。
+
+   前端项目引用了 charts 。 配置对不上很正常。
+
+   
+

@@ -26,13 +26,14 @@ detailed_internal_string_io.write('[')
 stop_word = stop_words()
 my_word = my_stop_words()
 
+combine_np = pd.concat([my_word, stop_word]).apply(lambda x: x.strip()).to_numpy()
+
 
 def del_stop_word(s):
     text = s
-    for i in range(len(my_word)):
-        text = text.replace(my_word.iloc[i].strip(), '')  # 先删除自己的停用词
-    for i in range(len(stop_word)):
-        text = text.replace(stop_word.iloc[i].strip(), '')  # del
+    for value in combine_np:
+        text = text.replace(value, '')  # 先删除自己的停用词
+
     # 分词，分成数组？？？
     # text_li = jieba.cut(text)  # 返回list
     # text = {'original': text, 'cut_li': list(text_li)}  # 空格分隔 数组
@@ -41,7 +42,7 @@ def del_stop_word(s):
 
 
 def pretreatment():
-    file_path_iterator = walk_dir(original_job_detail_data_dir)  # 获得迭代器
+    file_path_iterator = walk_dir(original_job_detail_data_dir, True, False)  # 获得迭代器
     if os.path.exists(storage_dir_job_info + '/' + stage_job_info_file_one):  # 先删除原先的
         os.remove(storage_dir_job_info + '/' + stage_job_info_file_one)
 
@@ -52,6 +53,8 @@ def pretreatment():
             # try:
             with open(str(file_path), 'r', encoding='UTF-8') as f:
                 i += 1
+                # if i == 100:
+                #     sys.exit()
                 line = f.readline()
                 if str(line).startswith("#") or str(line).startswith(" #") or str(line).strip() == '' or str(
                         line) == '\n' or str(line) == '\r\n':

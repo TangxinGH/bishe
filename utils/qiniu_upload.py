@@ -1,9 +1,10 @@
 import pathlib
 import sys
 
-from qiniu import Auth, BucketManager, build_batch_delete, put_file, etag
+from qiniu import Auth, BucketManager, build_batch_delete, put_file, etag, CdnManager, put_data
 from typing import List, Dict
 import os
+
 
 # from Test.qiniuconfig import access_key, secret_key
 
@@ -80,6 +81,8 @@ class Sync:
             for filename in os.listdir(path):
                 if filename in self.exclude:
                     continue
+                if filename.startswith('.git'):
+                    continue
                 fullpath = os.path.join(path, filename)
                 if os.path.isfile(fullpath):
                     key = fullpath.split(self.sync_dir)[1]
@@ -91,12 +94,48 @@ class Sync:
         return files
 
 
+
+
+  # 上传流/对象
+def qiniu_upload_file(data):
+        """
+          # 上传流/对象
+        :param data: 要上传的bytes类型数据
+        :return:
+        """
+
+        access_key = '自己账号的access key'
+
+        secret_key = '自己账号的secret key'
+
+        # 空间名
+        bucket_name = 'cars'
+
+        # 创建鉴权对象
+        q = Auth(access_key=access_key, secret_key=secret_key)
+
+        # 生产token, 上传凭证
+        token = q.upload_token(bucket=bucket_name)
+
+        # 上传文件，None是文件名，指定None的话七牛云会自动生成一个文件名，也可以自己指定，但自己指定文件名时不能上传重复的文件
+        ret, res = put_data(token, None, data=data)
+        ret.get('key')
+
+        print(ret)
+
+        print(res)
+
+        if res.status_code != 200:
+            raise Exception("upload failed")
+        return ret, res
+
+
 if __name__ == "__main__":
     # 不要开代理
     access_key = sys.argv[1]
     secret_key = sys.argv[2]
 
-    Sync(
+    sync = Sync(
         access_key=access_key,  # access_key
         secret_key=secret_key,  # secret_key
         bucket_name="bi-she",  # bucket_name
@@ -105,3 +144,17 @@ if __name__ == "__main__":
         cover=True,
         remove_redundant=True,
     )
+    # 刷新缓存
+    cdn_manager = CdnManager(sync.q)
+
+    # 需要刷新的文件链接
+    urls = [
+        'http://aaa.example.com/a.gif',
+        'http://bbb.example.com/b.jpg'
+    ]
+
+    # URL刷新链接
+    refresh_url_result = cdn_manager.refresh_urls(urls)
+
+    # 目录刷新链接
+    refresh_dir_result = cdn_manager.refresh_dirs(['xxx'])

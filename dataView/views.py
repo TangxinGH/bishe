@@ -6,7 +6,7 @@ from collections import Counter
 
 from bokeh.embed import json_item
 from bokeh.plotting import figure
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
 from django.views.decorators.clickjacking import xframe_options_exempt
@@ -180,14 +180,17 @@ def get_forest_predict(request):
     work_type_forest = request.GET.get("work_type_forest", '全职')
     try:
         result = get_predict_result([com_size_forest, edu_forest, work_city_forest, work_type_forest, exp_forest, kw])
-        return HttpResponse(json.dumps({'result': bool(result[0][0]), 'predict': list(result[1][0])}),
-                            content_type="application/json")
+        return HttpResponse(
+            json.dumps({'msg': 'random_forest', 'result': bool(result[0][0]), 'predict': list(result[1][0])}),
+            content_type="application/json")
     except Exception as ex:
-        result = get__dnn_predict_result([com_size_forest, edu_forest, work_city_forest, work_type_forest, exp_forest, kw])
+        result = get__dnn_predict_result(
+            [com_size_forest, edu_forest, work_city_forest, work_type_forest, exp_forest, kw])
         m = max(result[0])
         k = [i for i, j in enumerate(result[0]) if j == m]
-        return HttpResponse(json.dumps({'result': bool(k[-1] > 2), 'predict': list(result[0][k[-1]] + result)}),
-                    content_type="application/json")
+        return HttpResponse(
+            json.dumps({'msg': 'dnn', 'result': (k[-1] + k[-1] * m) * 1000, 'predict': list(result[0])}),
+            content_type="application/json")
 
 
 @xframe_options_exempt
@@ -409,3 +412,6 @@ def test_cache2(request):
     random_int = random.randint(1, 10)
     print(f'test_cache2请示进来了{random_int}')
     return HttpResponse(json.dumps({"msg": "false", 'data': random_int}), content_type="application/json")
+
+
+

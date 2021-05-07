@@ -52,8 +52,8 @@ machine_learn:
     dnn_model_tfl: 'Data/model.tfl.index'  # 模型目录 model.tfl.data-00000-of-00001 index mete 三个文件
     dnn_catagorical: 'Data/_CATEGORICAL_TYPES_.pkl' # 分类文件
 analysis:
-   reserve_word_file: ' analysis\\保留字.txt'  # 用户字典
-   stop_words_dir: 'analysis\\stopWord\\'  #停用词目录
-   custom_stop_word_file: 'analysis\\mystopWord\\自定义停用词.txt'
+   reserve_word_file: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\analysis\\保留字.txt'  # 用户字典
+   stop_words_dir: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\analysis\\stopWord\\'  #停用词目录
+   custom_stop_word_file: 'E:\\WorkSpacePyCharm\\PythonLearn\\ERDAV\\analysis\\mystopWord\\自定义停用词.txt'
 django:
   cache_age: 10 # 缓存时间 单位分钟

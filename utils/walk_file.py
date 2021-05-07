@@ -1,11 +1,14 @@
 import logging
 import os
+import warnings
+from os import listdir
+from os.path import isfile, join
 
 from tqdm import tqdm
 from itertools import (takewhile, repeat)
 
 
-def walk_dir(dir,tb=True):
+def walk_dir(directory, tb=True, sub_dir=False):
     """
     遍历目录下所有文件包括子目录
     :param: postfix_n extra desc state name
@@ -13,8 +16,8 @@ def walk_dir(dir,tb=True):
     """
     # len([lists for lists in os.listdir(dir) if         os.path.isfile(os.path.join(dir, lists))])
     if tb:
-        tbar = tqdm(total=total_file_count(dir), desc='文件数量进度：')
-    for root, dirs, files in os.walk(dir, topdown=False):  # 分布式解决
+        tbar = tqdm(total=total_file_count_fast(directory, sub_dir), desc='文件数量进度：')
+    for root, dirs, files in os.walk(directory, topdown=False):  # 分布式解决
         for name in files:
             if tb:
                 tbar.update()
@@ -31,11 +34,19 @@ def walk_dir(dir,tb=True):
 
 
 def total_file_count(dir):
+    warnings.warn("此方法已废弃，不推荐使用, 速度慢", DeprecationWarning)
     file_count = 0
     for dirpath, dirnames, filenames in os.walk(dir):
         for file in filenames:
             file_count = file_count + 1
     return file_count
+
+
+def total_file_count_fast(directory, sub_dir=False):
+    if sub_dir:
+        return sum(1 for entry in listdir(directory) if isfile(join(directory, entry)))
+    else:
+        return len(listdir(directory))
 
 
 def iter_count_line(file_name):
